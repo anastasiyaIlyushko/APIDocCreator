@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8" />
+
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="shortcut icon" href="http://180016988.r.cdn77.net/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" media="all" href="http://180016988.r.cdn77.net/wp-content/themes/unimax/style.css" />
+<link rel="pingback" href="http://www.unixmen.com/xmlrpc.php" />
+<script type="text/javascript">
+	window.google_analytics_uacct = "UA-6194676-1";
+</script>
+
+<!-- This site is optimized with the Yoast WordPress SEO plugin v1.4.18 - http://yoast.com/wordpress/seo/ -->
+<title>Install Yii PHP Framework on Ubuntu/Debian | Unixmen</title>
+<meta name="description" content="Yii is an open source, fast, secure and as well as high performance PHP framework used for developing large-scale web applications."/>
+<link rel="canonical" href="http://www.unixmen.com/install-yii-php-framework-on-ubuntu-debian/" />
+<link rel="author" href="https://plus.google.com/u/0/100039709769930445046/posts/p/pub"/>
+<link rel="publisher" href="https://plus.google.com/communities/117217680171357822524"/>
+<!-- / Yoast WordPress SEO plugin. -->
+
+<link rel="alternate" type="application/rss+xml" title="Unixmen &raquo; Feed" href="http://www.unixmen.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Unixmen &raquo; Comments Feed" href="http://www.unixmen.com/comments/feed/" />
+
+            <script type="text/javascript">//<![CDATA[
+            // Google Analytics for WordPress by Yoast v4.3.3 | http://yoast.com/wordpress/google-analytics/
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-6194676-1']);
+				            _gaq.push(['_setCustomVar',1,'post_type','post',3],['_setCustomVar',2,'author','sk',3],['_setCustomVar',3,'tags','php yii yii-framework',3],['_setCustomVar',4,'categories','hosting linux-distributions linux-mint linux-tutorials',3],['_trackPageview']);
+            (function () {
+                var ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
+            })();
+            //]]></script>
+			<link rel="alternate" type="application/rss+xml" title="Unixmen &raquo; Install Yii PHP Framework on Ubuntu/Debian Comments Feed" href="http://www.unixmen.com/install-yii-php-framework-on-ubuntu-debian/feed/" />
+<link rel='stylesheet' id='roster_slider_headcss-css'  href='http://180016988.r.cdn77.net/wp-content/plugins/roster-slider/css/skins/default/style.css?ver=1.6.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wordpress-popular-posts-css'  href='http://180016988.r.cdn77.net/wp-content/plugins/wordpress-popular-posts/style/wpp.css?ver=2.3.7' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://180016988.r.cdn77.net/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=3.5.2' type='text/css' media='all' />
+<link rel='stylesheet' id='arevico_scsfbcss-css'  href='http://180016988.r.cdn77.net/wp-content/plugins/facebook-page-promoter-lightbox-premium/scs/scs.css?ver=3.6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='social-widget-css'  href='http://180016988.r.cdn77.net/wp-content/plugins/social-media-widget/social_widget.css?ver=3.6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='vye_dynamic-css'  href='http://180016988.r.cdn77.net/wp-content/plugins/youtube-embed/css/main.min.css?ver=3.6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-syntax-css-css'  href='http://180016988.r.cdn77.net/wp-content/plugins/wp-syntax/css/wp-syntax.css?ver=1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='fancybox-css'  href='http://180016988.r.cdn77.net/wp-content/plugins/easy-fancybox/fancybox/jquery.fancybox-1.3.5.pack.css?ver=1.5.5' type='text/css' media='screen' />
+<link rel='stylesheet' id='wp-advanced-rp-css-css'  href='http://180016988.r.cdn77.net/wp-content/plugins/advanced-recent-posts-widget/css/advanced-recent-posts-widget.css?ver=3.6.1' type='text/css' media='all' />
+<script type='text/javascript' src='http://180016988.r.cdn77.net/wp-includes/js/jquery/jquery.js?ver=1.10.2'></script>
+<script type='text/javascript' src='http://180016988.r.cdn77.net/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='http://180016988.r.cdn77.net/wp-content/plugins/roster-slider/js/jquery.cycle.js?ver=1.6.2'></script>
+<script type='text/javascript' src='http://180016988.r.cdn77.net/wp-content/plugins/roster-slider/js/jquery.touchwipe.js?ver=1.6.2'></script>
+<script type='text/javascript' src='http://180016988.r.cdn77.net/wp-content/plugins/sharebar/js/sharebar.js?ver=3.6.1'></script>
+<script type='text/javascript' src='http://180016988.r.cdn77.net/wp-includes/js/comment-reply.min.js?ver=3.6.1'></script>
+<script type='text/javascript' src='http://180016988.r.cdn77.net/wp-content/plugins/facebook-page-promoter-lightbox-premium/scs/scs.js?ver=3.6.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var lb_l_ret = {"fb_id":"272714361685","display_on_page":"1","display_on_post":"1","display_on_homepage":"1","display_on_archive":"1","show_once":"60","delay":"4000","fblocale":"","width":"400","height":"250","fbcolorscheme":"light","facebookheader":"1","overlaycolor":"#696969","overlayop":"0.6","extracss":"","eam":"1","appid":"299189138898","hideonlike":"1","connect":"1","cmessage":"Already a fan?","gaevent":"1","mobile":"1","mab":"","fancybox":"","loggedin":"","scompat":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://180016988.r.cdn77.net/wp-content/plugins/facebook-page-promoter-lightbox-premium/js/launch_extended.js?ver=3.6.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.unixmen.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://180016988.r.cdn77.net/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.6.1" />
+<link rel='shortlink' href='http://www.unixmen.com/?p=15400' />
+
+<!-- This site is using AdRotate v3.8.7 Professional to display their advertisements - http://www.adrotateplugin.com/ -->
+<link rel="stylesheet" href="http://180016988.r.cdn77.net/wp-content/plugins/sharebar/css/sharebar.css" type="text/css" media="screen" />
+<script type="text/javascript">jQuery(document).ready(function($) { $('.sharebar').sharebar({horizontal:'true',swidth:'65',minwidth:2000,position:'left',leftOffset:20,rightOffset:10}); });</script>
+<!-- Sharebar Plugin by Monjurul Dolon (http://mdolon.com/) - more info at: http://devgrow.com/sharebar-wordpress-plugin -->
+<style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #000000; }
+</style>
+
+	<!-- Easy FancyBox 1.5.5 using FancyBox 1.3.5 - RavanH (http://status301.net/wordpress-plugins/easy-fancybox/) -->
+<!--[if lt IE 8]>            
+<style type="text/css">
+/* IE6 */
+.fancybox-ie6 #fancybox-close{background:transparent;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://180016988.r.cdn77.net/wp-content/plugins/easy-fancybox/fancybox/fancy_close.png",sizingMethod="scale")}
+.fancybox-ie6 #fancybox-left-ico{background:transparent;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://180016988.r.cdn77.net/wp-content/plugins/easy-fancybox/fancybox/fancy_nav_left.png",sizingMethod="scale")}
+.fancybox-ie6 #fancybox-right-ico{background:transparent;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://180016988.r.cdn77.net/wp-content/plugins/easy-fancybox/fancybox/fancy_nav_right.png",sizingMethod="scale")}
+.fancybox-ie6 #fancybox-title-over{background:transparent;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://180016988.r.cdn77.net/wp-content/plugins/easy-fancybox/fancybox/fancy_title_over.png",sizingMethod="scale");zoom:1}
+.fancybox-ie6 #fancybox-title-float-left{background:transparent;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://180016988.r.cdn77.net/wp-content/plugins/easy-fancybox/fancybox/fancy_title_left.png",sizingMethod="scale")}
+.fancybox-ie6 #fancybox-title-float-main{background:transparent;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://180016988.r.cdn77.net/wp-content/plugins/easy-fancybox/fancybox/fancy_title_main.png",sizingMethod="scale")}
+.fancybox-ie6 #fancybox-title-float-right{background:transparent;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://180016988.r.cdn77.net/wp-content/plugins/easy-fancybox/fancybox/fancy_title_right.png",sizingMethod="scale")}
+.fancybox-ie6 #fancybox-bg-w,.fancybox-ie6 #fancybox-bg-e,.fancybox-ie6 #fancybox-left,.fancybox-ie6 #fancybox-right,#fancybox-hide-sel-frame{height:expression(this.parentNode.clientHeight+"px")}
+#fancybox-loading.fancybox-ie6{position:absolute;margin-top:0;top:expression((-20+(document.documentElement.clientHeight ? document.documentElement.clientHeight/2 : document.body.clientHeight/2)+(ignoreMe=document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop))+"px")}
+#fancybox-loading.fancybox-ie6 div{background:transparent;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://180016988.r.cdn77.net/wp-content/plugins/easy-fancybox/fancybox/fancy_loading.png", sizingMethod="scale")}
+/* IE6, IE7 */
+.fancybox-ie .fancybox-bg{background:transparent !important}
+.fancybox-ie #fancybox-bg-n{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://180016988.r.cdn77.net/wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_n.png",sizingMethod="scale")}
+.fancybox-ie #fancybox-bg-ne{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://180016988.r.cdn77.net/wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_ne.png",sizingMethod="scale")}
+.fancybox-ie #fancybox-bg-e{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://180016988.r.cdn77.net/wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_e.png",sizingMethod="scale")}
+.fancybox-ie #fancybox-bg-se{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://180016988.r.cdn77.net/wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_se.png",sizingMethod="scale")}
+.fancybox-ie #fancybox-bg-s{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://180016988.r.cdn77.net/wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_s.png",sizingMethod="scale")}
+.fancybox-ie #fancybox-bg-sw{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://180016988.r.cdn77.net/wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_sw.png",sizingMethod="scale")}
+.fancybox-ie #fancybox-bg-w{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://180016988.r.cdn77.net/wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_w.png",sizingMethod="scale")}
+.fancybox-ie #fancybox-bg-nw{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://180016988.r.cdn77.net/wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_nw.png",sizingMethod="scale")}
+</style>
+<![endif]-->
+<!--[if IE 8]>            
+<style type="text/css">
+.fancybox-ie .fancybox-bg{background:transparent !important}
+.fancybox-ie #fancybox-bg-n{-ms-filter:'progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://180016988.r.cdn77.net/wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_n.png",sizingMethod="scale")'}
+.fancybox-ie #fancybox-bg-ne{-ms-filter:'progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://180016988.r.cdn77.net/wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_ne.png",sizingMethod="scale")'}
+.fancybox-ie #fancybox-bg-e{-ms-filter:'progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://180016988.r.cdn77.net/wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_e.png",sizingMethod="scale")'}
+.fancybox-ie #fancybox-bg-se{-ms-filter:'progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://180016988.r.cdn77.net/wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_se.png",sizingMethod="scale")'}
+.fancybox-ie #fancybox-bg-s{-ms-filter:'progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://180016988.r.cdn77.net/wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_s.png",sizingMethod="scale")'}
+.fancybox-ie #fancybox-bg-sw{-ms-filter:'progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://180016988.r.cdn77.net/wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_sw.png",sizingMethod="scale")'}
+.fancybox-ie #fancybox-bg-w{-ms-filter:'progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://180016988.r.cdn77.net/wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_w.png",sizingMethod="scale")'}
+.fancybox-ie #fancybox-bg-nw{-ms-filter:'progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://180016988.r.cdn77.net/wp-content/plugins/easy-fancybox/fancybox/fancy_shadow_nw.png",sizingMethod="scale")'}
+</style>
+<![endif]-->
+
+	<script type="text/javascript">
+	/* <![CDATA[ */
+	var fb_timeout = null;
+	var fb_opts = { 'overlayShow' : true, 'hideOnOverlayClick' : true, 'showCloseButton' : true, 'centerOnScroll' : true, 'enableEscapeButton' : true, 'autoScale' : true };
+	var easy_fancybox_handler = function(){
+	/* IMG */
+	var fb_IMG_select = 'a[href*=".jpg"]:not(.nofancybox), area[href*=".jpg"]:not(.nofancybox), a[href*=".jpeg"]:not(.nofancybox), area[href*=".jpeg"]:not(.nofancybox), a[href*=".png"]:not(.nofancybox), area[href*=".png"]:not(.nofancybox)';
+	jQuery(fb_IMG_select).addClass('fancybox');
+	var fb_IMG_sections = jQuery('div.gallery');
+	fb_IMG_sections.each(function() { jQuery(this).find(fb_IMG_select).attr('rel', 'gallery-' + fb_IMG_sections.index(this)); });
+	jQuery('a.fancybox, area.fancybox, li.fancybox a:not(li.nofancybox a)').fancybox( jQuery.extend({}, fb_opts, { 'transitionIn' : 'elastic', 'easingIn' : 'easeOutBack', 'transitionOut' : 'elastic', 'easingOut' : 'easeInBack', 'opacity' : false, 'hideOnContentClick' : false, 'titleShow' : true, 'titlePosition' : 'over', 'titleFromAlt' : true, 'showNavArrows' : true, 'enableKeyboardNav' : true, 'cyclic' : false }) );
+	/* Inline */
+	jQuery('a.fancybox-inline, area.fancybox-inline, li.fancybox-inline a:not(li.nofancybox-inline a)').fancybox( jQuery.extend({}, fb_opts, { 'type' : 'inline', 'autoDimensions' : true, 'scrolling' : 'no', 'easingIn' : 'easeOutBack', 'easingOut' : 'easeInBack', 'opacity' : false, 'hideOnContentClick' : false }) );
+	/* YouTube */
+	jQuery('a[href*="youtube.com/watch"]:not(.nofancybox), area[href*="youtube.com/watch"]:not(.nofancybox)').addClass('fancybox-youtube');
+	jQuery('a[href*="youtu.be/"]:not(.nofancybox), area[href*="youtu.be/"]:not(.nofancybox)').addClass('fancybox-youtube');
+	jQuery('a.fancybox-youtube, area.fancybox-youtube, li.fancybox-youtube a:not(li.nofancybox a)').fancybox( jQuery.extend({}, fb_opts, { 'type' : 'iframe', 'width' : 640, 'height' : 360, 'padding' : 0, 'titleShow' : false, 'titlePosition' : 'float', 'titleFromAlt' : true, 'onStart' : function(selectedArray, selectedIndex, selectedOpts) { selectedOpts.href = selectedArray[selectedIndex].href.replace(new RegExp('youtu.be', 'i'), 'www.youtube.com/embed').replace(new RegExp('watch\\?(.*)v=([a-z0-9\_\-]+)(&|\\?)?(.*)', 'i'), 'embed/$2?$1$4') } }) );
+	/* Vimeo */
+	jQuery('a[href*="vimeo.com/"]:not(.nofancybox), area[href*="vimeo.com/"]:not(.nofancybox)').addClass('fancybox-vimeo');
+	jQuery('a.fancybox-vimeo, area.fancybox-vimeo, li.fancybox-vimeo a:not(li.nofancybox a)').fancybox( jQuery.extend({}, fb_opts, { 'type' : 'iframe', 'width' : 500, 'height' : 281, 'padding' : 0, 'titleShow' : false, 'titlePosition' : 'float', 'titleFromAlt' : true, 'onStart' : function(selectedArray, selectedIndex, selectedOpts) { selectedOpts.href = selectedArray[selectedIndex].href.replace(new RegExp('http://(www\.)?vimeo\.com/([0-9]+)(&|\\?)?(.*)', 'i'), 'http://player.vimeo.com/video/$2?$4') } }) );
+	/* Auto-click */ 
+	jQuery('#fancybox-auto').trigger('click');
+	}
+	/* ]]> */
+	</script>
+	<style type="text/css">.fancybox-hidden{display:none}.rtl #fancybox-left{left:auto;right:0px}.rtl #fancybox-right{left:0px;right:auto}.rtl #fancybox-right-ico{background-position:-40px -30px}.rtl #fancybox-left-ico{background-position:-40px -60px}.rtl .fancybox-title-over{text-align:right}.rtl #fancybox-left-ico,.rtl #fancybox-right-ico{right:-9999px}.rtl #fancybox-right:hover span{right:auto;left:20px}.rtl #fancybox-left:hover span{right:20px}#fancybox-img{max-width:none;max-height:none}#fancybox-outer{background-color:#fff}#fancybox-content{border-color:#fff}#fancybox-content{color:inherit}</style>
+	<script type="text/javascript" src="http://180016988.r.cdn77.net/wp-content/themes/unimax/js/bookmarkscroll.js"></script>
+</head>
+
+<body>
+<!-- BuySellAds Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- End BuySellAds Ad Code -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="mainBox">
+<div class="mainDiv">
+<div class="hdSec">
+    <div class="date">
+    <time datetime="2012-05-09">
+    <p id="current-date-time">Wednesday, October 16, 7:05 am</p>    </time>
+    <div class="menu-top-menu-container"><ul id="menu-top-menu" class="menu"><li id="menu-item-16454" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16454"><a href="http://www.unixmen.com/about-us/" >About Us</a></li>
+<li id="menu-item-7349" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7349"><a href="http://www.unixmen.com/advertising/" >Advertising</a></li>
+<li id="menu-item-7347" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7347"><a href="http://www.unixmen.com/sitemap/" >Sitemap</a></li>
+<li id="menu-item-7702" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7702"><a href="http://www.unixmen.com/privacy-policy/" >Privacy</a></li>
+<li id="menu-item-7703" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7703"><a href="http://www.unixmen.com/contact-us/" >Contact Us</a></li>
+<li id="menu-item-11788" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11788"><a href="http://www.unixmen.com/hire-unixmen/" >Hire Us</a></li>
+</ul></div>    </div>
+    
+    <div class="iconBox">
+     			<div class="textwidget"><a href="http://www.facebook.com/pages/Unixmen/272714361685" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://www.facebook.com']);"><img src="http://180016988.r.cdn77.net/wp-content/themes/unimax/images/facebook.png" alt="" /></a>
+    <a href="https://plus.google.com/110820376491877300065/posts" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://plus.google.com']);"><img src="http://180016988.r.cdn77.net/wp-content/themes/unimax/images/googleplus.png" alt="" /></a>
+    <a href="http://twitter.com/unixmen" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://twitter.com']);"><img src="http://180016988.r.cdn77.net/wp-content/themes/unimax/images/twitter.png" alt="" /></a>
+    <a href="http://feeds.feedburner.com/unixmenhowtos" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://feeds.feedburner.com']);"><img src="http://180016988.r.cdn77.net/wp-content/themes/unimax/images/rss.png" alt="" /></a>
+    <a href="http://feedburner.google.com/fb/a/mailverify?uri=unixmenhowtos&loc=en_US" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://feedburner.google.com']);" class="messge"><img src="http://180016988.r.cdn77.net/wp-content/themes/unimax/images/email.png" alt="" /></a></div>
+		    
+    </div>
+  </div>
+  
+  <div class="headerbar">
+    <div class="logo"><img src="http://180016988.r.cdn77.net/wp-content/themes/unimax/images/logo.png" alt="Logo" /></div>
+    <div class="penguins"><img src="http://180016988.r.cdn77.net/wp-content/themes/unimax/images/penguins.png" alt="" /></div>
+  </div>
+  
+  <div class="mnuBox">
+  <div id="access" role="navigation">
+      <div class="menu-menu-container"><ul id="menu-menu" class="menu"><li id="menu-item-12" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-12"><a href="http://www.unixmen.com/" >Home</a></li>
+<li id="menu-item-11" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor menu-item-11"><a href="http://www.unixmen.com/category/news/" >News</a></li>
+<li id="menu-item-2413" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-2413"><a href="http://www.unixmen.com/category/linux-distributions/" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/icons/linux.png" alt="" /><span><strong>Linux</strong><br />Distributions</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-26" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-26"><a href="http://www.unixmen.com/category/linux-distributions/archlinux-2/" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/icons/archlinux.png" alt="" />Arch Linux</a></li>
+	<li id="menu-item-27" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-27"><a href="http://www.unixmen.com/category/linux-distributions/centos/" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/icons/centos.png" alt="" />CentOS</a></li>
+	<li id="menu-item-14" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-14"><a href="http://www.unixmen.com/category/linux-distributions/fedora/" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/icons/fedora.png" alt="" />Fedora</a></li>
+	<li id="menu-item-15" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-15"><a href="http://www.unixmen.com/category/linux-distributions/linux-mint/" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/icons/linuxmint.png" alt="" />Linux Mint</a></li>
+	<li id="menu-item-28" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-28"><a href="http://www.unixmen.com/category/linux-distributions/suse/" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/icons/suse.png" alt="" />Suse</a></li>
+	<li id="menu-item-16" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-16"><a href="http://www.unixmen.com/category/linux-distributions/ubuntu/" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/icons/ubuntu.png" alt="" />Ubuntu</a></li>
+	<li id="menu-item-2414" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2414"><a href="http://www.unixmen.com/category/linux-distributions/" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/icons/linux.png" alt="" />Other Linux Distros</a></li>
+</ul>
+</li>
+<li id="menu-item-13" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-13"><a href="http://www.unixmen.com/category/linux-tutorials/" ><span><strong>Tutorials</strong><br />Knowledge Base</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-3027" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-3027"><a href="http://www.unixmen.com/category/linux-tutorials/" >Tutorials &#038; Howtos</a></li>
+	<li id="menu-item-22" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-22"><a href="http://www.unixmen.com/category/linux-tutorials/hardware-linux/" >Hardware Linux</a></li>
+	<li id="menu-item-23" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-23"><a href="http://www.unixmen.com/category/linux-tutorials/linux-command/" >linux command</a></li>
+	<li id="menu-item-24" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-24"><a href="http://www.unixmen.com/category/linux-tutorials/linux-tutorials-video/" >Video Tutorials</a></li>
+	<li id="menu-item-25" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25"><a href="http://www.unixmen.com/category/linux-tutorials/unix-tutorials/" >Unix Tutorials</a></li>
+</ul>
+</li>
+<li id="menu-item-17" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-17"><a href="http://www.unixmen.com/category/opensource/" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/icons/opensource.png" alt="" />Opensource</a>
+<ul class="sub-menu">
+	<li id="menu-item-19" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-19"><a href="http://www.unixmen.com/category/gaming-on-linux/" >Gaming On Linux</a></li>
+	<li id="menu-item-20" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-20"><a href="http://www.unixmen.com/category/news/software/" >Software</a></li>
+</ul>
+</li>
+<li id="menu-item-18" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-18"><a href="http://www.unixmen.com/category/linux-distributions/android/" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/icons/android.png" alt="" />Android</a></li>
+<li id="menu-item-21" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-21"><a href="http://www.unixmen.com/category/frequently-asked-questions/" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/icons/faq.png" alt="" />FAQs</a></li>
+<li id="menu-item-5043" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5043"><a title="ASK Unixmen" href="http://ask.unixmen.com/" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/icons/forum.png" alt="" />Q/A Forum</a></li>
+</ul></div>  </div>
+  <div id="searchbox">
+  <form action="http://www.unixmen.com/search/" id="searchform">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-2917661377128354:0493260722" />
+    <input type="hidden" name="cof" value="FORID:11" />
+    <input type="hidden" name="ie" value="UTF-8" />
+    <input type="text" name="q" size="30" />
+    <input type="submit" id="searchsubmit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/cse/brand?form=searchform&lang=en"></script>  </div>
+  </div>
+
+  <div class="carocel"><script type="text/javascript"> jQuery("html").addClass("roster_slider_fouc"); jQuery(document).ready(function() {
+	   jQuery(".roster_slider_fouc .roster_slider").css({"display" : "block"});
+	});function roster_slider_1_pause() { jQuery("#roster_slider_1").cycle("pause"); };
+		jQuery(document).ready(function() {
+			jQuery("#roster_slider_1").cycle({
+				fx: "fade",
+				easing:"swing",
+				speed:"1000",
+				timeout: 3000,
+				onPrevNextEvent: roster_slider_1_pause,
+				onPagerEvent: roster_slider_1_pause,next:   "#roster_slider_1_next", prev:   "#roster_slider_1_prev",
+				pause: 1
+			});
+			jQuery("#roster_slider_1").touchwipe({
+				wipeLeft: function() {
+					jQuery("#roster_slider_1").cycle("next");
+				},
+				wipeRight: function() {
+					jQuery("#roster_slider_1").cycle("prev");
+				},
+				preventDefaultEvents: false
+			});
+		});</script> <noscript><p><strong>This page is having a slideshow that uses Javascript. Your browser either doesn't support Javascript or you have it turned off. To see this page as it is meant to appear please use a Javascript enabled browser.</strong></p></noscript><div class="roster_slider roster_slider_set" style="width:852px;padding:0 24px;">
+		<div id="roster_slider_1" class="roster_slider_instance">
+				<div class="roster_slide" >
+			<!-- roster_slide --><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/improve-touch-typing-tipp10/" title="Improve Touch Typing With TIPP10" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/10/tipp10_logo.jpg" alt="Improve Touch Typing With TIPP10" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/improve-touch-typing-tipp10/" style="color:#0067B7;" >Improve Touch Typing With TIPP10</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/pentesting-release-raspberry-pi/" title="A Pentesting Release for the Raspberry Pi" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/10/rpi_inside.png" alt="A Pentesting Release for the Raspberry Pi" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/pentesting-release-raspberry-pi/" style="color:#0067B7;" >A Pentesting Release for the Raspberry Pi</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/download-youtube-videos-linux/" title="Download Youtube Videos From Linux Command-line" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/07/images.jpeg" alt="Download Youtube Videos From Linux Command-line" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/download-youtube-videos-linux/" style="color:#0067B7;" >Download Youtube Videos From Linux Command-line</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/introducing-kids-linux-using-doudoulinux/" title="Introducing Kids to Linux Using DoudouLinux" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/10/doudou-logo.png" alt="Introducing Kids to Linux Using DoudouLinux" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/introducing-kids-linux-using-doudoulinux/" style="color:#0067B7;" >Introducing Kids to Linux Using DoudouLinux</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/improve-apt-get-download-speed-apt-fast/" title="apt-fast: Improve apt-get Download Speed" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2012/04/ubuntu-logo.png" alt="apt-fast: Improve apt-get Download Speed" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/improve-apt-get-download-speed-apt-fast/" style="color:#0067B7;" >apt-fast: Improve apt-get Download Speed</a></h2>	<!-- /roster_slideri -->
+			</div></div><!-- /roster_slide --><div class="roster_slide" >
+			<!-- roster_slide --><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/dax-os-desktop-linux-operating-system/" title="Dax OS Desktop, A Linux Operating System" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/10/logo_daxos.png" alt="Dax OS Desktop, A Linux Operating System" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/dax-os-desktop-linux-operating-system/" style="color:#0067B7;" >Dax OS Desktop, A Linux Operating System</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/upgrade-ubuntu-13-04-raring-ubuntu-13-10-saucy-salamander/" title="How To Upgrade From Ubuntu 13.04 Raring To Ubuntu 13.10 Saucy Salamander" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2012/04/ubuntu-logo.png" alt="How To Upgrade From Ubuntu 13.04 Raring To Ubuntu 13.10 Saucy Salamander" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/upgrade-ubuntu-13-04-raring-ubuntu-13-10-saucy-salamander/" style="color:#0067B7;" >How To Upgrade From Ubuntu 13.04 Raring To Ubuntu 13.10 Saucy Salamander</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/pengpod-1040-quad-core-linux-android-dual-booting-tablets/" title="PengPod 1040: Quad Core Linux-Android Dual Booting Tablets" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/10/pengapod-logo.jpg" alt="PengPod 1040: Quad Core Linux-Android Dual Booting Tablets" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/pengpod-1040-quad-core-linux-android-dual-booting-tablets/" style="color:#0067B7;" >PengPod 1040: Quad Core Linux-Android Dual Booting Tablets</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/galculator-scientific-calculator-algebraic-mode-rpn/" title="galculator: Scientific Calculator in Algebraic Mode and RPN" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/10/Calculator-.png" alt="galculator: Scientific Calculator in Algebraic Mode and RPN" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/galculator-scientific-calculator-algebraic-mode-rpn/" style="color:#0067B7;" >galculator: Scientific Calculator in Algebraic Mode and RPN</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/google-offers-cash-prizes-updates-linux-os-software/" title="Google Offers Cash Prizes for Updates to Linux and Other OS Software" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/08/google.png" alt="Google Offers Cash Prizes for Updates to Linux and Other OS Software" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/google-offers-cash-prizes-updates-linux-os-software/" style="color:#0067B7;" >Google Offers Cash Prizes for Updates to Linux and Other OS Software</a></h2>	<!-- /roster_slideri -->
+			</div></div><!-- /roster_slide --><div class="roster_slide" >
+			<!-- roster_slide --><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/samba-4-0-10-released/" title="Samba 4.0.10 Released!!" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/10/samba.png" alt="Samba 4.0.10 Released!!" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/samba-4-0-10-released/" style="color:#0067B7;" >Samba 4.0.10 Released!!</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/top-things-installing-ubuntu-13-10/" title="Top Things To Do After Installing Ubuntu 13.10 &#8216;Saucy Salamander&#8217;" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2012/04/ubuntu-logo.png" alt="Top Things To Do After Installing Ubuntu 13.10 &#8216;Saucy Salamander&#8217;" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/top-things-installing-ubuntu-13-10/" style="color:#0067B7;" >Top Things To Do After Installing Ubuntu 13.10 'Saucy Salamander'</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/cinnamon-2-0-released/" title="Cinnamon 2.0 Has Been Released!!" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/07/linux-200x200.jpg" alt="Cinnamon 2.0 Has Been Released!!" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/cinnamon-2-0-released/" style="color:#0067B7;" >Cinnamon 2.0 Has Been Released!!</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/mozilla-launches-markets-around-world/" title="Mozilla Launches in More Markets Around the World" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/10/Mozilla_logo.png" alt="Mozilla Launches in More Markets Around the World" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/mozilla-launches-markets-around-world/" style="color:#0067B7;" >Mozilla Launches in More Markets Around the World</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/cinnamon-2-0-feature-freeze/" title="Cinnamon 2.0 Feature-Freeze" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/07/linux-200x200.jpg" alt="Cinnamon 2.0 Feature-Freeze" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/cinnamon-2-0-feature-freeze/" style="color:#0067B7;" >Cinnamon 2.0 Feature-Freeze </a></h2>	<!-- /roster_slideri -->
+			</div></div><!-- /roster_slide --><div class="roster_slide" >
+			<!-- roster_slide --><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/pfsense-open-source-firewall-distribution/" style="color:#0067B7;" >pfSense: Open Source Firewall Distribution</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/firefox-os-1-1-update-details/" title="Firefox OS 1.1, Update Details" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/10/Firefox-OS-logo1.png" alt="Firefox OS 1.1, Update Details" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/firefox-os-1-1-update-details/" style="color:#0067B7;" > Firefox OS 1.1, Update Details</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/we-are-10-000-on-facebook/" title="We are 10,000 on Facebook &#8211; The winner of Unixmen T-Shirt is!!!!" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/10/unixmen.jpg" alt="We are 10,000 on Facebook &#8211; The winner of Unixmen T-Shirt is!!!!" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/we-are-10-000-on-facebook/" style="color:#0067B7;" >We are 10,000 on Facebook - The winner of Unixmen T-Shirt is!!!!</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/installing-xscreensaver-ubuntu/" title="Installing XScreenSaver In Ubuntu" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/10/xscreensaver.jpeg" alt="Installing XScreenSaver In Ubuntu" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/installing-xscreensaver-ubuntu/" style="color:#0067B7;" >Installing XScreenSaver In Ubuntu</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/create-amazing-native-apps-appcelerator-platform/" title="Create Amazing Native Apps With Appcelerator Platform" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/10/Appcelerator_logo.png" alt="Create Amazing Native Apps With Appcelerator Platform" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/create-amazing-native-apps-appcelerator-platform/" style="color:#0067B7;" >Create Amazing Native Apps With Appcelerator Platform</a></h2>	<!-- /roster_slideri -->
+			</div></div><!-- /roster_slide --><div class="roster_slide" >
+			<!-- roster_slide --><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/symbiose-try-gnome-online/" title="Symbiose: Try Gnome Online" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/10/symbiose.png" alt="Symbiose: Try Gnome Online" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/symbiose-try-gnome-online/" style="color:#0067B7;" >Symbiose: Try Gnome Online</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/use-gmail-default-email-client/" title="Use Gmail as Your Default Email Client" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/08/gmail.png" alt="Use Gmail as Your Default Email Client" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/use-gmail-default-email-client/" style="color:#0067B7;" >Use Gmail as Your Default Email Client</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/use-python-ssh-machine/" title="Use Python To SSH To Your Machine" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/06/python-logo-master-v3-icon1.png" alt="Use Python To SSH To Your Machine" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/use-python-ssh-machine/" style="color:#0067B7;" >Use Python To SSH To Your Machine</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/utilite-linux-mini-pc/" title="The Utilite Linux Mini PC" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/10/Utilite-logo.png" alt="The Utilite Linux Mini PC" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/utilite-linux-mini-pc/" style="color:#0067B7;" >The Utilite Linux Mini PC</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/install-cinnamon-1-8-ubuntu-13-04/" title="Install Cinnamon 1.8 in Ubuntu 13.04" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2012/04/ubuntu-logo.png" alt="Install Cinnamon 1.8 in Ubuntu 13.04" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/install-cinnamon-1-8-ubuntu-13-04/" style="color:#0067B7;" >Install Cinnamon 1.8 in Ubuntu 13.04</a></h2>	<!-- /roster_slideri -->
+			</div></div><!-- /roster_slide --><div class="roster_slide" >
+			<!-- roster_slide --><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/install-jitsi-instant-messenger-ubuntu/" title="Install Jitsi Instant Messenger in Ubuntu" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/10/Jitsi.png" alt="Install Jitsi Instant Messenger in Ubuntu" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/install-jitsi-instant-messenger-ubuntu/" style="color:#0067B7;" >Install Jitsi Instant Messenger in Ubuntu</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/ubuntu-touch-ubuntu-os-smartphone-almost-ready/" title="Ubuntu Touch: Ubuntu OS for Smartphone is Almost Ready" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2012/04/ubuntu-logo.png" alt="Ubuntu Touch: Ubuntu OS for Smartphone is Almost Ready" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/ubuntu-touch-ubuntu-os-smartphone-almost-ready/" style="color:#0067B7;" >Ubuntu Touch: Ubuntu OS for Smartphone is Almost Ready</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/install-opera-ubuntu-12-04/" title="Install Opera in Ubuntu 12.04" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/10/opera-browser-Logo.png" alt="Install Opera in Ubuntu 12.04" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/install-opera-ubuntu-12-04/" style="color:#0067B7;" >Install Opera in Ubuntu 12.04</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/illegal-access-adobe-source-code/" title="Illegal Access to Adobe Source Code" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/10/Adobe-Logo.png" alt="Illegal Access to Adobe Source Code" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/illegal-access-adobe-source-code/" style="color:#0067B7;" >Illegal Access to Adobe Source Code</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/change-ubuntu-systems-wallpaper-automatically-wallch/" title="Change Ubuntu Systems Wallpaper Automatically With Wallch" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2012/04/ubuntu-logo.png" alt="Change Ubuntu Systems Wallpaper Automatically With Wallch" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/change-ubuntu-systems-wallpaper-automatically-wallch/" style="color:#0067B7;" >Change Ubuntu Systems Wallpaper Automatically With Wallch</a></h2>	<!-- /roster_slideri -->
+			</div></div><!-- /roster_slide --><div class="roster_slide" >
+			<!-- roster_slide --><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/libreoffice-4-1-2-available-download/" title="LibreOffice 4.1.2 Is Available For Download" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/09/libreoffice.png" alt="LibreOffice 4.1.2 Is Available For Download" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/libreoffice-4-1-2-available-download/" style="color:#0067B7;" >LibreOffice 4.1.2 Is Available For Download</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/burn-iso-file-brasero-tool/" title="How To Burn An ISO File With Brasero Tool" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/10/brasero-logo.png" alt="How To Burn An ISO File With Brasero Tool" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/burn-iso-file-brasero-tool/" style="color:#0067B7;" >How To Burn An ISO File With Brasero Tool</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/3-good-cd-dvd-burning-tools-ubuntu/" title="3 Good CD And DVD Burning Tools For Ubuntu" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/10/cd-burner.png" alt="3 Good CD And DVD Burning Tools For Ubuntu" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/3-good-cd-dvd-burning-tools-ubuntu/" style="color:#0067B7;" >3 Good CD And DVD Burning Tools For Ubuntu</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/install-lamp-apache-mysql-php-debian-7-wheezy/" title="Install LAMP (Apache, MySQL And PHP) On Debian 7 &#8216;Wheezy&#8217;" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/10/lamp.png" alt="Install LAMP (Apache, MySQL And PHP) On Debian 7 &#8216;Wheezy&#8217;" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/install-lamp-apache-mysql-php-debian-7-wheezy/" style="color:#0067B7;" >Install LAMP (Apache, MySQL And PHP) On Debian 7 'Wheezy'</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/make-ubuntu-system-boot-sequence-graph-bootchart/" title="Make Your Ubuntu System Boot Sequence Graph With Bootchart" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2012/04/ubuntu-logo.png" alt="Make Your Ubuntu System Boot Sequence Graph With Bootchart" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/make-ubuntu-system-boot-sequence-graph-bootchart/" style="color:#0067B7;" >Make Your Ubuntu System Boot Sequence Graph With Bootchart</a></h2>	<!-- /roster_slideri -->
+			</div></div><!-- /roster_slide --><div class="roster_slide" >
+			<!-- roster_slide --><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/install-hide-ass-vpn-linux/" title="Install HideMyAss VPN in Linux" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/10/Hidemyass-Logo.png" alt="Install HideMyAss VPN in Linux" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/install-hide-ass-vpn-linux/" style="color:#0067B7;" >Install HideMyAss VPN in Linux</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/openkm-open-source-document-management-system/" title="OpenKM: An Open Source Document Management System" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/10/OPENKM_logo.png" alt="OpenKM: An Open Source Document Management System" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/openkm-open-source-document-management-system/" style="color:#0067B7;" >OpenKM: An Open Source Document Management System</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/google-chrome-30-comes-50-security-fixes/" title="Google Chrome 30 Comes With 50 Security Fixes" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/08/chrome-icon.png" alt="Google Chrome 30 Comes With 50 Security Fixes" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/google-chrome-30-comes-50-security-fixes/" style="color:#0067B7;" >Google Chrome 30 Comes With 50 Security Fixes</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/typecatcher-easy-way-download-install-google-web-fonts/" title="TypeCatcher: An Easy Way To Download And Install Google Web Fonts" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/10/typecatcher.jpg" alt="TypeCatcher: An Easy Way To Download And Install Google Web Fonts" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/typecatcher-easy-way-download-install-google-web-fonts/" style="color:#0067B7;" >TypeCatcher: An Easy Way To Download And Install Google Web Fonts</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/install-fonts-ubuntu/" title="Install Fonts in Ubuntu" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/10/font.png" alt="Install Fonts in Ubuntu" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/install-fonts-ubuntu/" style="color:#0067B7;" >Install Fonts in Ubuntu</a></h2>	<!-- /roster_slideri -->
+			</div></div><!-- /roster_slide --><div class="roster_slide" >
+			<!-- roster_slide --><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/says-linux-growing/" title="Who Says Linux is Not Growing?" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/06/tux-icon.png" alt="Who Says Linux is Not Growing?" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/says-linux-growing/" style="color:#0067B7;" >Who Says Linux is Not Growing?</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/install-spotify-client-linux/" title="Install Spotify Client In Ubuntu, Linux Mint" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/10/Spotify-Logo.png" alt="Install Spotify Client In Ubuntu, Linux Mint" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/install-spotify-client-linux/" style="color:#0067B7;" >Install Spotify Client In Ubuntu, Linux Mint</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/fix-e-get-lock-varlibaptlistslock-open-11-resource-temporarily-unavailable-ubuntu/" title="How To Fix &#8220;E: Could not get lock /var/lib/apt/lists/lock &#8211; open (11: Resource temporarily unavailable)&#8221; in Ubuntu" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2012/04/ubuntu-logo.png" alt="How To Fix &#8220;E: Could not get lock /var/lib/apt/lists/lock &#8211; open (11: Resource temporarily unavailable)&#8221; in Ubuntu" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/fix-e-get-lock-varlibaptlistslock-open-11-resource-temporarily-unavailable-ubuntu/" style="color:#0067B7;" >How To Fix E: Could not get lock /var/lib/apt/lists/lock - open (11: Resource temporarily unavailable) in Ubuntu</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/install-vlc-opensuse-12-2-12-3/" title="Install VLC On OpenSUSE 12.2 And 12.3" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2012/07/thumb-vlc-for-android.jpg" alt="Install VLC On OpenSUSE 12.2 And 12.3" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/install-vlc-opensuse-12-2-12-3/" style="color:#0067B7;" >Install VLC On OpenSUSE 12.2 And 12.3</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/ubuntu-13-10-beta-final-has-been-made-available-for-download/" title="Ubuntu 13.10 Beta Final is Available For Download" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2012/04/ubuntu-logo.png" alt="Ubuntu 13.10 Beta Final is Available For Download" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/ubuntu-13-10-beta-final-has-been-made-available-for-download/" style="color:#0067B7;" >Ubuntu 13.10 Beta Final is Available For Download</a></h2>	<!-- /roster_slideri -->
+			</div></div><!-- /roster_slide --><div class="roster_slide" >
+			<!-- roster_slide --><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/git-stretch/" title="Git (Distributed Version Control System) &#8211; Detailed, Yet Simpler" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/09/git-logo.png" alt="Git (Distributed Version Control System) &#8211; Detailed, Yet Simpler" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/git-stretch/" style="color:#0067B7;" >Git (Distributed Version Control System) - Detailed, Yet Simpler</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/vlc-2-1-0-rincewind-released/" title="VLC 2.1.0 &#8220;Rincewind&#8221; Has Been Released" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2012/05/VLC-logo.png" alt="VLC 2.1.0 &#8220;Rincewind&#8221; Has Been Released" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/vlc-2-1-0-rincewind-released/" style="color:#0067B7;" >VLC 2.1.0 Rincewind Has Been Released</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/install-mate-desktop-opensuse-12-3/" title="Install Mate-Desktop In OpenSUSE 12.3 And 12.2" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/06/OpenSUSE-Logo.jpg" alt="Install Mate-Desktop In OpenSUSE 12.3 And 12.2" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/install-mate-desktop-opensuse-12-3/" style="color:#0067B7;" >Install Mate-Desktop In OpenSUSE 12.3 And 12.2</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/friends-app-microblogging-client-social-networks/" title="Friends App: A Microblogging Client For Social Networks" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/06/20100716_ubuntu_logo.png" alt="Friends App: A Microblogging Client For Social Networks" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/friends-app-microblogging-client-social-networks/" style="color:#0067B7;" >Friends App: A Microblogging Client For Social Networks</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/removing-applications-using-terminal-ubuntu/" title="Removing Applications Using Terminal in Ubuntu" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/06/20100716_ubuntu_logo.png" alt="Removing Applications Using Terminal in Ubuntu" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/removing-applications-using-terminal-ubuntu/" style="color:#0067B7;" >Removing Applications Using Terminal in Ubuntu</a></h2>	<!-- /roster_slideri -->
+			</div></div><!-- /roster_slide --><div class="roster_slide" >
+			<!-- roster_slide --><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/xowa-offline-wikipedia-reader-editor/" title="XOWA : An Offline Wikipedia Reader And Editor" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/09/xowa.png" alt="XOWA : An Offline Wikipedia Reader And Editor" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/xowa-offline-wikipedia-reader-editor/" style="color:#0067B7;" >XOWA : An Offline Wikipedia Reader And Editor</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/uberstudent-linux-distribution-learners/" title="UberStudent, A  Linux Distribution For Learners" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/09/uberstudent-logo.png" alt="UberStudent, A  Linux Distribution For Learners" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/uberstudent-linux-distribution-learners/" style="color:#0067B7;" >UberStudent, A  Linux Distribution For Learners </a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/drizzle-database-cloud/" title="Drizzle: A Database For The Cloud" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/09/Drizzle.png" alt="Drizzle: A Database For The Cloud" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/drizzle-database-cloud/" style="color:#0067B7;" >Drizzle: A Database For The Cloud</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/steamos-steam-coming-new-operating-system/" title="SteamOS: Steam Is Coming To A New Operating System" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/09/Steam-logo.png" alt="SteamOS: Steam Is Coming To A New Operating System" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/steamos-steam-coming-new-operating-system/" style="color:#0067B7;" >SteamOS: Steam Is Coming To A New Operating System</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/schooltool-advanced-school-management-information-system/" title="SchoolTool: An Advanced School Management And Information System" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/09/schooltool.png" alt="SchoolTool: An Advanced School Management And Information System" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/schooltool-advanced-school-management-information-system/" style="color:#0067B7;" >SchoolTool: An Advanced School Management And Information System</a></h2>	<!-- /roster_slideri -->
+			</div></div><!-- /roster_slide --><div class="roster_slide" >
+			<!-- roster_slide --><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/gnome-3-10-release-candidate-rc-finally/" title="GNOME 3.10 Release Candidate (RC) is finally here" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/09/gnome_logo.gif" alt="GNOME 3.10 Release Candidate (RC) is finally here" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/gnome-3-10-release-candidate-rc-finally/" style="color:#0067B7;" >GNOME 3.10 Release Candidate (RC) is finally here</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/pear-os-8-linux-distribution-will-inspired-ios-7/" title="Pear OS 8 Linux Distribution Will Be Inspired by iOS 7" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/09/pear-os.png" alt="Pear OS 8 Linux Distribution Will Be Inspired by iOS 7" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/pear-os-8-linux-distribution-will-inspired-ios-7/" style="color:#0067B7;" > Pear OS 8 Linux Distribution Will Be Inspired by iOS 7</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/ubuntuzilla-easy-way-install-latest-mozilla-products/" title="Ubuntuzilla: An Easy Way To Install Latest Mozilla Software" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/09/ubuntuzilla.png" alt="Ubuntuzilla: An Easy Way To Install Latest Mozilla Software" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/ubuntuzilla-easy-way-install-latest-mozilla-products/" style="color:#0067B7;" >Ubuntuzilla: An Easy Way To Install Latest Mozilla Software</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/sparkleshare-opensource-dropbox-alternative/" title="SparkleShare: An Open Source Dropbox Alternative" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/09/SparkleShare.jpg" alt="SparkleShare: An Open Source Dropbox Alternative" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/sparkleshare-opensource-dropbox-alternative/" style="color:#0067B7;" >SparkleShare: An Open Source Dropbox Alternative</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/bambooinvoice-simple-opensource-online-invoicing-software/" title="BambooInvoice: A Simple, Opensource Online Invoicing Software" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/09/Bambooinvoice_logo.png" alt="BambooInvoice: A Simple, Opensource Online Invoicing Software" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/bambooinvoice-simple-opensource-online-invoicing-software/" style="color:#0067B7;" >BambooInvoice: A Simple, Opensource Online Invoicing Software</a></h2>	<!-- /roster_slideri -->
+			</div></div><!-- /roster_slide --><div class="roster_slide" >
+			<!-- roster_slide --><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/veetle-stream-broadcast-videos/" title="Veetle: Stream And Broadcast Videos" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/09/veetle.png" alt="Veetle: Stream And Broadcast Videos" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/veetle-stream-broadcast-videos/" style="color:#0067B7;" >Veetle: Stream And Broadcast Videos</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/munich-giving-ubuntu-linux-cds-citizens/" title="Munich Is Giving Out Ubuntu CDs To Its Citizens, What Are You Doing?" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2012/04/ubuntu-logo.png" alt="Munich Is Giving Out Ubuntu CDs To Its Citizens, What Are You Doing?" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/munich-giving-ubuntu-linux-cds-citizens/" style="color:#0067B7;" >Munich Is Giving Out Ubuntu CDs To Its Citizens, What Are You Doing?</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/firefox-24-released/" title="Firefox 24 Has Been Released" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/09/firefox-logo.png" alt="Firefox 24 Has Been Released" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/firefox-24-released/" style="color:#0067B7;" >Firefox 24 Has Been Released</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/grass-gis-geographic-information-system-software-geospatial-data-management/" title="GRASS GIS: Geographic Information System Software For Geospatial Data Management" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/09/Grass_GIS.png" alt="GRASS GIS: Geographic Information System Software For Geospatial Data Management" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/grass-gis-geographic-information-system-software-geospatial-data-management/" style="color:#0067B7;" >GRASS GIS: Geographic Information System Software For Geospatial Data Management</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/wine-1-7-available-for-ubuntu/" title="WINE 1.7 Available for Ubuntu" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2012/08/Wine.png" alt="WINE 1.7 Available for Ubuntu" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/wine-1-7-available-for-ubuntu/" style="color:#0067B7;" >WINE 1.7 Available for Ubuntu</a></h2>	<!-- /roster_slideri -->
+			</div></div><!-- /roster_slide --><div class="roster_slide" >
+			<!-- roster_slide --><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/padre-review-perl-scripting-environment/" title="Padre Review &#8211; Perl Scripting Environment" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/07/perl_logo.jpg" alt="Padre Review &#8211; Perl Scripting Environment" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/padre-review-perl-scripting-environment/" style="color:#0067B7;" >Padre Review - Perl Scripting Environment</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/package-detection-with-apt-file/" title="Package Detection with apt-file" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2012/06/tux1.png" alt="Package Detection with apt-file" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/package-detection-with-apt-file/" style="color:#0067B7;" >Package Detection with apt-file</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/organize-your-rss-and-social-network-feeds-under-one-roof-with-onefeed/" title="Organize All RSS and Social Network Feeds Under One Roof with Onefeed" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/07/Selection_010.bmp" alt="Organize All RSS and Social Network Feeds Under One Roof with Onefeed" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/organize-your-rss-and-social-network-feeds-under-one-roof-with-onefeed/" style="color:#0067B7;" >Organize All RSS and Social Network Feeds Under One Roof with Onefeed</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/how-to-get-email-notifications-for-new-updates-on-debianubuntu/" title="How to Get Email Notifications for Updates on Debian/Ubuntu" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/07/debian_ubuntu.jpg" alt="How to Get Email Notifications for Updates on Debian/Ubuntu" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/how-to-get-email-notifications-for-new-updates-on-debianubuntu/" style="color:#0067B7;" >How to Get Email Notifications for Updates on Debian/Ubuntu</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/manage-your-amarok-music-collection-with-mysql/" title="Manage Your Amarok Music Collection with MySQL" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/07/amarok-logo.jpg" alt="Manage Your Amarok Music Collection with MySQL" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/manage-your-amarok-music-collection-with-mysql/" style="color:#0067B7;" >Manage Your Amarok Music Collection with MySQL</a></h2>	<!-- /roster_slideri -->
+			</div></div><!-- /roster_slide --><div class="roster_slide" >
+			<!-- roster_slide --><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/resolve-slow-connexion-when-using-wifi-in-ubuntu-1104-natty-narwhal/" title="Resolve slow connexion when using wifi in ubuntu 13.10 Saucy Salamander , 13.04  and LinuxMint13" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2012/06/large_ubuntu.png" alt="Resolve slow connexion when using wifi in ubuntu 13.10 Saucy Salamander , 13.04  and LinuxMint13" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/resolve-slow-connexion-when-using-wifi-in-ubuntu-1104-natty-narwhal/" style="color:#0067B7;" >Resolve slow connexion when using wifi in ubuntu 13.10 Saucy Salamander , 13.04  and LinuxMint13</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/042013-top-things-to-do-after-installing-ubuntu-13-04-raring-ringtail/" title="Top Things to do After Installing Ubuntu 13.04 &#8216;Raring Ringtail&#8217;" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2012/04/ubuntu-logo.png" alt="Top Things to do After Installing Ubuntu 13.04 &#8216;Raring Ringtail&#8217;" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/042013-top-things-to-do-after-installing-ubuntu-13-04-raring-ringtail/" style="color:#0067B7;" >Top Things to do After Installing Ubuntu 13.04 'Raring Ringtail'</a></h2>	<!-- /roster_slideri -->
+			</div><div class="roster_slideri" style="background-color:transparent;border:1px solid #dddddd;width:120px;height:180px;">
+			<!-- roster_slideri --><a href="http://www.unixmen.com/how-to-upgrade-from-ubuntu-1004-1010-1104-to-ubuntu-1110-oneiric-ocelot-desktop-a-server/" title="Howto: Upgrade to Ubuntu 13.04 Raring Ringtail from 12.04, 12,10 | Desktop &amp; Server" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2011/09/upgrade-ubuntu12.10.png" alt="Howto: Upgrade to Ubuntu 13.04 Raring Ringtail from 12.04, 12,10 | Desktop &amp; Server" class="slider_thumbnail full roster_slider_thumbnail" width="110" style="float:none;margin:0 0px 0 0px;max-height:90px;border:0px solid #D8E7EE;width:110px;" /></a><h2 style="clear:none;line-height:15px;font-family:Georgia,serif;font-size:12px;font-weight:normal;font-style:normal;color:#0067B7;margin:0 0 5px 0;"><a href="http://www.unixmen.com/how-to-upgrade-from-ubuntu-1004-1010-1104-to-ubuntu-1110-oneiric-ocelot-desktop-a-server/" style="color:#0067B7;" >Howto: Upgrade to Ubuntu 13.04 Raring Ringtail from 12.04, 12,10 | Desktop & Server</a></h2>	<!-- /roster_slideri -->
+			</div></div><!-- /roster_slide -->
+		</div> <div id="roster_slider_1_next" class="roster_next" style="background: transparent url(http://180016988.r.cdn77.net/wp-content/plugins/roster-slider/css/skins/default/buttons/default/next.png) no-repeat 0 0;top:45%;"></div><div id="roster_slider_1_prev" class="roster_prev" style="background: transparent url(http://180016988.r.cdn77.net/wp-content/plugins/roster-slider/css/skins/default/buttons/default/prev.png) no-repeat 0 0;top:45%;"></div>
+	</div></div>  
+  
+  
+  <div class="body">
+	<div class="lftPnl">
+		
+				<div id="post-15400" class="post-15400 post type-post status-publish format-standard hentry category-hosting category-linux-distributions category-linux-mint category-linux-tutorials category-linux-webhosting category-opensource category-programming category-software category-ubuntu tag-php tag-yii tag-yii-framework">
+					<div class="leftDiv">
+                    <div style="margin-bottom:15px"><a href="https://plus.google.com/110820376491877300065/posts"><img src="http://180016988.r.cdn77.net/wp-content/uploads/google-plus.gif" alt="Google Plus" /></a></div>
+				<div style="left:20px; float:left; width:60px; height:60px"><a href="http://www.unixmen.com/author/sk/"><img alt='' src='http://0.gravatar.com/avatar/499ccc1154e9b8569b87413434220b91?s=60&amp;d=&amp;r=G' class='avatar avatar-60 photo' height='60' width='60' /></a></div>
+				<div style="margin-left:70px"><h1 class="title">Install Yii PHP Framework on Ubuntu/Debian</h1>
+					<p class="meta">
+						Written by <a href="http://www.unixmen.com/author/sk/" title="SK">SK</a> on <time datetime="2013-06-25" pubdate>June 25, 2013</time>. Posted in <a href="http://www.unixmen.com/category/hosting/" title="View all posts in Hosting" rel="category tag">Hosting</a>, <a href="http://www.unixmen.com/category/linux-distributions/" title="View all posts in Linux distributions" rel="category tag">Linux distributions</a>, <a href="http://www.unixmen.com/category/linux-distributions/linux-mint/" title="View all posts in Linux Mint" rel="category tag">Linux Mint</a>, <a href="http://www.unixmen.com/category/linux-tutorials/" title="View all posts in Linux tutorials" rel="category tag">Linux tutorials</a>, <a href="http://www.unixmen.com/category/news/linux-webhosting/" title="View all posts in Linux webhosting" rel="category tag">Linux webhosting</a>, <a href="http://www.unixmen.com/category/opensource/" title="View all posts in opensource" rel="category tag">opensource</a>, <a href="http://www.unixmen.com/category/news/programming/" title="View all posts in programming" rel="category tag">programming</a>, <a href="http://www.unixmen.com/category/news/software/" title="View all posts in Software" rel="category tag">Software</a>, <a href="http://www.unixmen.com/category/linux-distributions/ubuntu/" title="View all posts in Ubuntu" rel="category tag">Ubuntu</a>					</p>				
+				</div>
+				<ul id="sharebarx">
+<li><!-- Place this tag where you want the +1 button to render. -->
+<div class="g-plusone"></div>
+
+<!-- Place this tag after the last +1 button tag. -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script></li><li><a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="unixmen">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></li><li><iframe src="http://www.facebook.com/plugins/like.php?href=http://www.unixmen.com/install-yii-php-framework-on-ubuntu-debian/&layout=button_count&show_faces=false&width=85&action=like&colorscheme=light&height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:85px; height:21px;" allowTransparency="true"></iframe></li><li><script type="text/javascript" src="http://reddit.com/static/button/button1.js"></script></li><li><script src="http://www.stumbleupon.com/hostedbadge.php?s=2"></script></li><li><span class="st_facebook_hcount" displayText="Share"></span><span class="st_email" displayText="Email"></span><span class="st_sharethis" displayText="Share"></span></li></ul>				
+      <div class="opnOpffice">
+		    <script type="text/javascript">
+    // <![CDATA[
+        var disqus_shortname = 'unixmensite';
+        (function () {
+            var nodes = document.getElementsByTagName('span');
+            for (var i = 0, url; i < nodes.length; i++) {
+                if (nodes[i].className.indexOf('dsq-postid') != -1) {
+                    nodes[i].parentNode.setAttribute('data-disqus-identifier', nodes[i].getAttribute('rel'));
+                    url = nodes[i].parentNode.href.split('#', 1);
+                    if (url.length == 1) { url = url[0]; }
+                    else { url = url[1]; }
+                    nodes[i].parentNode.href = url + '#disqus_thread';
+                }
+            }
+            var s = document.createElement('script'); s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + 'disqus.com/forums/' + disqus_shortname + '/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    //]]>
+    </script>
+<ul id="sharebar" style="background:#;border-color:#;">
+<li></li><li><a href="http://twitter.com/share" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://twitter.com']);" class="twitter-share-button" data-count="vertical" data-via="unixmen">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></li><li><iframe src="http://www.facebook.com/plugins/like.php?href=http://www.unixmen.com/install-yii-php-framework-on-ubuntu-debian/&layout=box_count&show_faces=false&width=60&action=like&colorscheme=light&height=45" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:45px; height:60px;" allowTransparency="true"></iframe></li><li><script type="text/javascript" src="http://reddit.com/static/button/button2.js"></script></li><li><script src="http://www.stumbleupon.com/hostedbadge.php?s=5"></script></li><li><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><span class="st_facebook_vcount" displayText="Share"></span><span class="st_email" displayText="Email"></span><span class="st_sharethis" displayText="Share"></span></li></ul><ul id="sharebarx">
+<li><!-- Place this tag where you want the +1 button to render. -->
+<div class="g-plusone"></div>
+
+<!-- Place this tag after the last +1 button tag. -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script></li><li><a href="http://twitter.com/share" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://twitter.com']);" class="twitter-share-button" data-count="horizontal" data-via="unixmen">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></li><li><iframe src="http://www.facebook.com/plugins/like.php?href=http://www.unixmen.com/install-yii-php-framework-on-ubuntu-debian/&layout=button_count&show_faces=false&width=85&action=like&colorscheme=light&height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:85px; height:21px;" allowTransparency="true"></iframe></li><li><script type="text/javascript" src="http://reddit.com/static/button/button1.js"></script></li><li><script src="http://www.stumbleupon.com/hostedbadge.php?s=2"></script></li><li><span class="st_facebook_hcount" displayText="Share"></span><span class="st_email" displayText="Email"></span><span class="st_sharethis" displayText="Share"></span></li></ul><p><strong><a href="http://www.yiiframework.com/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.yiiframework.com']);" target="_blank">Yii</a></strong> is an open source, fast, secure and as well as high performance PHP framework used for developing large-scale web applications. In this walk-through let us learn how to install Yii on Ubuntu/Debian and its derivatives.</p>
+<p><strong>Install Yii On Ubuntu</strong></p>
+<p>I tested this under Ubuntu 12.10 Server, although it will work on Ubuntu/Debian new editions. Well, let us get started!</p>
+<p>If you haven&#8217;t installed <strong>Apache</strong> and <strong>PHP</strong>, install them with following command:</p>
+<pre><strong>sk@server1:~$ sudo apt-get install apache2 php5 libapache2-mod-php5</strong></pre>
+<p>If things goes well, you should see the Apache home page as shown below. Navigate to <strong>http://ip-address/</strong> from your browser to see Apache home page.</p>
+<p><a href="http://180016988.r.cdn77.net/wp-content/uploads/2013/06/192.168.1.201-Chromium_007.png" ><img class="aligncenter size-full wp-image-15404" alt="192.168.1.201 - Chromium_007" src="http://180016988.r.cdn77.net/wp-content/uploads/2013/06/192.168.1.201-Chromium_007.png" width="500" height="302" /></a></p>
+<p><strong>Create MySQL database for Yii</strong></p>
+<p>Let us create a database &#8216;<strong>yiidb</strong>&#8216; and a database user called &#8216;<strong>yiiuser</strong>&#8216; with password &#8216;<strong>ubuntu</strong>&#8216;. Change these values as per your scenario:</p>
+<pre><strong>sk@server1:~$ <span style="color: #ff0000">mysql -u root -p</span></strong>
+<strong>Enter password: </strong>
+<strong>Welcome to the MySQL monitor. Commands end with ; or \g.</strong>
+<strong>Your MySQL connection id is 45</strong>
+<strong>Server version: 5.5.31-0ubuntu0.12.10.1 (Ubuntu)
+
+</strong><strong>Copyright (c) 2000, 2013, Oracle and/or its affiliates. All rights reserved. 
+
+</strong><strong>Oracle is a registered trademark of Oracle Corporation and/or its </strong><strong>affiliates.</strong><strong> Other names may be trademarks of their respective </strong><strong>owners.
+
+</strong><strong>Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+</strong><strong>mysql&gt; <span style="color: #ff0000">create database yiidb;</span>
+
+</strong><strong>Query OK, 1 row affected (0.02 sec)
+
+</strong><strong>mysql&gt; <span style="color: #ff0000">GRANT ALL PRIVILEGES ON yiidb.* TO 'yiiuser' IDENTIFIED BY 'ubuntu';</span>
+
+</strong><strong>Query OK, 0 rows affected (0.00 sec)
+
+</strong><strong>mysql&gt; <span style="color: #ff0000">flush privileges;</span>
+
+</strong><strong>Query OK, 0 rows affected (0.01 sec)
+
+</strong><strong>mysql&gt; <span style="color: #ff0000">exit</span>
+
+</strong><strong>Bye</strong></pre>
+<p>Now grab the latest version from the <a href="http://www.yiiframework.com/download/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.yiiframework.com']);" target="_blank">official download page</a> or simply download it via terminal as shown below:</p>
+<pre><strong>sk@server1:~$ wget http://yii.googlecode.com/files/yii-1.1.13.e9e4a0.tar.gz</strong></pre>
+<p>Extract the downloaded file:</p>
+<pre><strong>sk@server1:~$ tar zxvf yii-1.1.13.e9e4a0.tar.gz</strong></pre>
+<p>It will be extracted as a folder called <strong>&#8220;yii-1.1.13.e9e4a0&#8243; </strong>in your current directory. Change to this directory and move all contents to <strong>/var/www/</strong> folder as shown below:</p>
+<pre><strong>sk@server1:~$ sudo mv yii-1.1.13.e9e4a0/ /var/www/yii</strong></pre>
+<p>Now create a directory under <strong>/var/www/yii/</strong> directory for a sample project. Let&#8217;s call it as <strong>unixmen</strong>. So here I create a folder called <strong>unixmen</strong> under <strong>/var/www/yii/</strong> directory:</p>
+<pre><strong>sk@server1:~$ sudo mkdir /var/www/yii/unixmen</strong></pre>
+<p>Assign the full permission for unixmen directory:</p>
+<pre><strong>sk@server1:~$ sudo chmod -R 777 /var/www/yii/unixmen/</strong></pre>
+<p>Enter the following command to begin installation:</p>
+<pre><strong>sk@server1:~$ <span style="color: #ff0000">php /var/www/yii/framework/yiic.php webapp /var/www/yii/unixmen/</span></strong>
+<strong> Create a Web application under '/var/www/yii/unixmen'? (yes|no) [no]:<span style="color: #ff0000">yes</span></strong>
+<strong> mkdir /var/www/yii/unixmen/css</strong>
+<strong> generate css/screen.css</strong>
+<strong> generate css/bg.gif</strong>
+<strong> generate css/form.css</strong>
+<strong> generate css/ie.css</strong>
+<strong> generate css/print.css</strong>
+<strong> generate css/main.css</strong>
+<strong> generate index-test.php</strong>
+<strong> generate index.php</strong>
+<strong> mkdir /var/www/yii/unixmen/images</strong>
+<strong> mkdir /var/www/yii/unixmen/themes</strong>
+<strong> mkdir /var/www/yii/unixmen/themes/classic</strong>
+<strong> mkdir /var/www/yii/unixmen/themes/classic/views</strong>
+<strong> mkdir /var/www/yii/unixmen/themes/classic/views/system</strong>
+<strong> mkdir /var/www/yii/unixmen/themes/classic/views/layouts</strong>
+<strong> generate themes/classic/views/.htaccess</strong>
+<strong> mkdir /var/www/yii/unixmen/themes/classic/views/site</strong>
+<strong> mkdir /var/www/yii/unixmen/assets</strong>
+<strong> mkdir /var/www/yii/unixmen/protected</strong>
+<strong> mkdir /var/www/yii/unixmen/protected/data</strong>
+<strong> generate protected/data/testdrive.db</strong>
+<strong> generate protected/data/schema.sqlite.sql</strong>
+<strong> generate protected/data/schema.mysql.sql</strong>
+<strong> mkdir /var/www/yii/unixmen/protected/controllers</strong>
+<strong> generate protected/controllers/SiteController.php</strong>
+<strong> mkdir /var/www/yii/unixmen/protected/tests</strong>
+<strong> generate protected/tests/phpunit.xml</strong>
+<strong> mkdir /var/www/yii/unixmen/protected/tests/fixtures</strong>
+<strong> mkdir /var/www/yii/unixmen/protected/tests/unit</strong>
+<strong> generate protected/tests/WebTestCase.php</strong>
+<strong> mkdir /var/www/yii/unixmen/protected/tests/functional</strong>
+<strong> generate protected/tests/functional/SiteTest.php</strong>
+<strong> generate protected/tests/bootstrap.php</strong>
+<strong> mkdir /var/www/yii/unixmen/protected/tests/report</strong>
+<strong> mkdir /var/www/yii/unixmen/protected/runtime</strong>
+<strong> mkdir /var/www/yii/unixmen/protected/messages</strong>
+<strong> mkdir /var/www/yii/unixmen/protected/config</strong>
+<strong> generate protected/config/main.php</strong>
+<strong> generate protected/config/console.php</strong>
+<strong> generate protected/config/test.php</strong>
+<strong> mkdir /var/www/yii/unixmen/protected/extensions</strong>
+<strong> mkdir /var/www/yii/unixmen/protected/views</strong>
+<strong> mkdir /var/www/yii/unixmen/protected/views/layouts</strong>
+<strong> generate protected/views/layouts/main.php</strong>
+<strong> generate protected/views/layouts/column1.php</strong>
+<strong> generate protected/views/layouts/column2.php</strong>
+<strong> mkdir /var/www/yii/unixmen/protected/views/site</strong>
+<strong> generate protected/views/site/login.php</strong>
+<strong> generate protected/views/site/index.php</strong>
+<strong> generate protected/views/site/contact.php</strong>
+<strong> mkdir /var/www/yii/unixmen/protected/views/site/pages</strong>
+<strong> generate protected/views/site/pages/about.php</strong>
+<strong> generate protected/views/site/error.php</strong>
+<strong> mkdir /var/www/yii/unixmen/protected/components</strong>
+<strong> generate protected/components/UserIdentity.php</strong>
+<strong> generate protected/components/Controller.php</strong>
+<strong> mkdir /var/www/yii/unixmen/protected/commands</strong>
+<strong> mkdir /var/www/yii/unixmen/protected/commands/shell</strong>
+<strong> generate protected/yiic.php</strong>
+<strong> mkdir /var/www/yii/unixmen/protected/migrations</strong>
+<strong> mkdir /var/www/yii/unixmen/protected/models</strong>
+<strong> generate protected/models/ContactForm.php</strong>
+<strong> generate protected/models/LoginForm.php</strong>
+<strong> generate protected/.htaccess</strong>
+<strong> generate protected/yiic</strong>
+<strong> generate protected/yiic.bat
+
+</strong><strong>Your application has been created successfully under /var/www/yii/unixmen.</strong></pre>
+<p>Now test the new project by navigating to <strong>http://ip-address/yii/unixmen</strong> from your browser.</p>
+<p><a href="http://180016988.r.cdn77.net/wp-content/uploads/2013/06/My-Web-Application-Chromium_008.png" ><img class="aligncenter size-full wp-image-15405" alt="My Web Application - Chromium_008" src="http://180016988.r.cdn77.net/wp-content/uploads/2013/06/My-Web-Application-Chromium_008.png" width="500" height="302" /></a></p>
+<p>Yii Framework has been installed now.</p>
+<p><strong>Enable Yii code generation tool GiiModule</strong></p>
+<p>Starting from version <strong>1.1.2</strong>, Yii is equipped with a web-based code generation tool called <strong>GiiModule</strong>. GiiModule is a module which provides web-based code generation capabilities.<i><br />
+</i></p>
+<p>To enable GiiModule, edit the <strong>main.php</strong> file found under /<strong>var/www/yii/unixmen/protected/config/</strong> directory:</p>
+<pre><strong>sk@server1:~$ sudo nano var/www/yii/unixmen/protected/config/main.php</strong></pre>
+<p>Scroll down to <strong>modules</strong> section. It will look like as shown below:</p>
+<pre><strong>[...]
+'modules'=&gt;array(</strong>
+<strong> // uncomment the following to enable the Gii tool</strong>
+<span style="color: #ff0000"><strong> /*</strong></span>
+<strong> 'gii'=&gt;array(</strong>
+<strong> 'class'=&gt;'system.gii.GiiModule',</strong>
+<strong> 'password'=&gt;'Enter Your Password Here',</strong>
+<strong> // If removed, Gii defaults to localhost only. Edit car$</strong>
+<strong> 'ipFilters'=&gt;array('127.0.0.1','::1'),</strong>
+<strong> ),</strong>
+<span style="color: #ff0000"><strong> */</strong></span>
+<strong> ),
+[...]</strong></pre>
+<p>Remove  <strong>&#8220;/*&#8221;</strong> and <strong>&#8220;*/&#8221;</strong> lines to uncomment and enter your <strong>ip address series</strong> in the <strong>ipFilters</strong> line. And specify the password to login to code generator. I use <strong>ubuntu</strong> as my password. So after modification, it will look like as follows:</p>
+<pre><strong>[...]
+'modules'=&gt;array(</strong>
+<strong> // uncomment the following to enable the Gii tool</strong>
+<strong>
+'gii'=&gt;array(
+
+</strong><strong> 'class'=&gt;'system.gii.GiiModule',
+
+</strong><strong> 'password'=&gt;'<span style="color: #ff0000">ubuntu</span>',
+
+</strong><strong> // If removed, Gii defaults to localhost only. Edit car$
+
+ 'ipFilters'=&gt;array('127.0.0.1','<span style="color: #ff0000">192.168.1.*</span>'),
+</strong><strong> ),
+</strong><strong>),
+</strong><strong>[...]</strong></pre>
+<p>Scroll down further, you will find <strong>db</strong> section looks like as follows:</p>
+<pre><strong>[...]
+/*</strong>
+<strong> 'db'=&gt;array(</strong>
+<strong> 'connectionString' =&gt; 'mysql:host=localhost;dbname=test$</strong>
+<strong> 'emulatePrepare' =&gt; true,</strong>
+<strong> 'username' =&gt; 'root',</strong>
+<strong> 'password' =&gt; '',</strong>
+<strong> 'charset' =&gt; 'utf8',</strong>
+<strong> ),</strong>
+<strong> */
+[...]</strong></pre>
+<p>Remove  <strong>&#8220;/*&#8221;</strong> and <strong>&#8220;*/&#8221;</strong> lines to uncomment and enter your database name, database username and password. So after the modification, it will look like as follows:</p>
+<pre><strong>[...]
+<strong>// uncomment the following to use a MySQL database</strong>
+'db'=&gt;array(</strong>
+<strong> 'connectionString' =&gt; 'mysql:host=localhost;dbname=<span style="color: #ff0000">yiidb</span>',</strong>
+<strong> 'emulatePrepare' =&gt; true,</strong>
+<strong> 'username' =&gt; 'root',</strong>
+<strong> 'password' =&gt; '<span style="color: #ff0000">ubuntu</span>',</strong>
+<strong> 'charset' =&gt; 'utf8',</strong>
+<strong> ),
+[...]</strong></pre>
+<p>Save and exit the file. Now try to access the GiiModule by navigating to <strong>http://ip-address/yii/unixmen/index.php?r=gii</strong> from your browser.</p>
+<p>Enter the password to login to yii code generator. In my case its <strong>ubuntu</strong>.</p>
+<p><a href="http://180016988.r.cdn77.net/wp-content/uploads/2013/06/Gii-Login-Generator-Chromium_011.png" ><img class="aligncenter size-full wp-image-15415" alt="Gii - Login Generator - Chromium_011" src="http://180016988.r.cdn77.net/wp-content/uploads/2013/06/Gii-Login-Generator-Chromium_011.png" width="500" height="302" /></a></p>
+<p>Now you will able to login to GiiModule code generator.</p>
+<p><a href="http://180016988.r.cdn77.net/wp-content/uploads/2013/06/Gii-a-Web-based-code-generator-for-Yii-Chromium_012.png" ><img class="aligncenter size-full wp-image-15416" alt="Gii: a Web-based code generator for Yii - Chromium_012" src="http://180016988.r.cdn77.net/wp-content/uploads/2013/06/Gii-a-Web-based-code-generator-for-Yii-Chromium_012.png" width="500" height="302" /></a></p>
+<p>That;s it. Start using Yii. I highly recommend to refer the <a href="http://www.yiiframework.com/wiki/250/yii-for-beginners" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.yiiframework.com']);" target="_blank">Yii Wiki page</a> for beginners.</p>
+
+<!-- Quick Adsense WordPress Plugin: http://quicksense.net/ -->
+<div style="float:none;margin:10px 0 10px 0;text-align:center;">
+<div class="box-info" style="text-align: justify;">For questions please refer to our Q/A forum at : <a href="http://ask.unixmen.com" >http://ask.unixmen.com/ </a></div>
+<!-- BuySellAds Zone Code -->
+<div id="bsap_1289091" class="bsarocks bsap_98a5476e4186edb0166977da67937f0c"></div>
+<!-- End BuySellAds Zone Code -->
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-2917661377128354";
+/* 336X280-Content Top right ad */
+google_ad_slot = "7884474091";
+google_ad_width = 336;
+google_ad_height = 280;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+<div style="font-size:0px;height:0px;line-height:0px;margin:0;padding:0;clear:both"></div><div class='yarpp-related'>
+<p>Related posts:</p><ol>
+<li><a href='http://www.unixmen.com/install-easy-hosting-control-panel-ehcp-in-ubuntu-1210-server-debian-6/' rel='bookmark' title='Install Easy Hosting Control Panel (EHCP) in Ubuntu 12.10 Server / Debian 6'>Install Easy Hosting Control Panel (EHCP) in Ubuntu 12.10 Server / Debian 6</a></li>
+<li><a href='http://www.unixmen.com/how-to-install-utorrent-on-ubuntu-debian/' rel='bookmark' title='How to Install uTorrent Client on Ubuntu/Debian/Linux Mint'>How to Install uTorrent Client on Ubuntu/Debian/Linux Mint</a></li>
+<li><a href='http://www.unixmen.com/install-and-configure-monit-on-centos-rhel-ubuntu-debian/' rel='bookmark' title='Install and Configure Monit on CentOS/RHEL/Ubuntu/Debian'>Install and Configure Monit on CentOS/RHEL/Ubuntu/Debian</a></li>
+<li><a href='http://www.unixmen.com/how-to-install-and-configure-subversion-server-on-ubuntu-13-04-server/' rel='bookmark' title='How to Install and Configure Subversion Server on Ubuntu 13.04 Server'>How to Install and Configure Subversion Server on Ubuntu 13.04 Server</a></li>
+<li><a href='http://www.unixmen.com/script-to-install-and-secure-apache2-php5-mysql5-in-ubuntudebian/' rel='bookmark' title='Script to Install and Secure Apache2 PHP5 MySQL5 in  Ubuntu/Debian'>Script to Install and Secure Apache2 PHP5 MySQL5 in  Ubuntu/Debian</a></li>
+</ol>
+<img src='http://yarpp.org/pixels/9a49b9534a4a64c5fda2537c7da5b283'/>
+</div>
+
+      </div>
+      <div style="text-align:center"></div>
+      <div style="text-align:center"></div>
+      <div class="tag-links"><ul><a href="http://www.unixmen.com/tag/php/" rel="tag">PHP</a><a href="http://www.unixmen.com/tag/yii/" rel="tag">yii</a><a href="http://www.unixmen.com/tag/yii-framework/" rel="tag">Yii Framework</a></ul></div>
+		<p class="links">
+		<a href="http://www.unixmen.com/install-yii-php-framework-on-ubuntu-debian/#comments" title="Comment on Install Yii PHP Framework on Ubuntu/Debian">4 Comment(s)</a>		</p>
+		</div>
+				</div><!-- #post-## -->
+			<section class="author-box clearfix">
+		
+				<img alt='' src='http://0.gravatar.com/avatar/499ccc1154e9b8569b87413434220b91?s=96&amp;d=&amp;r=G' class='avatar avatar-96 photo' height='96' width='96' />				
+				<h3 class="name">SK</h3>
+				
+				<div class="description">I'm Senthilkumar a.k.a SK, a Linux Admin &amp; Tech writer from Tamilnadu, India. I love very much to write about Linux, Open Source, Computers and Internet to help newbies of Linux and Open Source. For any queries, suggestions and comments, please feel free to contact me at sk@unixmen.com, ask2sk@in.com.</div>
+
+			</section>
+							
+<div id="disqus_thread">
+                    <div id="dsq-content">
+
+
+            <ul id="dsq-comments">
+                    <li class="comment even thread-even depth-1" id="dsq-comment-12753">
+        <div id="dsq-comment-header-12753" class="dsq-comment-header">
+            <cite id="dsq-cite-12753">
+                <span id="dsq-author-user-12753">Partha S Sengupta</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-12753" class="dsq-comment-body">
+            <div id="dsq-comment-message-12753" class="dsq-comment-message"><p>Very useful article. Thanks.<br />
+Partha</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-13421">
+        <div id="dsq-comment-header-13421" class="dsq-comment-header">
+            <cite id="dsq-cite-13421">
+                <span id="dsq-author-user-13421">Wann Fallen</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-13421" class="dsq-comment-body">
+            <div id="dsq-comment-message-13421" class="dsq-comment-message"><p>I&#8217;m thank very much to you! All is doing!!!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-13678">
+        <div id="dsq-comment-header-13678" class="dsq-comment-header">
+            <cite id="dsq-cite-13678">
+                <span id="dsq-author-user-13678">Christina Enriquez</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-13678" class="dsq-comment-body">
+            <div id="dsq-comment-message-13678" class="dsq-comment-message"><p>Thank You very much! this is very useful</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-13954">
+        <div id="dsq-comment-header-13954" class="dsq-comment-header">
+            <cite id="dsq-cite-13954">
+                <span id="dsq-author-user-13954">vaijanath</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-13954" class="dsq-comment-body">
+            <div id="dsq-comment-message-13954" class="dsq-comment-message"><p>I&#8217;m not getting the login screen for gii tool..I&#8217;m done every configuration and i have enabled the gii and mysql database in /protected/config/main.php.</p>
+<p>Here is my /protected/config/main.php.</p>
+<p>dirname(__FILE__).DIRECTORY_SEPARATOR.&#8217;..&#8217;,</p>
+<p>	&#8216;name&#8217;=&gt;&#8217;My Web Application&#8217;,</p>
+<p>	// preloading &#8216;log&#8217; component</p>
+<p>	&#8216;preload&#8217;=&gt;array(&#8216;log&#8217;),</p>
+<p>	// autoloading model and component classes</p>
+<p>	&#8216;import&#8217;=&gt;array(</p>
+<p>		&#8216;application.models.*&#8217;,</p>
+<p>		&#8216;application.components.*&#8217;,</p>
+<p>	),</p>
+<p>	&#8216;modules&#8217;=&gt;array(</p>
+<p>		// uncomment the following to enable the Gii tool</p>
+<p>		&#8216;gii&#8217;=&gt;array(</p>
+<p>			&#8216;class&#8217;=&gt;&#8217;system.gii.GiiModule&#8217;,</p>
+<p>			&#8216;password&#8217;=&gt;&#8217;vediclabs&#8217;,</p>
+<p>			// If removed, Gii defaults to localhost only. Edit carefully to taste.</p>
+<p>			&#8216;ipFilters&#8217;=&gt;array(&#8217;127.0.0.1&#8242;,&#8217;::1&#8242;),</p>
+<p>		),</p>
+<p>	),</p>
+<p>	// application components</p>
+<p>	&#8216;components&#8217;=&gt;array(</p>
+<p>		&#8216;user&#8217;=&gt;array(</p>
+<p>			// enable cookie-based authentication</p>
+<p>			&#8216;allowAutoLogin&#8217;=&gt;true,</p>
+<p>		),</p>
+<p>		// uncomment the following to enable URLs in path-format</p>
+<p>		&#8216;urlManager&#8217;=&gt;array(</p>
+<p>			&#8216;urlFormat&#8217;=&gt;&#8217;path&#8217;,</p>
+<p>			&#8216;rules&#8217;=&gt;array(</p>
+<p>				&#8216;/&#8217;=&gt;&#8217;/view&#8217;,</p>
+<p>				&#8216;//&#8217;=&gt;&#8217;/',</p>
+<p>				&#8216;/&#8217;=&gt;&#8217;/',</p>
+<p>			),</p>
+<p>		),</p>
+<p>		/*</p>
+<p>		&#8216;db&#8217;=&gt;array(</p>
+<p>			&#8216;connectionString&#8217; =&gt; &#8216;sqlite:&#8217;.dirname(__FILE__).&#8217;/../data/testdrive.db&#8217;,</p>
+<p>		),*/</p>
+<p>		// uncomment the following to use a MySQL database</p>
+<p>		&#8216;db&#8217;=&gt;array(</p>
+<p>			&#8216;connectionString&#8217; =&gt; &#8216;mysql:host=localhost;dbname=testdrive&#8217;,</p>
+<p>			&#8216;emulatePrepare&#8217; =&gt; true,</p>
+<p>			&#8216;username&#8217; =&gt; &#8216;root&#8217;,</p>
+<p>			&#8216;password&#8217; =&gt; &#8216;vediclabs&#8217;,</p>
+<p>			&#8216;charset&#8217; =&gt; &#8216;utf8&#8242;,</p>
+<p>		),</p>
+<p>		&#8216;errorHandler&#8217;=&gt;array(</p>
+<p>			// use &#8216;site/error&#8217; action to display errors</p>
+<p>			&#8216;errorAction&#8217;=&gt;&#8217;site/error&#8217;,</p>
+<p>		),</p>
+<p>		&#8216;log&#8217;=&gt;array(</p>
+<p>			&#8216;class&#8217;=&gt;&#8217;CLogRouter&#8217;,</p>
+<p>			&#8216;routes&#8217;=&gt;array(</p>
+<p>				array(</p>
+<p>					&#8216;class&#8217;=&gt;&#8217;CFileLogRoute&#8217;,</p>
+<p>					&#8216;levels&#8217;=&gt;&#8217;error, warning&#8217;,</p>
+<p>				),</p>
+<p>				// uncomment the following to show log messages on web pages</p>
+<p>				/*</p>
+<p>				array(</p>
+<p>					&#8216;class&#8217;=&gt;&#8217;CWebLogRoute&#8217;,</p>
+<p>				),*/</p>
+<p>			),</p>
+<p>		),</p>
+<p>	),</p>
+<p>	// application-level parameters that can be accessed</p>
+<p>	// using Yii::app()-&gt;params['paramName']</p>
+<p>	&#8216;params&#8217;=&gt;array(</p>
+<p>		// this is used in contact page</p>
+<p>		&#8216;adminEmail&#8217;=&gt;&#8217;vaijanath@vediclabs.com&#8217;,</p>
+<p>	),</p>
+<p>);</p>
+<p> but its not taking me to login screen. It directly shows :</p>
+<p>Welcome to Yii Code Generator!</p>
+<p>You may use the following generators to quickly build up your Yii application:</p>
+<p>Have i missed something? Somebody please help me &#8230;</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+            </ul>
+
+
+        </div>
+
+    </div>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    var disqus_url = 'http://www.unixmen.com/install-yii-php-framework-on-ubuntu-debian/';
+    var disqus_identifier = '15400 http://www.unixmen.com/?p=15400';
+    var disqus_container_id = 'disqus_thread';
+    var disqus_domain = 'disqus.com';
+    var disqus_shortname = 'unixmensite';
+    var disqus_title = "Install Yii PHP Framework on Ubuntu\/Debian";
+        var disqus_config = function () {
+        var config = this; // Access to the config object
+        config.language = '';
+
+        /*
+           All currently supported events:
+            * preData — fires just before we request for initial data
+            * preInit - fires after we get initial data but before we load any dependencies
+            * onInit  - fires when all dependencies are resolved but before dtpl template is rendered
+            * afterRender - fires when template is rendered but before we show it
+            * onReady - everything is done
+         */
+
+        config.callbacks.preData.push(function() {
+            // clear out the container (its filled for SEO/legacy purposes)
+            document.getElementById(disqus_container_id).innerHTML = '';
+        });
+                config.callbacks.onReady.push(function() {
+            // sync comments in the background so we don't block the page
+            var script = document.createElement('script');
+            script.async = true;
+            script.src = '?cf_action=sync_comments&post_id=15400';
+
+            var firstScript = document.getElementsByTagName( "script" )[0];
+            firstScript.parentNode.insertBefore(script, firstScript);
+        });
+                    };
+/* ]]> */
+</script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    var DsqLocal = {
+        'trackbacks': [
+        ],
+        'trackback_url': "http:\/\/www.unixmen.com\/install-yii-php-framework-on-ubuntu-debian\/trackback\/"    };
+/* ]]> */
+</script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.' + 'disqus.com' + '/embed.js?pname=wordpress&pver=2.74';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+/* ]]> */
+</script>
+
+
+		
+
+
+</div>
+
+<div class="rightPnl">
+<div class="module">
+<h3 class="module-title">Like us on Facebook</h3>
+<div class="execphpwidget">
+				
+			<div class="execphpwidget"><div class="fb-like-box" data-href="http://www.facebook.com/pages/Unixmen/272714361685" data-width="292" data-show-faces="false" data-stream="false" data-header="false"></div></div>
+					
+			<div class="execphpwidget"><!-- BuySellAds Zone Code -->
+<div id="bsap_1263938" class="bsarocks bsap_98a5476e4186edb0166977da67937f0c"></div>
+<!-- End BuySellAds Zone Code --></div>
+					
+			<div class="execphpwidget"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-2917661377128354";
+/* 300X250 directory */
+google_ad_slot = "2262590223";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+		</div>
+</div>
+    
+<div class="module">
+<h3 class="module-title">This week Top Posts <img src="http://180016988.r.cdn77.net/wp-content/themes/unimax/images/hot.jpg" alt="" /></h3>
+<div class="post1">
+	<!-- Wordpress Popular Posts Plugin v2.3.7 [W] [daily] [views] [regular] -->
+
+<ul class="wpp-list">
+<li><a href="http://www.unixmen.com/top-things-installing-ubuntu-13-10/" title="Top Things To Do After Installing Ubuntu 13.10 &#039;Saucy Salamander&#039;" target="_self"><img src="http://180016988.r.cdn77.net/wp-content/uploads/2012/04/ubuntu-logo-50x50.png" alt="" border="0" width="50" height="50" class="wpp-thumbnail wpp_cached_thumb wpp_featured" /></a><a href="http://www.unixmen.com/top-things-installing-ubuntu-13-10/" title="Top Things To Do After Installing Ubuntu 13.10 &#039;Saucy Salamander&#039;" class="wpp-post-title" target="_self">Top Things To Do After Installing Ubuntu 13.10 &#039;Saucy Salamander&#039;</a> : <span class="wpp-excerpt">Ubuntu 13.10 Saucy Salamander will be released on coming October 17th with many new salient featur...</span><span class="post-stats"><span class="wpp-comments">5 comments</span> | <span class="wpp-author">by <a href="http://www.unixmen.com/author/sk/">SK</a></span></span></li>
+<li><a href="http://www.unixmen.com/improve-apt-get-download-speed-apt-fast/" title="apt-fast: Improve apt-get Download Speed" target="_self"><img src="http://180016988.r.cdn77.net/wp-content/uploads/2012/04/ubuntu-logo-50x50.png" alt="" border="0" width="50" height="50" class="wpp-thumbnail wpp_cached_thumb wpp_featured" /></a><a href="http://www.unixmen.com/improve-apt-get-download-speed-apt-fast/" title="apt-fast: Improve apt-get Download Speed" class="wpp-post-title" target="_self">apt-fast: Improve apt-get Download Speed</a> : <span class="wpp-excerpt">apt-fast is a "shell script wrapper" for apt-get and aptitude that can drastically improve APT downl...</span><span class="post-stats"><span class="wpp-comments">1 comment</span> | <span class="wpp-author">by <a href="http://www.unixmen.com/author/sk/">SK</a></span></span></li>
+<li><a href="http://www.unixmen.com/upgrade-ubuntu-13-04-raring-ubuntu-13-10-saucy-salamander/" title="How To Upgrade From Ubuntu 13.04 Raring To Ubuntu 13.10 Saucy Salamander" target="_self"><img src="http://180016988.r.cdn77.net/wp-content/uploads/2012/04/ubuntu-logo-50x50.png" alt="" border="0" width="50" height="50" class="wpp-thumbnail wpp_cached_thumb wpp_featured" /></a><a href="http://www.unixmen.com/upgrade-ubuntu-13-04-raring-ubuntu-13-10-saucy-salamander/" title="How To Upgrade From Ubuntu 13.04 Raring To Ubuntu 13.10 Saucy Salamander" class="wpp-post-title" target="_self">How To Upgrade From Ubuntu 13.04 Raring To Ubuntu 13.10 Saucy Salamander</a> : <span class="wpp-excerpt">Ubuntu 13.10 Saucy will be released on October 17th. Hope it will come with lot of improvements and ...</span><span class="post-stats"><span class="wpp-comments">0 comments</span> | <span class="wpp-author">by <a href="http://www.unixmen.com/author/sk/">SK</a></span></span></li>
+<li><a href="http://www.unixmen.com/introducing-kids-linux-using-doudoulinux/" title="Introducing Kids to Linux Using DoudouLinux" target="_self"><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/10/doudou-logo-50x50.png" alt="" border="0" width="50" height="50" class="wpp-thumbnail wpp_cached_thumb wpp_featured" /></a><a href="http://www.unixmen.com/introducing-kids-linux-using-doudoulinux/" title="Introducing Kids to Linux Using DoudouLinux" class="wpp-post-title" target="_self">Introducing Kids to Linux Using DoudouLinux</a> : <span class="wpp-excerpt">DoudouLinux is an operating system targeting young children. It aims at making computer use as simpl...</span><span class="post-stats"><span class="wpp-comments">0 comments</span> | <span class="wpp-author">by <a href="http://www.unixmen.com/author/seth/">Enock Seth Nyamador</a></span></span></li>
+<li><a href="http://www.unixmen.com/improve-touch-typing-tipp10/" title="Improve Touch Typing With TIPP10" target="_self"><img src="http://180016988.r.cdn77.net/wp-content/uploads/2013/10/tipp10_logo-50x50.jpg" alt="" border="0" width="50" height="50" class="wpp-thumbnail wpp_cached_thumb wpp_featured" /></a><a href="http://www.unixmen.com/improve-touch-typing-tipp10/" title="Improve Touch Typing With TIPP10" class="wpp-post-title" target="_self">Improve Touch Typing With TIPP10</a> : <span class="wpp-excerpt">TIPP10 is a free touch typing tutor for Windows, Mac OS and Linux. The software is easy to use and f...</span><span class="post-stats"><span class="wpp-comments">0 comments</span> | <span class="wpp-author">by <a href="http://www.unixmen.com/author/seth/">Enock Seth Nyamador</a></span></span></li>
+<li><a href="http://www.unixmen.com/install-lamp-with-1-command-in-ubuntu-1010-maverick-meerkat/" title="Install lamp with 1 command in Ubuntu 12.10, 13.04 Raring Ringtail &amp; LinuxMint13" target="_self"><img src="http://180016988.r.cdn77.net/wp-content/plugins/wordpress-popular-posts/no_thumb.jpg" alt="" border="0" width="50" height="50" class="wpp-thumbnail wpp_def_noPath wpp_featured" /></a><a href="http://www.unixmen.com/install-lamp-with-1-command-in-ubuntu-1010-maverick-meerkat/" title="Install lamp with 1 command in Ubuntu 12.10, 13.04 Raring Ringtail &amp; LinuxMint13" class="wpp-post-title" target="_self">Install lamp with 1 command in Ubuntu 12.10, 13.04 Raring Ringtail &amp; LinuxMint13</a> : <span class="wpp-excerpt">Updated: 10/09/2012 :LAMP (Linux, Apache, MySQL and PHP) is an open source Web development platform ...</span><span class="post-stats"><span class="wpp-comments">0 comments</span> | <span class="wpp-author">by <a href="http://www.unixmen.com/author/pirat9/">Mel Kham</a></span></span></li>
+
+</ul>
+
+<!-- End Wordpress Popular Posts Plugin v2.3.7 -->
+<img src="http://180016988.r.cdn77.net/wp-content/themes/unimax/images/bigLine.jpg" alt="" />
+</div>
+    </div>
+    <div style="float:left;">
+    <!-- mfunc --><!-- BuySellAds Zone Code -->
+<div id="bsap_1290953" class="bsarocks bsap_98a5476e4186edb0166977da67937f0c"></div>
+<!-- End BuySellAds Zone Code --><!-- /mfunc -->			<div class="textwidget"><a href="http://www.unixmen.com/contact-us/" ><img src="http://180016988.r.cdn77.net/wp-content/uploads/2012/06/write-for-us.png" width="260" height="70" alt="Write for us" align="middle"/></a></div>
+		
+        <!-- BuySellAds.com Zone Code -->
+        <div id="bsap_1263938" class="bsarocks bsap_98a5476e4186edb0166977da67937f0c"></div>
+        <!-- END BuySellAds.com Zone Code -->
+          </div>
+    <div class="module2">
+    <h3 class="module-title2">Recent Posts</h3>
+
+    <div class="recentPost">
+						Recent Posts		<ul>
+					<li>
+				<a href="http://www.unixmen.com/top-things-installing-ubuntu-13-10/" title="Top Things To Do After Installing Ubuntu 13.10 &#8216;Saucy Salamander&#8217;">Top Things To Do After Installing Ubuntu 13.10 &#8216;Saucy Salamander&#8217;</a>
+						</li>
+					<li>
+				<a href="http://www.unixmen.com/pentesting-release-raspberry-pi/" title="A Pentesting Release for the Raspberry Pi">A Pentesting Release for the Raspberry Pi</a>
+						</li>
+					<li>
+				<a href="http://www.unixmen.com/download-youtube-videos-linux/" title="Download Youtube Videos From Linux Command-line">Download Youtube Videos From Linux Command-line</a>
+						</li>
+					<li>
+				<a href="http://www.unixmen.com/improve-apt-get-download-speed-apt-fast/" title="apt-fast: Improve apt-get Download Speed">apt-fast: Improve apt-get Download Speed</a>
+						</li>
+					<li>
+				<a href="http://www.unixmen.com/improve-touch-typing-tipp10/" title="Improve Touch Typing With TIPP10">Improve Touch Typing With TIPP10</a>
+						</li>
+					<li>
+				<a href="http://www.unixmen.com/introducing-kids-linux-using-doudoulinux/" title="Introducing Kids to Linux Using DoudouLinux">Introducing Kids to Linux Using DoudouLinux</a>
+						</li>
+					<li>
+				<a href="http://www.unixmen.com/upgrade-ubuntu-13-04-raring-ubuntu-13-10-saucy-salamander/" title="How To Upgrade From Ubuntu 13.04 Raring To Ubuntu 13.10 Saucy Salamander">How To Upgrade From Ubuntu 13.04 Raring To Ubuntu 13.10 Saucy Salamander</a>
+						</li>
+					<li>
+				<a href="http://www.unixmen.com/dax-os-desktop-linux-operating-system/" title="Dax OS Desktop, A Linux Operating System">Dax OS Desktop, A Linux Operating System</a>
+						</li>
+					<li>
+				<a href="http://www.unixmen.com/pengpod-1040-quad-core-linux-android-dual-booting-tablets/" title="PengPod 1040: Quad Core Linux-Android Dual Booting Tablets">PengPod 1040: Quad Core Linux-Android Dual Booting Tablets</a>
+						</li>
+					<li>
+				<a href="http://www.unixmen.com/google-offers-cash-prizes-updates-linux-os-software/" title="Google Offers Cash Prizes for Updates to Linux and Other OS Software">Google Offers Cash Prizes for Updates to Linux and Other OS Software</a>
+						</li>
+				</ul>
+		        </div>
+    <img src="http://180016988.r.cdn77.net/wp-content/themes/unimax/images/bigLine.jpg" alt="" style="clear:both" />
+    
+    
+    </div>
+    <div style="float:left;">
+    			<div class="textwidget"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-2917661377128354";
+/* 160X600 Sidebar UX */
+google_ad_slot = "9908287444";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+		    </div>
+    <div class="module2">
+    <h3 class="module-title2">Recent Comments</h3>
+        <section class="comments-list">
+
+		<article>
+		
+		        <div style="float:left; display:block; margin:0 10px 10px 0; border:1px solid #CCCCCC; padding:3px; width:35px; height:35px;"><img alt='' src='http://0.gravatar.com/avatar/e8a9be331c8a511baffeacb69b296178?s=35&amp;d=&amp;r=G' class='avatar avatar-35 photo' height='35' width='35' /></div>
+        <div style="float:left;">
+		<h4 class="author">TrollBeast</h4>
+
+		<p class="meta">
+			<time datetime="2013-10-16" pubdate>October 16, 2013</time>
+			| <a class="permalink" href="http://www.unixmen.com/top-things-installing-ubuntu-13-10/#comment-14031">#</a>
+		</p>
+		</div>
+		<div class="content" style="float:left;"><p>That isn&#8217;t Ubuntu&#8217;s fault or even the Cinnamon devs. As a nightly build, breakages are expected and probably won&#8217;t follow through to stable. No &#8220;fix&#8221; is necessary.</p>
+</div>
+	
+	</article>
+		<article>
+		
+		        <div style="float:left; display:block; margin:0 10px 10px 0; border:1px solid #CCCCCC; padding:3px; width:35px; height:35px;"><img alt='' src='http://1.gravatar.com/avatar/1f223bc6b08ad7647530339363dee109?s=35&amp;d=&amp;r=G' class='avatar avatar-35 photo' height='35' width='35' /></div>
+        <div style="float:left;">
+		<h4 class="author">брайков</h4>
+
+		<p class="meta">
+			<time datetime="2013-10-16" pubdate>October 16, 2013</time>
+			| <a class="permalink" href="http://www.unixmen.com/how-to-install-utorrent-on-ubuntu-debian/#comment-14030">#</a>
+		</p>
+		</div>
+		<div class="content" style="float:left;"><p>uTorrent for Linux is still an alpha version. It has many flaws. The developers have abandoned it. I have been using it for more than a year, as it used to be the best app for Windows.<br />
+Don&#8217;t get mislead by this article. You will only put trouble on your head. Just use Deluge instead.</p>
+</div>
+	
+	</article>
+		<article>
+		
+		        <div style="float:left; display:block; margin:0 10px 10px 0; border:1px solid #CCCCCC; padding:3px; width:35px; height:35px;"><img alt='' src='http://0.gravatar.com/avatar/481bdd4b27db0e96e472e3b4b6fd0fbb?s=35&amp;d=&amp;r=G' class='avatar avatar-35 photo' height='35' width='35' /></div>
+        <div style="float:left;">
+		<h4 class="author">John</h4>
+
+		<p class="meta">
+			<time datetime="2013-10-16" pubdate>October 16, 2013</time>
+			| <a class="permalink" href="http://www.unixmen.com/configure-conky-lua-in-ubuntu-11-10-12-04-fedora-debian-and-linuxmint-howto-conky/#comment-14027">#</a>
+		</p>
+		</div>
+		<div class="content" style="float:left;"><p>get conky manager, it&#8217;ll make it easier to configure conky.</p>
+</div>
+	
+	</article>
+		<article>
+		
+		        <div style="float:left; display:block; margin:0 10px 10px 0; border:1px solid #CCCCCC; padding:3px; width:35px; height:35px;"><img alt='' src='http://0.gravatar.com/avatar/efaa1c317032a2325a268e35755af8e5?s=35&amp;d=&amp;r=G' class='avatar avatar-35 photo' height='35' width='35' /></div>
+        <div style="float:left;">
+		<h4 class="author">Guest</h4>
+
+		<p class="meta">
+			<time datetime="2013-10-16" pubdate>October 16, 2013</time>
+			| <a class="permalink" href="http://www.unixmen.com/top-things-installing-ubuntu-13-10/#comment-14026">#</a>
+		</p>
+		</div>
+		<div class="content" style="float:left;"><p>You have a typoo about Lucid Lynx in the article, though I enjoyed that one, I much preferr 13.10, it is so fast!!</p>
+</div>
+	
+	</article>
+		<article>
+		
+		        <div style="float:left; display:block; margin:0 10px 10px 0; border:1px solid #CCCCCC; padding:3px; width:35px; height:35px;"><img alt='' src='http://1.gravatar.com/avatar/1f19783304454682ae048f48d38e53c0?s=35&amp;d=&amp;r=G' class='avatar avatar-35 photo' height='35' width='35' /></div>
+        <div style="float:left;">
+		<h4 class="author">zinovsky</h4>
+
+		<p class="meta">
+			<time datetime="2013-10-15" pubdate>October 15, 2013</time>
+			| <a class="permalink" href="http://www.unixmen.com/improve-apt-get-download-speed-apt-fast/#comment-14024">#</a>
+		</p>
+		</div>
+		<div class="content" style="float:left;"><p>This is not needed for europe and America users where the internet speed is high, for Africa, and other countries where the internet speed is too slow, this will help them a lot.</p>
+</div>
+	
+	</article>
+		
+</section>
+	
+	
+    </div>
+    <div style="float:left;">
+    &nbsp;<script type="text/javascript">
+window.___gcfg = {lang: 'en-US'}; 
+(function()  
+{var po = document.createElement("script"); 
+po.type = "text/javascript"; po.async = true;po.src = "https://apis.google.com/js/plusone.js"; 
+var s = document.getElementsByTagName("script")[0]; 
+s.parentNode.insertBefore(po, s); 
+})();</script> 
+<g:plus href="https://plus.google.com/110820376491877300065" size="badge"></g:plus>    </div>
+    <div style="float:left; margin-top:30px; margin-bottom:10px;"><img src="http://180016988.r.cdn77.net/wp-content/themes/unimax/images/bigLine.jpg" alt="" /></div>
+    <div style="float:left;">
+    			
+			<div class="execphpwidget"></div>
+		    </div>
+    <div class="module2">
+
+
+    <div class="recentPost">
+    <h3 class="module-title2">Favorite Links</h3>
+	<ul class='xoxo blogroll'>
+<li><a href="http://www.iticy.com" title="Cheap Hosting   with 3 Datacenters  choice" target="" onclick="javascript:_gaq.push(['_trackEvent','outbound-blogroll','http://www.iticy.com']);">Cheap Hosting</a></li>
+<li><a href="http://www.tuxmachines.org/" title="Do you waddle the waddle? " target="" onclick="javascript:_gaq.push(['_trackEvent','outbound-blogroll','http://www.tuxmachines.org']);">TuxMachines.org</a></li>
+<li><a href="http://www.ubuntugeek.com/" title="Ubuntu Linux Tutorials,Howtos,Tips &amp; News" target="" onclick="javascript:_gaq.push(['_trackEvent','outbound-blogroll','http://www.ubuntugeek.com']);">UbuntuGeek.com</a></li>
+<li><a href="http://www.stelinuxhost.com/" rel="me" title="LinuxHost-Webdesing, seo &amp; Internet Marketing" target="" onclick="javascript:_gaq.push(['_trackEvent','outbound-blogroll','http://www.stelinuxhost.com']);">Webdesign &amp; SEO</a></li>
+
+	</ul>
+
+    <img src="http://180016988.r.cdn77.net/wp-content/themes/unimax/images/bigLine.jpg" alt="" />
+    </div>
+    
+    </div>
+    
+    <div align="center" style="min-height:610px;">
+    			
+			<div class="execphpwidget"></div>
+					<div class="textwidget"><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://creativecommons.org']);"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" /></a><br />This work by <a xmlns:cc="http://creativecommons.org/ns#" href="unixmen.com" property="cc:attributionName" rel="cc:attributionURL">unixmen.com</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US" >Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License</a>.</div>
+		    </div>
+    </div>
+		
+		<!-- #primary .widget-area -->
+
+	</div>
+<div class="footer">
+    <div class="lftSec">
+    
+    <h3 class="title">Unixmen Archive</h3>		<select name="archive-dropdown" onchange='document.location.href=this.options[this.selectedIndex].value;'> <option value="">Select Month</option> 	<option value='http://www.unixmen.com/2013/10/'> October 2013 </option>
+	<option value='http://www.unixmen.com/2013/09/'> September 2013 </option>
+	<option value='http://www.unixmen.com/2013/08/'> August 2013 </option>
+	<option value='http://www.unixmen.com/2013/07/'> July 2013 </option>
+	<option value='http://www.unixmen.com/2013/06/'> June 2013 </option>
+	<option value='http://www.unixmen.com/2013/05/'> May 2013 </option>
+	<option value='http://www.unixmen.com/2013/04/'> April 2013 </option>
+	<option value='http://www.unixmen.com/2013/03/'> March 2013 </option>
+	<option value='http://www.unixmen.com/2013/02/'> February 2013 </option>
+	<option value='http://www.unixmen.com/2013/01/'> January 2013 </option>
+	<option value='http://www.unixmen.com/2012/12/'> December 2012 </option>
+	<option value='http://www.unixmen.com/2012/11/'> November 2012 </option>
+	<option value='http://www.unixmen.com/2012/10/'> October 2012 </option>
+	<option value='http://www.unixmen.com/2012/09/'> September 2012 </option>
+	<option value='http://www.unixmen.com/2012/08/'> August 2012 </option>
+	<option value='http://www.unixmen.com/2012/07/'> July 2012 </option>
+	<option value='http://www.unixmen.com/2012/06/'> June 2012 </option>
+	<option value='http://www.unixmen.com/2012/05/'> May 2012 </option>
+	<option value='http://www.unixmen.com/2012/04/'> April 2012 </option>
+	<option value='http://www.unixmen.com/2012/03/'> March 2012 </option>
+	<option value='http://www.unixmen.com/2012/02/'> February 2012 </option>
+	<option value='http://www.unixmen.com/2012/01/'> January 2012 </option>
+	<option value='http://www.unixmen.com/2011/12/'> December 2011 </option>
+	<option value='http://www.unixmen.com/2011/11/'> November 2011 </option>
+	<option value='http://www.unixmen.com/2011/10/'> October 2011 </option>
+	<option value='http://www.unixmen.com/2011/09/'> September 2011 </option>
+	<option value='http://www.unixmen.com/2011/08/'> August 2011 </option>
+	<option value='http://www.unixmen.com/2011/07/'> July 2011 </option>
+	<option value='http://www.unixmen.com/2011/06/'> June 2011 </option>
+	<option value='http://www.unixmen.com/2011/05/'> May 2011 </option>
+	<option value='http://www.unixmen.com/2011/04/'> April 2011 </option>
+	<option value='http://www.unixmen.com/2011/03/'> March 2011 </option>
+	<option value='http://www.unixmen.com/2011/02/'> February 2011 </option>
+	<option value='http://www.unixmen.com/2011/01/'> January 2011 </option>
+	<option value='http://www.unixmen.com/2010/12/'> December 2010 </option>
+	<option value='http://www.unixmen.com/2010/11/'> November 2010 </option>
+	<option value='http://www.unixmen.com/2010/10/'> October 2010 </option>
+	<option value='http://www.unixmen.com/2010/09/'> September 2010 </option>
+	<option value='http://www.unixmen.com/2010/08/'> August 2010 </option>
+	<option value='http://www.unixmen.com/2010/07/'> July 2010 </option>
+	<option value='http://www.unixmen.com/2010/06/'> June 2010 </option>
+	<option value='http://www.unixmen.com/2010/05/'> May 2010 </option>
+	<option value='http://www.unixmen.com/2010/04/'> April 2010 </option>
+	<option value='http://www.unixmen.com/2010/03/'> March 2010 </option>
+	<option value='http://www.unixmen.com/2010/02/'> February 2010 </option>
+	<option value='http://www.unixmen.com/2010/01/'> January 2010 </option>
+	<option value='http://www.unixmen.com/2009/12/'> December 2009 </option>
+	<option value='http://www.unixmen.com/2009/11/'> November 2009 </option>
+	<option value='http://www.unixmen.com/2009/10/'> October 2009 </option>
+	<option value='http://www.unixmen.com/2009/09/'> September 2009 </option>
+	<option value='http://www.unixmen.com/2009/08/'> August 2009 </option>
+	<option value='http://www.unixmen.com/2009/07/'> July 2009 </option>
+	<option value='http://www.unixmen.com/2009/06/'> June 2009 </option>
+	<option value='http://www.unixmen.com/2009/05/'> May 2009 </option>
+	<option value='http://www.unixmen.com/2009/04/'> April 2009 </option>
+	<option value='http://www.unixmen.com/2009/03/'> March 2009 </option>
+	<option value='http://www.unixmen.com/2009/02/'> February 2009 </option>
+	<option value='http://www.unixmen.com/2009/01/'> January 2009 </option>
+	<option value='http://www.unixmen.com/2008/12/'> December 2008 </option>
+ </select>
+    </div>
+    
+    <div class="tags">
+    
+     <h2>Tags Cloud</h2><div class="tagcloud"><a href='http://www.unixmen.com/tag/android-2/' class='tag-link-117' title='54 topics' style='font-size: 11.0992366412pt;'>android</a>
+<a href='http://www.unixmen.com/tag/apache/' class='tag-link-131' title='31 topics' style='font-size: 8.64122137405pt;'>apache</a>
+<a href='http://www.unixmen.com/tag/browser/' class='tag-link-249' title='47 topics' style='font-size: 10.4580152672pt;'>browser</a>
+<a href='http://www.unixmen.com/tag/centos-2/' class='tag-link-287' title='62 topics' style='font-size: 11.7404580153pt;'>Centos</a>
+<a href='http://www.unixmen.com/tag/chrome/' class='tag-link-312' title='30 topics' style='font-size: 8.42748091603pt;'>chrome</a>
+<a href='http://www.unixmen.com/tag/command-line/' class='tag-link-351' title='27 topics' style='font-size: 8pt;'>command line</a>
+<a href='http://www.unixmen.com/tag/debian/' class='tag-link-418' title='75 topics' style='font-size: 12.5954198473pt;'>Debian</a>
+<a href='http://www.unixmen.com/tag/eyecandy/' class='tag-link-26' title='35 topics' style='font-size: 9.17557251908pt;'>eyecandy</a>
+<a href='http://www.unixmen.com/tag/fedora/' class='tag-link-27' title='124 topics' style='font-size: 14.9465648855pt;'>Fedora</a>
+<a href='http://www.unixmen.com/tag/firefox/' class='tag-link-609' title='40 topics' style='font-size: 9.70992366412pt;'>firefox</a>
+<a href='http://www.unixmen.com/tag/games/' class='tag-link-671' title='110 topics' style='font-size: 14.4122137405pt;'>games</a>
+<a href='http://www.unixmen.com/tag/gaming/' class='tag-link-672' title='93 topics' style='font-size: 13.5572519084pt;'>gaming</a>
+<a href='http://www.unixmen.com/tag/gnome/' class='tag-link-710' title='63 topics' style='font-size: 11.8473282443pt;'>gnome</a>
+<a href='http://www.unixmen.com/tag/google/' class='tag-link-733' title='45 topics' style='font-size: 10.2442748092pt;'>google</a>
+<a href='http://www.unixmen.com/tag/karmic-koala/' class='tag-link-946' title='46 topics' style='font-size: 10.3511450382pt;'>karmic koala</a>
+<a href='http://www.unixmen.com/tag/kde/' class='tag-link-949' title='30 topics' style='font-size: 8.42748091603pt;'>kde</a>
+<a href='http://www.unixmen.com/tag/libreoffice/' class='tag-link-1008' title='30 topics' style='font-size: 8.42748091603pt;'>libreoffice</a>
+<a href='http://www.unixmen.com/tag/linux/' class='tag-link-1021' title='516 topics' style='font-size: 21.465648855pt;'>Linux</a>
+<a href='http://www.unixmen.com/tag/linux-distribution/' class='tag-link-1032' title='59 topics' style='font-size: 11.5267175573pt;'>linux distribution</a>
+<a href='http://www.unixmen.com/tag/linuxmint/' class='tag-link-1071' title='99 topics' style='font-size: 13.8778625954pt;'>LinuxMint</a>
+<a href='http://www.unixmen.com/tag/lucid-lynx/' class='tag-link-1109' title='53 topics' style='font-size: 10.9923664122pt;'>lucid lynx</a>
+<a href='http://www.unixmen.com/tag/maverick-meerkat/' class='tag-link-1145' title='37 topics' style='font-size: 9.3893129771pt;'>maverick meerkat</a>
+<a href='http://www.unixmen.com/tag/mysql/' class='tag-link-1240' title='37 topics' style='font-size: 9.3893129771pt;'>mysql</a>
+<a href='http://www.unixmen.com/tag/news-2/' class='tag-link-1267' title='59 topics' style='font-size: 11.5267175573pt;'>news</a>
+<a href='http://www.unixmen.com/tag/oneiric-ocelot/' class='tag-link-1306' title='28 topics' style='font-size: 8.10687022901pt;'>oneiric ocelot</a>
+<a href='http://www.unixmen.com/tag/openoffice/' class='tag-link-1327' title='30 topics' style='font-size: 8.42748091603pt;'>openoffice</a>
+<a href='http://www.unixmen.com/tag/opensource/' class='tag-link-14' title='235 topics' style='font-size: 17.8320610687pt;'>opensource</a>
+<a href='http://www.unixmen.com/tag/opensuse/' class='tag-link-1345' title='35 topics' style='font-size: 9.17557251908pt;'>opensuse</a>
+<a href='http://www.unixmen.com/tag/oracle/' class='tag-link-1361' title='46 topics' style='font-size: 10.3511450382pt;'>oracle</a>
+<a href='http://www.unixmen.com/tag/ppa/' class='tag-link-1469' title='35 topics' style='font-size: 9.17557251908pt;'>ppa</a>
+<a href='http://www.unixmen.com/tag/precise-pangolin/' class='tag-link-1476' title='41 topics' style='font-size: 9.81679389313pt;'>Precise Pangolin</a>
+<a href='http://www.unixmen.com/tag/release/' class='tag-link-1553' title='27 topics' style='font-size: 8pt;'>release</a>
+<a href='http://www.unixmen.com/tag/rhel/' class='tag-link-1576' title='34 topics' style='font-size: 8.96183206107pt;'>RHEL</a>
+<a href='http://www.unixmen.com/tag/security/' class='tag-link-1621' title='63 topics' style='font-size: 11.8473282443pt;'>security</a>
+<a href='http://www.unixmen.com/tag/server/' class='tag-link-1627' title='107 topics' style='font-size: 14.1984732824pt;'>server</a>
+<a href='http://www.unixmen.com/tag/software-2/' class='tag-link-1680' title='75 topics' style='font-size: 12.5954198473pt;'>software</a>
+<a href='http://www.unixmen.com/tag/themes-2/' class='tag-link-1791' title='45 topics' style='font-size: 10.2442748092pt;'>themes</a>
+<a href='http://www.unixmen.com/tag/tools/' class='tag-link-1812' title='50 topics' style='font-size: 10.7786259542pt;'>tools</a>
+<a href='http://www.unixmen.com/tag/ubuntu-2/' class='tag-link-1856' title='569 topics' style='font-size: 22pt;'>ubuntu</a>
+<a href='http://www.unixmen.com/tag/unix/' class='tag-link-1930' title='41 topics' style='font-size: 9.81679389313pt;'>unix</a>
+<a href='http://www.unixmen.com/tag/upgrade/' class='tag-link-1941' title='39 topics' style='font-size: 9.60305343511pt;'>upgrade</a>
+<a href='http://www.unixmen.com/tag/virtualbox/' class='tag-link-1979' title='42 topics' style='font-size: 9.92366412214pt;'>virtualbox</a>
+<a href='http://www.unixmen.com/tag/vlc/' class='tag-link-1986' title='30 topics' style='font-size: 8.42748091603pt;'>vlc</a>
+<a href='http://www.unixmen.com/tag/windows/' class='tag-link-2054' title='43 topics' style='font-size: 10.0305343511pt;'>windows</a>
+<a href='http://www.unixmen.com/tag/wine/' class='tag-link-2064' title='36 topics' style='font-size: 9.28244274809pt;'>wine</a></div>
+    </div>
+    
+    <div class="twitts">
+         </div>
+  </div>
+  
+<div class="deepest">
+<div class="menu-top-menu-container"><ul id="menu-top-menu-1" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16454"><a href="http://www.unixmen.com/about-us/" >About Us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7349"><a href="http://www.unixmen.com/advertising/" >Advertising</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7347"><a href="http://www.unixmen.com/sitemap/" >Sitemap</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7702"><a href="http://www.unixmen.com/privacy-policy/" >Privacy</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7703"><a href="http://www.unixmen.com/contact-us/" >Contact Us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11788"><a href="http://www.unixmen.com/hire-unixmen/" >Hire Us</a></li>
+</ul></div><a id="totop-scroller" href="#top"></a> </div>
+<div class="deepest2">
+<br>
+Copyright &copy; 2008-2013
+<a target="_blank" href="http://www.unixmen.com/" target="_blank">Unixmen.com</a>
+.
+</div>
+<div class="ftrAnbik">
+Maintained by
+<a title="web design company" href="http://www.unixmen.com/" target="_blank" >Unixmen</a>
+.
+</div>
+  <br  class="clear"/>
+
+</div>
+</div>
+<!-- start Vibrant Media IntelliTXT script section -->
+<script type="text/javascript" src="http://unixmen.us.intellitxt.com/intellitxt/front.asp?ipid=22747"></script>
+<!-- end Vibrant Media IntelliTXT script section -->
+<script type='text/javascript' src='http://180016988.r.cdn77.net/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.40.0-2013.08.13'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/www.unixmen.com\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ...","cached":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://180016988.r.cdn77.net/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=3.5.2'></script>
+<script type='text/javascript' src='http://180016988.r.cdn77.net/wp-content/plugins/easy-fancybox/fancybox/jquery.fancybox-1.3.5.pack.js?ver=1.5.5'></script>
+<script type='text/javascript' src='http://180016988.r.cdn77.net/wp-content/plugins/easy-fancybox/jquery.easing.pack.js?ver=1.3'></script>
+
+<script type="text/javascript">
+jQuery(document).on('ready post-load', easy_fancybox_handler );
+</script>
+</body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using apc
+Database Caching 3/377 queries in 0.128 seconds using apc
+Content Delivery Network via 180016988.r.cdn77.net
+
+ Served from: www.unixmen.com @ 2013-10-16 10:05:58 by W3 Total Cache -->

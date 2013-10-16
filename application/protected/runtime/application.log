@@ -1,0 +1,621 @@
+2013/10/16 14:21:33 [error] [exception.CException] exception 'CException' with message 'Alias "ext.bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php:316
+Stack trace:
+#0 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(196): YiiBase::import('ext.bootstrap.c...', true)
+#1 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#3 /home/nastya/projects/APIDocCreator/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#4 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(125): CApplication->__construct('/home/nastya/pr...')
+#5 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/nastya/pr...')
+#6 /home/nastya/projects/APIDocCreator/application/index.php(13): YiiBase::createWebApplication('/home/nastya/pr...')
+#7 {main}
+REQUEST_URI=/
+---
+2013/10/16 14:26:40 [error] [exception.CException] exception 'CException' with message 'Alias "ext.bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php:316
+Stack trace:
+#0 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(196): YiiBase::import('ext.bootstrap.c...', true)
+#1 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#3 /home/nastya/projects/APIDocCreator/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#4 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(125): CApplication->__construct('/home/nastya/pr...')
+#5 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/nastya/pr...')
+#6 /home/nastya/projects/APIDocCreator/application/index.php(13): YiiBase::createWebApplication('/home/nastya/pr...')
+#7 {main}
+REQUEST_URI=/
+---
+2013/10/16 14:26:43 [error] [exception.CException] exception 'CException' with message 'Alias "ext.bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php:316
+Stack trace:
+#0 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(196): YiiBase::import('ext.bootstrap.c...', true)
+#1 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#3 /home/nastya/projects/APIDocCreator/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#4 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(125): CApplication->__construct('/home/nastya/pr...')
+#5 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/nastya/pr...')
+#6 /home/nastya/projects/APIDocCreator/application/index.php(13): YiiBase::createWebApplication('/home/nastya/pr...')
+#7 {main}
+REQUEST_URI=/
+---
+2013/10/16 14:26:45 [error] [exception.CException] exception 'CException' with message 'Alias "ext.bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php:316
+Stack trace:
+#0 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(196): YiiBase::import('ext.bootstrap.c...', true)
+#1 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#3 /home/nastya/projects/APIDocCreator/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#4 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(125): CApplication->__construct('/home/nastya/pr...')
+#5 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/nastya/pr...')
+#6 /home/nastya/projects/APIDocCreator/application/index.php(13): YiiBase::createWebApplication('/home/nastya/pr...')
+#7 {main}
+REQUEST_URI=/
+---
+2013/10/16 14:27:20 [error] [exception.CException] exception 'CException' with message 'Alias "ext.bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php:316
+Stack trace:
+#0 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(196): YiiBase::import('ext.bootstrap.c...', true)
+#1 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#3 /home/nastya/projects/APIDocCreator/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#4 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(125): CApplication->__construct('/home/nastya/pr...')
+#5 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/nastya/pr...')
+#6 /home/nastya/projects/APIDocCreator/application/index.php(13): YiiBase::createWebApplication('/home/nastya/pr...')
+#7 {main}
+REQUEST_URI=/
+---
+2013/10/16 14:27:21 [error] [exception.CException] exception 'CException' with message 'Alias "ext.bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php:316
+Stack trace:
+#0 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(196): YiiBase::import('ext.bootstrap.c...', true)
+#1 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#3 /home/nastya/projects/APIDocCreator/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#4 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(125): CApplication->__construct('/home/nastya/pr...')
+#5 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/nastya/pr...')
+#6 /home/nastya/projects/APIDocCreator/application/index.php(13): YiiBase::createWebApplication('/home/nastya/pr...')
+#7 {main}
+REQUEST_URI=/
+---
+2013/10/16 14:33:42 [error] [exception.CException] exception 'CException' with message 'Alias "ext.bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php:316
+Stack trace:
+#0 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(196): YiiBase::import('ext.bootstrap.c...', true)
+#1 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#3 /home/nastya/projects/APIDocCreator/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#4 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(125): CApplication->__construct('/home/nastya/pr...')
+#5 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/nastya/pr...')
+#6 /home/nastya/projects/APIDocCreator/application/index.php(13): YiiBase::createWebApplication('/home/nastya/pr...')
+#7 {main}
+REQUEST_URI=/
+---
+2013/10/16 14:34:44 [error] [exception.CException] exception 'CException' with message 'Alias "ext.bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php:316
+Stack trace:
+#0 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(196): YiiBase::import('ext.bootstrap.c...', true)
+#1 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#3 /home/nastya/projects/APIDocCreator/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#4 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(125): CApplication->__construct('/home/nastya/pr...')
+#5 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/nastya/pr...')
+#6 /home/nastya/projects/APIDocCreator/application/index.php(13): YiiBase::createWebApplication('/home/nastya/pr...')
+#7 {main}
+REQUEST_URI=/
+---
+2013/10/16 14:34:46 [error] [exception.CException] exception 'CException' with message 'Alias "ext.bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php:316
+Stack trace:
+#0 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(196): YiiBase::import('ext.bootstrap.c...', true)
+#1 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#3 /home/nastya/projects/APIDocCreator/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#4 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(125): CApplication->__construct('/home/nastya/pr...')
+#5 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/nastya/pr...')
+#6 /home/nastya/projects/APIDocCreator/application/index.php(13): YiiBase::createWebApplication('/home/nastya/pr...')
+#7 {main}
+REQUEST_URI=/
+---
+2013/10/16 14:34:47 [error] [exception.CException] exception 'CException' with message 'Alias "ext.bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php:316
+Stack trace:
+#0 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(196): YiiBase::import('ext.bootstrap.c...', true)
+#1 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#3 /home/nastya/projects/APIDocCreator/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#4 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(125): CApplication->__construct('/home/nastya/pr...')
+#5 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/nastya/pr...')
+#6 /home/nastya/projects/APIDocCreator/application/index.php(13): YiiBase::createWebApplication('/home/nastya/pr...')
+#7 {main}
+REQUEST_URI=/
+---
+2013/10/16 14:35:32 [error] [exception.CException] exception 'CException' with message 'Alias "ext.bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php:316
+Stack trace:
+#0 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(196): YiiBase::import('ext.bootstrap.c...', true)
+#1 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#3 /home/nastya/projects/APIDocCreator/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#4 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(125): CApplication->__construct('/home/nastya/pr...')
+#5 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/nastya/pr...')
+#6 /home/nastya/projects/APIDocCreator/application/index.php(13): YiiBase::createWebApplication('/home/nastya/pr...')
+#7 {main}
+REQUEST_URI=/
+---
+2013/10/16 14:37:25 [error] [exception.CException] exception 'CException' with message 'Alias "bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php:316
+Stack trace:
+#0 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(196): YiiBase::import('bootstrap.compo...', true)
+#1 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#3 /home/nastya/projects/APIDocCreator/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#4 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(125): CApplication->__construct('/home/nastya/pr...')
+#5 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/nastya/pr...')
+#6 /home/nastya/projects/APIDocCreator/application/index.php(13): YiiBase::createWebApplication('/home/nastya/pr...')
+#7 {main}
+REQUEST_URI=/
+---
+2013/10/16 14:37:27 [error] [exception.CException] exception 'CException' with message 'Alias "bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php:316
+Stack trace:
+#0 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(196): YiiBase::import('bootstrap.compo...', true)
+#1 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#3 /home/nastya/projects/APIDocCreator/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#4 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(125): CApplication->__construct('/home/nastya/pr...')
+#5 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/nastya/pr...')
+#6 /home/nastya/projects/APIDocCreator/application/index.php(13): YiiBase::createWebApplication('/home/nastya/pr...')
+#7 {main}
+REQUEST_URI=/
+---
+2013/10/16 14:37:28 [error] [exception.CException] exception 'CException' with message 'Alias "bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php:316
+Stack trace:
+#0 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(196): YiiBase::import('bootstrap.compo...', true)
+#1 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#3 /home/nastya/projects/APIDocCreator/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#4 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(125): CApplication->__construct('/home/nastya/pr...')
+#5 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/nastya/pr...')
+#6 /home/nastya/projects/APIDocCreator/application/index.php(13): YiiBase::createWebApplication('/home/nastya/pr...')
+#7 {main}
+REQUEST_URI=/
+---
+2013/10/16 14:39:32 [error] [exception.CException] exception 'CException' with message 'Alias "ext.bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php:316
+Stack trace:
+#0 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(196): YiiBase::import('ext.bootstrap.c...', true)
+#1 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#3 /home/nastya/projects/APIDocCreator/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#4 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(125): CApplication->__construct('/home/nastya/pr...')
+#5 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/nastya/pr...')
+#6 /home/nastya/projects/APIDocCreator/application/index.php(13): YiiBase::createWebApplication('/home/nastya/pr...')
+#7 {main}
+REQUEST_URI=/
+---
+2013/10/16 14:39:34 [error] [exception.CException] exception 'CException' with message 'Alias "ext.bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php:316
+Stack trace:
+#0 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(196): YiiBase::import('ext.bootstrap.c...', true)
+#1 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#3 /home/nastya/projects/APIDocCreator/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#4 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(125): CApplication->__construct('/home/nastya/pr...')
+#5 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/nastya/pr...')
+#6 /home/nastya/projects/APIDocCreator/application/index.php(13): YiiBase::createWebApplication('/home/nastya/pr...')
+#7 {main}
+REQUEST_URI=/
+---
+2013/10/16 14:39:48 [error] [exception.CException] exception 'CException' with message 'Alias "ext.bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php:316
+Stack trace:
+#0 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(196): YiiBase::import('ext.bootstrap.c...', true)
+#1 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#3 /home/nastya/projects/APIDocCreator/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#4 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(125): CApplication->__construct('/home/nastya/pr...')
+#5 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/nastya/pr...')
+#6 /home/nastya/projects/APIDocCreator/application/index.php(13): YiiBase::createWebApplication('/home/nastya/pr...')
+#7 {main}
+REQUEST_URI=/
+---
+2013/10/16 14:39:50 [error] [exception.CException] exception 'CException' with message 'Alias "ext.bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php:316
+Stack trace:
+#0 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(196): YiiBase::import('ext.bootstrap.c...', true)
+#1 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#3 /home/nastya/projects/APIDocCreator/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#4 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(125): CApplication->__construct('/home/nastya/pr...')
+#5 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/nastya/pr...')
+#6 /home/nastya/projects/APIDocCreator/application/index.php(13): YiiBase::createWebApplication('/home/nastya/pr...')
+#7 {main}
+REQUEST_URI=/
+---
+2013/10/16 14:39:51 [error] [exception.CException] exception 'CException' with message 'Alias "ext.bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php:316
+Stack trace:
+#0 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(196): YiiBase::import('ext.bootstrap.c...', true)
+#1 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#3 /home/nastya/projects/APIDocCreator/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#4 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(125): CApplication->__construct('/home/nastya/pr...')
+#5 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/nastya/pr...')
+#6 /home/nastya/projects/APIDocCreator/application/index.php(13): YiiBase::createWebApplication('/home/nastya/pr...')
+#7 {main}
+REQUEST_URI=/
+---
+2013/10/16 14:40:07 [error] [exception.CException] exception 'CException' with message 'Alias "ext.bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php:316
+Stack trace:
+#0 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(196): YiiBase::import('ext.bootstrap.c...', true)
+#1 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#3 /home/nastya/projects/APIDocCreator/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#4 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(125): CApplication->__construct('/home/nastya/pr...')
+#5 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/nastya/pr...')
+#6 /home/nastya/projects/APIDocCreator/application/index.php(13): YiiBase::createWebApplication('/home/nastya/pr...')
+#7 {main}
+REQUEST_URI=/
+---
+2013/10/16 14:40:10 [error] [exception.CException] exception 'CException' with message 'Alias "ext.bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php:316
+Stack trace:
+#0 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(196): YiiBase::import('ext.bootstrap.c...', true)
+#1 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#3 /home/nastya/projects/APIDocCreator/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#4 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(125): CApplication->__construct('/home/nastya/pr...')
+#5 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/nastya/pr...')
+#6 /home/nastya/projects/APIDocCreator/application/index.php(13): YiiBase::createWebApplication('/home/nastya/pr...')
+#7 {main}
+REQUEST_URI=/
+---
+2013/10/16 14:40:11 [error] [exception.CException] exception 'CException' with message 'Alias "ext.bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php:316
+Stack trace:
+#0 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(196): YiiBase::import('ext.bootstrap.c...', true)
+#1 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#3 /home/nastya/projects/APIDocCreator/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#4 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(125): CApplication->__construct('/home/nastya/pr...')
+#5 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/nastya/pr...')
+#6 /home/nastya/projects/APIDocCreator/application/index.php(13): YiiBase::createWebApplication('/home/nastya/pr...')
+#7 {main}
+REQUEST_URI=/
+---
+2013/10/16 14:41:12 [error] [exception.CException] exception 'CException' with message 'Alias "ext.bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php:316
+Stack trace:
+#0 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(196): YiiBase::import('ext.bootstrap.c...', true)
+#1 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#3 /home/nastya/projects/APIDocCreator/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#4 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(125): CApplication->__construct('/home/nastya/pr...')
+#5 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/nastya/pr...')
+#6 /home/nastya/projects/APIDocCreator/application/index.php(13): YiiBase::createWebApplication('/home/nastya/pr...')
+#7 {main}
+REQUEST_URI=/
+---
+2013/10/16 14:42:02 [error] [exception.CException] exception 'CException' with message 'Alias "ext.bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php:316
+Stack trace:
+#0 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(196): YiiBase::import('ext.bootstrap.c...', true)
+#1 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#3 /home/nastya/projects/APIDocCreator/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#4 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(125): CApplication->__construct('/home/nastya/pr...')
+#5 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/nastya/pr...')
+#6 /home/nastya/projects/APIDocCreator/application/index.php(13): YiiBase::createWebApplication('/home/nastya/pr...')
+#7 {main}
+REQUEST_URI=/
+---
+2013/10/16 14:42:10 [error] [exception.CException] exception 'CException' with message 'Alias "ext.bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php:316
+Stack trace:
+#0 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(196): YiiBase::import('ext.bootstrap.c...', true)
+#1 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#3 /home/nastya/projects/APIDocCreator/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#4 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(125): CApplication->__construct('/home/nastya/pr...')
+#5 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/nastya/pr...')
+#6 /home/nastya/projects/APIDocCreator/application/index.php(13): YiiBase::createWebApplication('/home/nastya/pr...')
+#7 {main}
+REQUEST_URI=/
+---
+2013/10/16 14:45:08 [error] [exception.CException] exception 'CException' with message 'Alias "ext.bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php:316
+Stack trace:
+#0 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(196): YiiBase::import('ext.bootstrap.c...', true)
+#1 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#3 /home/nastya/projects/APIDocCreator/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#4 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(125): CApplication->__construct('/home/nastya/pr...')
+#5 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/nastya/pr...')
+#6 /home/nastya/projects/APIDocCreator/application/index.php(13): YiiBase::createWebApplication('/home/nastya/pr...')
+#7 {main}
+REQUEST_URI=/
+---
+2013/10/16 14:45:26 [error] [exception.CException] exception 'CException' with message 'Alias "ext.bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php:316
+Stack trace:
+#0 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(196): YiiBase::import('ext.bootstrap.c...', true)
+#1 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#3 /home/nastya/projects/APIDocCreator/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#4 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(125): CApplication->__construct('/home/nastya/pr...')
+#5 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/nastya/pr...')
+#6 /home/nastya/projects/APIDocCreator/application/index.php(13): YiiBase::createWebApplication('/home/nastya/pr...')
+#7 {main}
+REQUEST_URI=/
+---
+2013/10/16 14:45:31 [error] [exception.CException] exception 'CException' with message 'Alias "ext.bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php:316
+Stack trace:
+#0 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(196): YiiBase::import('ext.bootstrap.c...', true)
+#1 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#3 /home/nastya/projects/APIDocCreator/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#4 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(125): CApplication->__construct('/home/nastya/pr...')
+#5 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/nastya/pr...')
+#6 /home/nastya/projects/APIDocCreator/application/index.php(13): YiiBase::createWebApplication('/home/nastya/pr...')
+#7 {main}
+REQUEST_URI=/
+---
+2013/10/16 14:45:32 [error] [exception.CException] exception 'CException' with message 'Alias "ext.bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php:316
+Stack trace:
+#0 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(196): YiiBase::import('ext.bootstrap.c...', true)
+#1 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#3 /home/nastya/projects/APIDocCreator/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#4 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(125): CApplication->__construct('/home/nastya/pr...')
+#5 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/nastya/pr...')
+#6 /home/nastya/projects/APIDocCreator/application/index.php(13): YiiBase::createWebApplication('/home/nastya/pr...')
+#7 {main}
+REQUEST_URI=/
+---
+2013/10/16 14:45:32 [error] [exception.CException] exception 'CException' with message 'Alias "ext.bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php:316
+Stack trace:
+#0 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(196): YiiBase::import('ext.bootstrap.c...', true)
+#1 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#3 /home/nastya/projects/APIDocCreator/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#4 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(125): CApplication->__construct('/home/nastya/pr...')
+#5 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/nastya/pr...')
+#6 /home/nastya/projects/APIDocCreator/application/index.php(13): YiiBase::createWebApplication('/home/nastya/pr...')
+#7 {main}
+REQUEST_URI=/
+---
+2013/10/16 14:45:33 [error] [exception.CException] exception 'CException' with message 'Alias "ext.bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php:316
+Stack trace:
+#0 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(196): YiiBase::import('ext.bootstrap.c...', true)
+#1 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#3 /home/nastya/projects/APIDocCreator/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#4 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(125): CApplication->__construct('/home/nastya/pr...')
+#5 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/nastya/pr...')
+#6 /home/nastya/projects/APIDocCreator/application/index.php(13): YiiBase::createWebApplication('/home/nastya/pr...')
+#7 {main}
+REQUEST_URI=/
+---
+2013/10/16 14:45:34 [error] [exception.CException] exception 'CException' with message 'Alias "ext.bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php:316
+Stack trace:
+#0 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(196): YiiBase::import('ext.bootstrap.c...', true)
+#1 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#3 /home/nastya/projects/APIDocCreator/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#4 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(125): CApplication->__construct('/home/nastya/pr...')
+#5 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/nastya/pr...')
+#6 /home/nastya/projects/APIDocCreator/application/index.php(13): YiiBase::createWebApplication('/home/nastya/pr...')
+#7 {main}
+REQUEST_URI=/
+---
+2013/10/16 14:45:35 [error] [exception.CException] exception 'CException' with message 'Alias "ext.bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php:316
+Stack trace:
+#0 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(196): YiiBase::import('ext.bootstrap.c...', true)
+#1 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#3 /home/nastya/projects/APIDocCreator/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#4 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(125): CApplication->__construct('/home/nastya/pr...')
+#5 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/nastya/pr...')
+#6 /home/nastya/projects/APIDocCreator/application/index.php(13): YiiBase::createWebApplication('/home/nastya/pr...')
+#7 {main}
+REQUEST_URI=/
+---
+2013/10/16 14:45:36 [error] [exception.CException] exception 'CException' with message 'Alias "ext.bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php:316
+Stack trace:
+#0 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(196): YiiBase::import('ext.bootstrap.c...', true)
+#1 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#3 /home/nastya/projects/APIDocCreator/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#4 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(125): CApplication->__construct('/home/nastya/pr...')
+#5 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/nastya/pr...')
+#6 /home/nastya/projects/APIDocCreator/application/index.php(13): YiiBase::createWebApplication('/home/nastya/pr...')
+#7 {main}
+REQUEST_URI=/
+---
+2013/10/16 14:45:37 [error] [exception.CException] exception 'CException' with message 'Alias "ext.bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php:316
+Stack trace:
+#0 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(196): YiiBase::import('ext.bootstrap.c...', true)
+#1 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#3 /home/nastya/projects/APIDocCreator/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#4 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(125): CApplication->__construct('/home/nastya/pr...')
+#5 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/nastya/pr...')
+#6 /home/nastya/projects/APIDocCreator/application/index.php(13): YiiBase::createWebApplication('/home/nastya/pr...')
+#7 {main}
+REQUEST_URI=/
+---
+2013/10/16 14:46:01 [error] [exception.CException] exception 'CException' with message 'Alias "ext.bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php:316
+Stack trace:
+#0 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(196): YiiBase::import('ext.bootstrap.c...', true)
+#1 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#3 /home/nastya/projects/APIDocCreator/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#4 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(125): CApplication->__construct('/home/nastya/pr...')
+#5 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/nastya/pr...')
+#6 /home/nastya/projects/APIDocCreator/application/index.php(13): YiiBase::createWebApplication('/home/nastya/pr...')
+#7 {main}
+REQUEST_URI=/
+---
+2013/10/16 14:46:03 [error] [exception.CException] exception 'CException' with message 'Alias "ext.bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php:316
+Stack trace:
+#0 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(196): YiiBase::import('ext.bootstrap.c...', true)
+#1 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#3 /home/nastya/projects/APIDocCreator/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#4 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(125): CApplication->__construct('/home/nastya/pr...')
+#5 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/nastya/pr...')
+#6 /home/nastya/projects/APIDocCreator/application/index.php(13): YiiBase::createWebApplication('/home/nastya/pr...')
+#7 {main}
+REQUEST_URI=/
+---
+2013/10/16 14:46:53 [error] [exception.CException] exception 'CException' with message 'Alias "ext.bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php:317
+Stack trace:
+#0 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(196): YiiBase::import('ext.bootstrap.c...', true)
+#1 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#3 /home/nastya/projects/APIDocCreator/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#4 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(125): CApplication->__construct('/home/nastya/pr...')
+#5 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/nastya/pr...')
+#6 /home/nastya/projects/APIDocCreator/application/index.php(13): YiiBase::createWebApplication('/home/nastya/pr...')
+#7 {main}
+REQUEST_URI=/
+---
+2013/10/16 14:48:49 [error] [exception.CException] exception 'CException' with message 'Alias "ext.bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php:317
+Stack trace:
+#0 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(196): YiiBase::import('ext.bootstrap.c...', true)
+#1 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#3 /home/nastya/projects/APIDocCreator/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#4 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(125): CApplication->__construct('/home/nastya/pr...')
+#5 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/nastya/pr...')
+#6 /home/nastya/projects/APIDocCreator/application/index.php(13): YiiBase::createWebApplication('/home/nastya/pr...')
+#7 {main}
+REQUEST_URI=/
+---
+2013/10/16 14:48:54 [error] [exception.CException] exception 'CException' with message 'Alias "ext.bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php:317
+Stack trace:
+#0 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(196): YiiBase::import('ext.bootstrap.c...', true)
+#1 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#3 /home/nastya/projects/APIDocCreator/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#4 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(125): CApplication->__construct('/home/nastya/pr...')
+#5 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/nastya/pr...')
+#6 /home/nastya/projects/APIDocCreator/application/index.php(13): YiiBase::createWebApplication('/home/nastya/pr...')
+#7 {main}
+REQUEST_URI=/
+---
+2013/10/16 14:48:56 [error] [exception.CException] exception 'CException' with message 'Alias "ext.bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php:317
+Stack trace:
+#0 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(196): YiiBase::import('ext.bootstrap.c...', true)
+#1 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#3 /home/nastya/projects/APIDocCreator/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#4 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(125): CApplication->__construct('/home/nastya/pr...')
+#5 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/nastya/pr...')
+#6 /home/nastya/projects/APIDocCreator/application/index.php(13): YiiBase::createWebApplication('/home/nastya/pr...')
+#7 {main}
+REQUEST_URI=/
+---
+2013/10/16 14:49:20 [error] [exception.CException] exception 'CException' with message 'Alias "ext.bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php:317
+Stack trace:
+#0 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(196): YiiBase::import('ext.bootstrap.c...', true)
+#1 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#3 /home/nastya/projects/APIDocCreator/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#4 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(125): CApplication->__construct('/home/nastya/pr...')
+#5 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/nastya/pr...')
+#6 /home/nastya/projects/APIDocCreator/application/index.php(13): YiiBase::createWebApplication('/home/nastya/pr...')
+#7 {main}
+REQUEST_URI=/
+---
+2013/10/16 14:49:25 [error] [exception.CException] exception 'CException' with message 'Alias "ext.bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php:317
+Stack trace:
+#0 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(196): YiiBase::import('ext.bootstrap.c...', true)
+#1 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#3 /home/nastya/projects/APIDocCreator/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#4 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(125): CApplication->__construct('/home/nastya/pr...')
+#5 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/nastya/pr...')
+#6 /home/nastya/projects/APIDocCreator/application/index.php(13): YiiBase::createWebApplication('/home/nastya/pr...')
+#7 {main}
+REQUEST_URI=/
+---
+2013/10/16 14:57:38 [error] [exception.CException] exception 'CException' with message 'The asset "/home/nastya/projects/APIDocCreator/application/protected/config../extensions/bootstrap/assets" to be published does not exist.' in /home/nastya/projects/APIDocCreator/yii/framework/web/CAssetManager.php:257
+Stack trace:
+#0 /home/nastya/projects/APIDocCreator/application/protected/extensions/bootstrap/components/Bootstrap.php(308): CAssetManager->publish('/home/nastya/pr...', true, -1, false)
+#1 /home/nastya/projects/APIDocCreator/application/protected/extensions/bootstrap/components/Bootstrap.php(52): Bootstrap->getAssetsUrl()
+#2 /home/nastya/projects/APIDocCreator/application/protected/extensions/bootstrap/components/Bootstrap.php(83): Bootstrap->registerCoreCss()
+#3 /home/nastya/projects/APIDocCreator/application/protected/extensions/bootstrap/components/Bootstrap.php(44): Bootstrap->registerAllCss()
+#4 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(387): Bootstrap->init()
+#5 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#6 /home/nastya/projects/APIDocCreator/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#7 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(125): CApplication->__construct('/home/nastya/pr...')
+#8 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/nastya/pr...')
+#9 /home/nastya/projects/APIDocCreator/application/index.php(13): YiiBase::createWebApplication('/home/nastya/pr...')
+#10 {main}
+REQUEST_URI=/
+---
+2013/10/16 14:58:30 [error] [exception.CException] exception 'CException' with message 'The asset "/home/nastya/projects/APIDocCreator/application/protected/config../extensions/bootstrap/assets" to be published does not exist.' in /home/nastya/projects/APIDocCreator/yii/framework/web/CAssetManager.php:257
+Stack trace:
+#0 /home/nastya/projects/APIDocCreator/application/protected/extensions/bootstrap/components/Bootstrap.php(308): CAssetManager->publish('/home/nastya/pr...', true, -1, false)
+#1 /home/nastya/projects/APIDocCreator/application/protected/extensions/bootstrap/components/Bootstrap.php(52): Bootstrap->getAssetsUrl()
+#2 /home/nastya/projects/APIDocCreator/application/protected/extensions/bootstrap/components/Bootstrap.php(83): Bootstrap->registerCoreCss()
+#3 /home/nastya/projects/APIDocCreator/application/protected/extensions/bootstrap/components/Bootstrap.php(44): Bootstrap->registerAllCss()
+#4 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(387): Bootstrap->init()
+#5 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#6 /home/nastya/projects/APIDocCreator/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#7 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(125): CApplication->__construct('/home/nastya/pr...')
+#8 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/nastya/pr...')
+#9 /home/nastya/projects/APIDocCreator/application/index.php(13): YiiBase::createWebApplication('/home/nastya/pr...')
+#10 {main}
+REQUEST_URI=/
+---
+2013/10/16 14:58:32 [error] [exception.CException] exception 'CException' with message 'The asset "/home/nastya/projects/APIDocCreator/application/protected/config../extensions/bootstrap/assets" to be published does not exist.' in /home/nastya/projects/APIDocCreator/yii/framework/web/CAssetManager.php:257
+Stack trace:
+#0 /home/nastya/projects/APIDocCreator/application/protected/extensions/bootstrap/components/Bootstrap.php(308): CAssetManager->publish('/home/nastya/pr...', true, -1, false)
+#1 /home/nastya/projects/APIDocCreator/application/protected/extensions/bootstrap/components/Bootstrap.php(52): Bootstrap->getAssetsUrl()
+#2 /home/nastya/projects/APIDocCreator/application/protected/extensions/bootstrap/components/Bootstrap.php(83): Bootstrap->registerCoreCss()
+#3 /home/nastya/projects/APIDocCreator/application/protected/extensions/bootstrap/components/Bootstrap.php(44): Bootstrap->registerAllCss()
+#4 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(387): Bootstrap->init()
+#5 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#6 /home/nastya/projects/APIDocCreator/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#7 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(125): CApplication->__construct('/home/nastya/pr...')
+#8 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/nastya/pr...')
+#9 /home/nastya/projects/APIDocCreator/application/index.php(13): YiiBase::createWebApplication('/home/nastya/pr...')
+#10 {main}
+REQUEST_URI=/
+---
+2013/10/16 14:58:34 [error] [exception.CException] exception 'CException' with message 'The asset "/home/nastya/projects/APIDocCreator/application/protected/config../extensions/bootstrap/assets" to be published does not exist.' in /home/nastya/projects/APIDocCreator/yii/framework/web/CAssetManager.php:257
+Stack trace:
+#0 /home/nastya/projects/APIDocCreator/application/protected/extensions/bootstrap/components/Bootstrap.php(308): CAssetManager->publish('/home/nastya/pr...', true, -1, false)
+#1 /home/nastya/projects/APIDocCreator/application/protected/extensions/bootstrap/components/Bootstrap.php(52): Bootstrap->getAssetsUrl()
+#2 /home/nastya/projects/APIDocCreator/application/protected/extensions/bootstrap/components/Bootstrap.php(83): Bootstrap->registerCoreCss()
+#3 /home/nastya/projects/APIDocCreator/application/protected/extensions/bootstrap/components/Bootstrap.php(44): Bootstrap->registerAllCss()
+#4 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(387): Bootstrap->init()
+#5 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#6 /home/nastya/projects/APIDocCreator/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#7 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(125): CApplication->__construct('/home/nastya/pr...')
+#8 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/nastya/pr...')
+#9 /home/nastya/projects/APIDocCreator/application/index.php(13): YiiBase::createWebApplication('/home/nastya/pr...')
+#10 {main}
+REQUEST_URI=/
+---
+2013/10/16 14:58:35 [error] [exception.CException] exception 'CException' with message 'The asset "/home/nastya/projects/APIDocCreator/application/protected/config../extensions/bootstrap/assets" to be published does not exist.' in /home/nastya/projects/APIDocCreator/yii/framework/web/CAssetManager.php:257
+Stack trace:
+#0 /home/nastya/projects/APIDocCreator/application/protected/extensions/bootstrap/components/Bootstrap.php(308): CAssetManager->publish('/home/nastya/pr...', true, -1, false)
+#1 /home/nastya/projects/APIDocCreator/application/protected/extensions/bootstrap/components/Bootstrap.php(52): Bootstrap->getAssetsUrl()
+#2 /home/nastya/projects/APIDocCreator/application/protected/extensions/bootstrap/components/Bootstrap.php(83): Bootstrap->registerCoreCss()
+#3 /home/nastya/projects/APIDocCreator/application/protected/extensions/bootstrap/components/Bootstrap.php(44): Bootstrap->registerAllCss()
+#4 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(387): Bootstrap->init()
+#5 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#6 /home/nastya/projects/APIDocCreator/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#7 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(125): CApplication->__construct('/home/nastya/pr...')
+#8 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/nastya/pr...')
+#9 /home/nastya/projects/APIDocCreator/application/index.php(13): YiiBase::createWebApplication('/home/nastya/pr...')
+#10 {main}
+REQUEST_URI=/
+---
+2013/10/16 14:58:37 [error] [exception.CException] exception 'CException' with message 'The asset "/home/nastya/projects/APIDocCreator/application/protected/config../extensions/bootstrap/assets" to be published does not exist.' in /home/nastya/projects/APIDocCreator/yii/framework/web/CAssetManager.php:257
+Stack trace:
+#0 /home/nastya/projects/APIDocCreator/application/protected/extensions/bootstrap/components/Bootstrap.php(308): CAssetManager->publish('/home/nastya/pr...', true, -1, false)
+#1 /home/nastya/projects/APIDocCreator/application/protected/extensions/bootstrap/components/Bootstrap.php(52): Bootstrap->getAssetsUrl()
+#2 /home/nastya/projects/APIDocCreator/application/protected/extensions/bootstrap/components/Bootstrap.php(83): Bootstrap->registerCoreCss()
+#3 /home/nastya/projects/APIDocCreator/application/protected/extensions/bootstrap/components/Bootstrap.php(44): Bootstrap->registerAllCss()
+#4 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(387): Bootstrap->init()
+#5 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#6 /home/nastya/projects/APIDocCreator/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#7 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(125): CApplication->__construct('/home/nastya/pr...')
+#8 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/nastya/pr...')
+#9 /home/nastya/projects/APIDocCreator/application/index.php(13): YiiBase::createWebApplication('/home/nastya/pr...')
+#10 {main}
+REQUEST_URI=/
+---
+2013/10/16 14:59:30 [error] [exception.CException] exception 'CException' with message 'The asset "/home/nastya/projects/APIDocCreator/application/protected/config../extensions/bootstrap/assets" to be published does not exist.' in /home/nastya/projects/APIDocCreator/yii/framework/web/CAssetManager.php:257
+Stack trace:
+#0 /home/nastya/projects/APIDocCreator/application/protected/extensions/bootstrap/components/Bootstrap.php(308): CAssetManager->publish('/home/nastya/pr...', true, -1, false)
+#1 /home/nastya/projects/APIDocCreator/application/protected/extensions/bootstrap/components/Bootstrap.php(52): Bootstrap->getAssetsUrl()
+#2 /home/nastya/projects/APIDocCreator/application/protected/extensions/bootstrap/components/Bootstrap.php(83): Bootstrap->registerCoreCss()
+#3 /home/nastya/projects/APIDocCreator/application/protected/extensions/bootstrap/components/Bootstrap.php(44): Bootstrap->registerAllCss()
+#4 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(387): Bootstrap->init()
+#5 /home/nastya/projects/APIDocCreator/yii/framework/base/CModule.php(523): CModule->getComponent('bootstrap')
+#6 /home/nastya/projects/APIDocCreator/yii/framework/base/CApplication.php(152): CModule->preloadComponents()
+#7 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(125): CApplication->__construct('/home/nastya/pr...')
+#8 /home/nastya/projects/APIDocCreator/yii/framework/YiiBase.php(98): YiiBase::createApplication('CWebApplication', '/home/nastya/pr...')
+#9 /home/nastya/projects/APIDocCreator/application/index.php(13): YiiBase::createWebApplication('/home/nastya/pr...')
+#10 {main}
+REQUEST_URI=/
+---
