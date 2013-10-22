@@ -9,7 +9,6 @@ return array(
             'migrationPath'=>'application.migrations',
             'migrationTable'=>'migration',
             'connectionID'=>'db',
-            'templateFile'=>'application.migrations.template',
         ),
     ),
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
