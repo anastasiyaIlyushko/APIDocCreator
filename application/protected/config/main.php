@@ -91,6 +91,9 @@ return array(
 				*/
 			),
 		),
+		'themeManager' => array(
+			'basePath' => dirname(__FILE__).DIRECTORY_SEPARATOR.'../../themes',
+		)
 	),
 
 	// application-level parameters that can be accessed

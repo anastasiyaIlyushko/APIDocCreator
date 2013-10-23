@@ -619,3 +619,235 @@ Stack trace:
 #10 {main}
 REQUEST_URI=/
 ---
+2013/10/23 12:43:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/y2k/projects/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/y2k/projects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/y2k/projects/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/y2k/projects/APIDocCreator/application/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/10/23 15:07:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/y2k/projects/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/y2k/projects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/y2k/projects/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/y2k/projects/APIDocCreator/application/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/10/23 15:07:48 [error] [exception.CDbException] exception 'CDbException' with message 'The table "projects" for active record class "Project" cannot be found in the database.' in /home/y2k/projects/yii/framework/db/ar/CActiveRecord.php:2362
+Stack trace:
+#0 /home/y2k/projects/yii/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Project))
+#1 /home/y2k/projects/yii/framework/db/ar/CActiveRecord.php(658): CActiveRecord->getMetaData()
+#2 /home/y2k/projects/yii/framework/db/ar/CActiveRecord.php(1601): CActiveRecord->getTableSchema()
+#3 /home/y2k/projects/yii/framework/web/CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#4 /home/y2k/projects/yii/framework/web/CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#5 /home/y2k/projects/yii/framework/web/CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#6 /home/y2k/projects/yii/framework/web/CDataProvider.php(168): CActiveDataProvider->fetchData()
+#7 /home/y2k/projects/yii/framework/zii/widgets/CBaseListView.php(111): CDataProvider->getData()
+#8 /home/y2k/projects/yii/framework/zii/widgets/CListView.php(211): CBaseListView->init()
+#9 /home/y2k/projects/yii/framework/web/CBaseController.php(147): CListView->init()
+#10 /home/y2k/projects/yii/framework/web/CBaseController.php(172): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#11 /home/y2k/projects/APIDocCreator/application/protected/views/projects/index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#12 /home/y2k/projects/yii/framework/web/CBaseController.php(126): require('/home/y2k/proje...')
+#13 /home/y2k/projects/APIDocCreator/application/protected/extensions/yii-debug-toolbar/components/YiiDebugViewRenderer.php(47): CBaseController->renderInternal('/home/y2k/proje...', Array, true)
+#14 /home/y2k/projects/yii/framework/web/CBaseController.php(93): YiiDebugViewRenderer->renderFile(Object(ProjectsController), '/home/y2k/proje...', Array, true)
+#15 /home/y2k/projects/yii/framework/web/CController.php(869): CBaseController->renderFile('/home/y2k/proje...', Array, true)
+#16 /home/y2k/projects/yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#17 /home/y2k/projects/APIDocCreator/application/protected/controllers/ProjectsController.php(128): CController->render('index', Array)
+#18 /home/y2k/projects/yii/framework/web/actions/CInlineAction.php(49): ProjectsController->actionIndex()
+#19 /home/y2k/projects/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#20 /home/y2k/projects/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#21 /home/y2k/projects/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#22 /home/y2k/projects/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#23 /home/y2k/projects/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#24 /home/y2k/projects/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#25 /home/y2k/projects/yii/framework/web/CController.php(291): CFilterChain->run()
+#26 /home/y2k/projects/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#27 /home/y2k/projects/yii/framework/web/CWebApplication.php(282): CController->run('')
+#28 /home/y2k/projects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('projects')
+#29 /home/y2k/projects/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#30 /home/y2k/projects/APIDocCreator/application/index.php(13): CApplication->run()
+#31 {main}
+REQUEST_URI=/projects
+---
+2013/10/23 15:12:21 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 8 attempt to write a readonly database. The SQL statement executed was: CREATE TABLE 'migration' (
+	"version" varchar(255) NOT NULL PRIMARY KEY,
+	"apply_time" integer
+).
+2013/10/23 15:12:21 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY000]: General error: 8 attempt to write a readonly database. The SQL statement executed was: CREATE TABLE 'migration' (
+	"version" varchar(255) NOT NULL PRIMARY KEY,
+	"apply_time" integer
+)' in /home/y2k/projects/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /home/y2k/projects/yii/framework/db/CDbCommand.php(1324): CDbCommand->execute()
+#1 /home/y2k/projects/yii/framework/cli/commands/MigrateCommand.php(471): CDbCommand->createTable('migration', Array)
+#2 /home/y2k/projects/yii/framework/cli/commands/MigrateCommand.php(454): MigrateCommand->createMigrationHistoryTable()
+#3 /home/y2k/projects/yii/framework/cli/commands/MigrateCommand.php(482): MigrateCommand->getMigrationHistory(-1)
+#4 /home/y2k/projects/yii/framework/cli/commands/MigrateCommand.php(84): MigrateCommand->getNewMigrations()
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 /home/y2k/projects/yii/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 /home/y2k/projects/yii/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 /home/y2k/projects/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 /home/y2k/projects/yii/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#10 /home/y2k/projects/yii/framework/yiic.php(33): CApplication->run()
+#11 /home/y2k/projects/APIDocCreator/application/protected/yiic.php(7): require_once('/home/y2k/proje...')
+#12 /home/y2k/projects/APIDocCreator/application/protected/yiic(4): require_once('/home/y2k/proje...')
+#13 {main}
+---
+2013/10/23 15:16:01 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/y2k/projects/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /home/y2k/projects/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /home/y2k/projects/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/y2k/projects/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /home/y2k/projects/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /home/y2k/projects/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/y2k/projects/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /home/y2k/projects/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/y2k/projects/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /home/y2k/projects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('projects/admin')
+#9 /home/y2k/projects/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /home/y2k/projects/APIDocCreator/application/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/projects/admin
+HTTP_REFERER=http://apidoccreator.ru.local/projects/index
+---
+2013/10/23 16:33:31 [error] [php] Argument 1 passed to LoginContext::__construct() must be an array, none given, called in /home/y2k/projects/APIDocCreator/application/protected/tests/features/bootstrap/FeatureContext.php on line 31 and defined (/home/y2k/projects/APIDocCreator/application/protected/tests/features/bootstrap/LoginContext.php:10)
+Stack trace:
+#0 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Context/ContextReader.php(51): Behat\Behat\Context\ContextDispatcher->createContext()
+#1 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Console/Processor/ContextReaderProcessor.php(48): Behat\Behat\Context\ContextReader->read()
+#2 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Console/Processor/AggregateProcessor.php(57): Behat\Behat\Console\Processor\ContextReaderProcessor->process()
+#3 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Console/Command/BaseCommand.php(55): Behat\Behat\Console\Processor\AggregateProcessor->process()
+#4 /home/y2k/projects/env/bdd/vendor/symfony/console/Symfony/Component/Console/Command/Command.php(234): Behat\Behat\Console\Command\BehatCommand->initialize()
+#5 /home/y2k/projects/env/bdd/vendor/symfony/console/Symfony/Component/Console/Application.php(888): Behat\Behat\Console\Command\BehatCommand->run()
+#6 /home/y2k/projects/env/bdd/vendor/symfony/console/Symfony/Component/Console/Application.php(194): Behat\Behat\Console\BehatApplication->doRunCommand()
+#7 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Console/BehatApplication.php(68): Behat\Behat\Console\BehatApplication->doRun()
+#8 /home/y2k/projects/env/bdd/vendor/symfony/console/Symfony/Component/Console/Application.php(124): Behat\Behat\Console\BehatApplication->doRun()
+#9 /home/y2k/projects/env/bdd/vendor/behat/behat/bin/behat(32): Behat\Behat\Console\BehatApplication->run()
+
+2013/10/23 17:45:56 [error] [php] Invalid argument supplied for foreach() (/home/y2k/projects/env/bdd/vendor/behat/mink-selenium2-driver/src/Behat/Mink/Driver/Selenium2Driver.php:100)
+Stack trace:
+#0 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Context/ContextDispatcher.php(113): FeatureContext->__construct()
+#1 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Context/ContextReader.php(51): Behat\Behat\Context\ContextDispatcher->createContext()
+#2 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Console/Processor/ContextReaderProcessor.php(48): Behat\Behat\Context\ContextReader->read()
+#3 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Console/Processor/AggregateProcessor.php(57): Behat\Behat\Console\Processor\ContextReaderProcessor->process()
+#4 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Console/Command/BaseCommand.php(55): Behat\Behat\Console\Processor\AggregateProcessor->process()
+#5 /home/y2k/projects/env/bdd/vendor/symfony/console/Symfony/Component/Console/Command/Command.php(234): Behat\Behat\Console\Command\BehatCommand->initialize()
+#6 /home/y2k/projects/env/bdd/vendor/symfony/console/Symfony/Component/Console/Application.php(888): Behat\Behat\Console\Command\BehatCommand->run()
+#7 /home/y2k/projects/env/bdd/vendor/symfony/console/Symfony/Component/Console/Application.php(194): Behat\Behat\Console\BehatApplication->doRunCommand()
+#8 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Console/BehatApplication.php(68): Behat\Behat\Console\BehatApplication->doRun()
+#9 /home/y2k/projects/env/bdd/vendor/symfony/console/Symfony/Component/Console/Application.php(124): Behat\Behat\Console\BehatApplication->doRun()
+#10 /home/y2k/projects/env/bdd/vendor/behat/behat/bin/behat(32): Behat\Behat\Console\BehatApplication->run()
+
+2013/10/23 17:50:43 [error] [php] Invalid argument supplied for foreach() (/home/y2k/projects/env/bdd/vendor/behat/mink-selenium2-driver/src/Behat/Mink/Driver/Selenium2Driver.php:100)
+Stack trace:
+#0 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Context/ContextDispatcher.php(113): FeatureContext->__construct()
+#1 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Context/ContextReader.php(51): Behat\Behat\Context\ContextDispatcher->createContext()
+#2 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Console/Processor/ContextReaderProcessor.php(48): Behat\Behat\Context\ContextReader->read()
+#3 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Console/Processor/AggregateProcessor.php(57): Behat\Behat\Console\Processor\ContextReaderProcessor->process()
+#4 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Console/Command/BaseCommand.php(55): Behat\Behat\Console\Processor\AggregateProcessor->process()
+#5 /home/y2k/projects/env/bdd/vendor/symfony/console/Symfony/Component/Console/Command/Command.php(234): Behat\Behat\Console\Command\BehatCommand->initialize()
+#6 /home/y2k/projects/env/bdd/vendor/symfony/console/Symfony/Component/Console/Application.php(888): Behat\Behat\Console\Command\BehatCommand->run()
+#7 /home/y2k/projects/env/bdd/vendor/symfony/console/Symfony/Component/Console/Application.php(194): Behat\Behat\Console\BehatApplication->doRunCommand()
+#8 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Console/BehatApplication.php(68): Behat\Behat\Console\BehatApplication->doRun()
+#9 /home/y2k/projects/env/bdd/vendor/symfony/console/Symfony/Component/Console/Application.php(124): Behat\Behat\Console\BehatApplication->doRun()
+#10 /home/y2k/projects/env/bdd/vendor/behat/behat/bin/behat(32): Behat\Behat\Console\BehatApplication->run()
+
+2013/10/23 17:55:47 [error] [php] Invalid argument supplied for foreach() (/home/y2k/projects/env/bdd/vendor/behat/mink-selenium2-driver/src/Behat/Mink/Driver/Selenium2Driver.php:100)
+Stack trace:
+#0 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Context/ContextDispatcher.php(113): FeatureContext->__construct()
+#1 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Context/ContextReader.php(51): Behat\Behat\Context\ContextDispatcher->createContext()
+#2 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Console/Processor/ContextReaderProcessor.php(48): Behat\Behat\Context\ContextReader->read()
+#3 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Console/Processor/AggregateProcessor.php(57): Behat\Behat\Console\Processor\ContextReaderProcessor->process()
+#4 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Console/Command/BaseCommand.php(55): Behat\Behat\Console\Processor\AggregateProcessor->process()
+#5 /home/y2k/projects/env/bdd/vendor/symfony/console/Symfony/Component/Console/Command/Command.php(234): Behat\Behat\Console\Command\BehatCommand->initialize()
+#6 /home/y2k/projects/env/bdd/vendor/symfony/console/Symfony/Component/Console/Application.php(888): Behat\Behat\Console\Command\BehatCommand->run()
+#7 /home/y2k/projects/env/bdd/vendor/symfony/console/Symfony/Component/Console/Application.php(194): Behat\Behat\Console\BehatApplication->doRunCommand()
+#8 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Console/BehatApplication.php(68): Behat\Behat\Console\BehatApplication->doRun()
+#9 /home/y2k/projects/env/bdd/vendor/symfony/console/Symfony/Component/Console/Application.php(124): Behat\Behat\Console\BehatApplication->doRun()
+#10 /home/y2k/projects/env/bdd/vendor/behat/behat/bin/behat(32): Behat\Behat\Console\BehatApplication->run()
+
+2013/10/23 17:56:18 [error] [php] Invalid argument supplied for foreach() (/home/y2k/projects/env/bdd/vendor/behat/mink-selenium2-driver/src/Behat/Mink/Driver/Selenium2Driver.php:100)
+Stack trace:
+#0 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Context/ContextDispatcher.php(113): FeatureContext->__construct()
+#1 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Context/ContextReader.php(51): Behat\Behat\Context\ContextDispatcher->createContext()
+#2 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Console/Processor/ContextReaderProcessor.php(48): Behat\Behat\Context\ContextReader->read()
+#3 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Console/Processor/AggregateProcessor.php(57): Behat\Behat\Console\Processor\ContextReaderProcessor->process()
+#4 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Console/Command/BaseCommand.php(55): Behat\Behat\Console\Processor\AggregateProcessor->process()
+#5 /home/y2k/projects/env/bdd/vendor/symfony/console/Symfony/Component/Console/Command/Command.php(234): Behat\Behat\Console\Command\BehatCommand->initialize()
+#6 /home/y2k/projects/env/bdd/vendor/symfony/console/Symfony/Component/Console/Application.php(888): Behat\Behat\Console\Command\BehatCommand->run()
+#7 /home/y2k/projects/env/bdd/vendor/symfony/console/Symfony/Component/Console/Application.php(194): Behat\Behat\Console\BehatApplication->doRunCommand()
+#8 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Console/BehatApplication.php(68): Behat\Behat\Console\BehatApplication->doRun()
+#9 /home/y2k/projects/env/bdd/vendor/symfony/console/Symfony/Component/Console/Application.php(124): Behat\Behat\Console\BehatApplication->doRun()
+#10 /home/y2k/projects/env/bdd/vendor/behat/behat/bin/behat(32): Behat\Behat\Console\BehatApplication->run()
+
+2013/10/23 18:00:31 [error] [php] Invalid argument supplied for foreach() (/home/y2k/projects/env/bdd/vendor/behat/mink-selenium2-driver/src/Behat/Mink/Driver/Selenium2Driver.php:100)
+Stack trace:
+#0 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Context/ContextDispatcher.php(113): FeatureContext->__construct()
+#1 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Context/ContextReader.php(51): Behat\Behat\Context\ContextDispatcher->createContext()
+#2 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Console/Processor/ContextReaderProcessor.php(48): Behat\Behat\Context\ContextReader->read()
+#3 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Console/Processor/AggregateProcessor.php(57): Behat\Behat\Console\Processor\ContextReaderProcessor->process()
+#4 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Console/Command/BaseCommand.php(55): Behat\Behat\Console\Processor\AggregateProcessor->process()
+#5 /home/y2k/projects/env/bdd/vendor/symfony/console/Symfony/Component/Console/Command/Command.php(234): Behat\Behat\Console\Command\BehatCommand->initialize()
+#6 /home/y2k/projects/env/bdd/vendor/symfony/console/Symfony/Component/Console/Application.php(888): Behat\Behat\Console\Command\BehatCommand->run()
+#7 /home/y2k/projects/env/bdd/vendor/symfony/console/Symfony/Component/Console/Application.php(194): Behat\Behat\Console\BehatApplication->doRunCommand()
+#8 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Console/BehatApplication.php(68): Behat\Behat\Console\BehatApplication->doRun()
+#9 /home/y2k/projects/env/bdd/vendor/symfony/console/Symfony/Component/Console/Application.php(124): Behat\Behat\Console\BehatApplication->doRun()
+#10 /home/y2k/projects/env/bdd/vendor/behat/behat/bin/behat(32): Behat\Behat\Console\BehatApplication->run()
+
+2013/10/23 18:01:04 [error] [php] Invalid argument supplied for foreach() (/home/y2k/projects/env/bdd/vendor/behat/mink-selenium2-driver/src/Behat/Mink/Driver/Selenium2Driver.php:100)
+Stack trace:
+#0 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Context/ContextDispatcher.php(113): FeatureContext->__construct()
+#1 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Context/ContextReader.php(51): Behat\Behat\Context\ContextDispatcher->createContext()
+#2 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Console/Processor/ContextReaderProcessor.php(48): Behat\Behat\Context\ContextReader->read()
+#3 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Console/Processor/AggregateProcessor.php(57): Behat\Behat\Console\Processor\ContextReaderProcessor->process()
+#4 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Console/Command/BaseCommand.php(55): Behat\Behat\Console\Processor\AggregateProcessor->process()
+#5 /home/y2k/projects/env/bdd/vendor/symfony/console/Symfony/Component/Console/Command/Command.php(234): Behat\Behat\Console\Command\BehatCommand->initialize()
+#6 /home/y2k/projects/env/bdd/vendor/symfony/console/Symfony/Component/Console/Application.php(888): Behat\Behat\Console\Command\BehatCommand->run()
+#7 /home/y2k/projects/env/bdd/vendor/symfony/console/Symfony/Component/Console/Application.php(194): Behat\Behat\Console\BehatApplication->doRunCommand()
+#8 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Console/BehatApplication.php(68): Behat\Behat\Console\BehatApplication->doRun()
+#9 /home/y2k/projects/env/bdd/vendor/symfony/console/Symfony/Component/Console/Application.php(124): Behat\Behat\Console\BehatApplication->doRun()
+#10 /home/y2k/projects/env/bdd/vendor/behat/behat/bin/behat(32): Behat\Behat\Console\BehatApplication->run()
+
+2013/10/23 18:14:02 [error] [php] Invalid argument supplied for foreach() (/home/y2k/projects/env/bdd/vendor/behat/mink-selenium2-driver/src/Behat/Mink/Driver/Selenium2Driver.php:100)
+Stack trace:
+#0 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Context/ContextDispatcher.php(113): FeatureContext->__construct()
+#1 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Context/ContextReader.php(51): Behat\Behat\Context\ContextDispatcher->createContext()
+#2 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Console/Processor/ContextReaderProcessor.php(48): Behat\Behat\Context\ContextReader->read()
+#3 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Console/Processor/AggregateProcessor.php(57): Behat\Behat\Console\Processor\ContextReaderProcessor->process()
+#4 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Console/Command/BaseCommand.php(55): Behat\Behat\Console\Processor\AggregateProcessor->process()
+#5 /home/y2k/projects/env/bdd/vendor/symfony/console/Symfony/Component/Console/Command/Command.php(234): Behat\Behat\Console\Command\BehatCommand->initialize()
+#6 /home/y2k/projects/env/bdd/vendor/symfony/console/Symfony/Component/Console/Application.php(888): Behat\Behat\Console\Command\BehatCommand->run()
+#7 /home/y2k/projects/env/bdd/vendor/symfony/console/Symfony/Component/Console/Application.php(194): Behat\Behat\Console\BehatApplication->doRunCommand()
+#8 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Console/BehatApplication.php(68): Behat\Behat\Console\BehatApplication->doRun()
+#9 /home/y2k/projects/env/bdd/vendor/symfony/console/Symfony/Component/Console/Application.php(124): Behat\Behat\Console\BehatApplication->doRun()
+#10 /home/y2k/projects/env/bdd/vendor/behat/behat/bin/behat(32): Behat\Behat\Console\BehatApplication->run()
+
+2013/10/23 18:14:17 [error] [php] Invalid argument supplied for foreach() (/home/y2k/projects/env/bdd/vendor/behat/mink-selenium2-driver/src/Behat/Mink/Driver/Selenium2Driver.php:100)
+Stack trace:
+#0 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Context/ContextDispatcher.php(113): FeatureContext->__construct()
+#1 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Context/ContextReader.php(51): Behat\Behat\Context\ContextDispatcher->createContext()
+#2 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Console/Processor/ContextReaderProcessor.php(48): Behat\Behat\Context\ContextReader->read()
+#3 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Console/Processor/AggregateProcessor.php(57): Behat\Behat\Console\Processor\ContextReaderProcessor->process()
+#4 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Console/Command/BaseCommand.php(55): Behat\Behat\Console\Processor\AggregateProcessor->process()
+#5 /home/y2k/projects/env/bdd/vendor/symfony/console/Symfony/Component/Console/Command/Command.php(234): Behat\Behat\Console\Command\BehatCommand->initialize()
+#6 /home/y2k/projects/env/bdd/vendor/symfony/console/Symfony/Component/Console/Application.php(888): Behat\Behat\Console\Command\BehatCommand->run()
+#7 /home/y2k/projects/env/bdd/vendor/symfony/console/Symfony/Component/Console/Application.php(194): Behat\Behat\Console\BehatApplication->doRunCommand()
+#8 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Console/BehatApplication.php(68): Behat\Behat\Console\BehatApplication->doRun()
+#9 /home/y2k/projects/env/bdd/vendor/symfony/console/Symfony/Component/Console/Application.php(124): Behat\Behat\Console\BehatApplication->doRun()
+#10 /home/y2k/projects/env/bdd/vendor/behat/behat/bin/behat(32): Behat\Behat\Console\BehatApplication->run()
+
+2013/10/23 18:14:48 [error] [php] Invalid argument supplied for foreach() (/home/y2k/projects/env/bdd/vendor/behat/mink-selenium2-driver/src/Behat/Mink/Driver/Selenium2Driver.php:100)
+Stack trace:
+#0 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Context/ContextDispatcher.php(113): FeatureContext->__construct()
+#1 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Context/ContextReader.php(51): Behat\Behat\Context\ContextDispatcher->createContext()
+#2 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Console/Processor/ContextReaderProcessor.php(48): Behat\Behat\Context\ContextReader->read()
+#3 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Console/Processor/AggregateProcessor.php(57): Behat\Behat\Console\Processor\ContextReaderProcessor->process()
+#4 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Console/Command/BaseCommand.php(55): Behat\Behat\Console\Processor\AggregateProcessor->process()
+#5 /home/y2k/projects/env/bdd/vendor/symfony/console/Symfony/Component/Console/Command/Command.php(234): Behat\Behat\Console\Command\BehatCommand->initialize()
+#6 /home/y2k/projects/env/bdd/vendor/symfony/console/Symfony/Component/Console/Application.php(888): Behat\Behat\Console\Command\BehatCommand->run()
+#7 /home/y2k/projects/env/bdd/vendor/symfony/console/Symfony/Component/Console/Application.php(194): Behat\Behat\Console\BehatApplication->doRunCommand()
+#8 /home/y2k/projects/env/bdd/vendor/behat/behat/src/Behat/Behat/Console/BehatApplication.php(68): Behat\Behat\Console\BehatApplication->doRun()
+#9 /home/y2k/projects/env/bdd/vendor/symfony/console/Symfony/Component/Console/Application.php(124): Behat\Behat\Console\BehatApplication->doRun()
+#10 /home/y2k/projects/env/bdd/vendor/behat/behat/bin/behat(32): Behat\Behat\Console\BehatApplication->run()
+

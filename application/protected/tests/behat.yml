@@ -1,0 +1,11 @@
+default:
+    extensions:
+        Behat\MinkExtension\Extension:
+            default_session: selenium2
+            javascript_session: selenium2
+            selenium2: ~
+            base_url: "http://apidoccreator.ru.local"
+
+        Behat\YiiExtension\Extension:
+            framework_script: ../../../../yii/framework/yii.php
+            config_script: ../config/main.php
