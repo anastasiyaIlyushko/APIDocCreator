@@ -9,7 +9,9 @@
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'substance-form',
 	'enableAjaxValidation'=>false,
-)); ?>
+));
+
+?>
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
@@ -27,9 +29,9 @@
 		<?php echo $form->error($model,'description'); ?>
 	</div>
 
-	<div class="row">
+	<div class="row hidden">
 		<?php echo $form->labelEx($model,'projectId'); ?>
-		<?php echo $form->textField($model,'projectId'); ?>
+		<?php echo $form->textField($model,'projectId', array('value'=>$project->id)); ?>
 		<?php echo $form->error($model,'projectId'); ?>
 	</div>
 

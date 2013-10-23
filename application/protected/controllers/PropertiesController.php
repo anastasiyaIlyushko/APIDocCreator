@@ -1,15 +1,12 @@
 <?php
 
-class ProjectsController extends Controller {
-
-	public $menuName = "";
-	public $substances = array();
+class PropertiesController extends Controller {
 
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
-	public $layout = '//layouts/column2.for.projects';
+	public $layout = '//layouts/column2';
 
 	/**
 	 * @return array action filters
@@ -51,13 +48,8 @@ class ProjectsController extends Controller {
 	 * @param integer $id the ID of the model to be displayed
 	 */
 	public function actionView($id) {
-		$substances = new CActiveDataProvider('Substance', array(
-					'criteria' => array(
-						'condition' => 'projectId=' . $id)
-				));
 		$this->render('view', array(
 			'model' => $this->loadModel($id),
-			'substances' => $substances,
 		));
 	}
 
@@ -65,20 +57,27 @@ class ProjectsController extends Controller {
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionCreate() {
-		$model = new Project;
+	public function actionCreate($substanceId) {
+		if (empty($substanceId)) {
+			throw new CException("недостаточно параметров");
+		}
+
+		$model = new Propertie;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if (isset($_POST['Project'])) {
-			$model->attributes = $_POST['Project'];
+		if (isset($_POST['Propertie'])) {
+			$model->attributes = $_POST['Propertie'];
 			if ($model->save())
-				$this->redirect(array('view', 'id' => $model->id));
+				$this->redirect(array($this->getSubstanceViewURL(NULL, $model)));
 		}
+		$substance = Substance::model()->findByPk($substanceId);
+
 
 		$this->render('create', array(
 			'model' => $model,
+			'substance' => $substance,
 		));
 	}
 
@@ -93,8 +92,8 @@ class ProjectsController extends Controller {
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if (isset($_POST['Project'])) {
-			$model->attributes = $_POST['Project'];
+		if (isset($_POST['Propertie'])) {
+			$model->attributes = $_POST['Propertie'];
 			if ($model->save())
 				$this->redirect(array('view', 'id' => $model->id));
 		}
@@ -121,7 +120,7 @@ class ProjectsController extends Controller {
 	 * Lists all models.
 	 */
 	public function actionIndex() {
-		$dataProvider = new CActiveDataProvider('Project');
+		$dataProvider = new CActiveDataProvider('Propertie');
 		$this->render('index', array(
 			'dataProvider' => $dataProvider,
 		));
@@ -131,10 +130,10 @@ class ProjectsController extends Controller {
 	 * Manages all models.
 	 */
 	public function actionAdmin() {
-		$model = new Project('search');
+		$model = new Propertie('search');
 		$model->unsetAttributes();  // clear any default values
-		if (isset($_GET['Project']))
-			$model->attributes = $_GET['Project'];
+		if (isset($_GET['Propertie']))
+			$model->attributes = $_GET['Propertie'];
 
 		$this->render('admin', array(
 			'model' => $model,
@@ -145,11 +144,11 @@ class ProjectsController extends Controller {
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
-	 * @return Project the loaded model
+	 * @return Propertie the loaded model
 	 * @throws CHttpException
 	 */
 	public function loadModel($id) {
-		$model = Project::model()->findByPk($id);
+		$model = Propertie::model()->findByPk($id);
 		if ($model === null)
 			throw new CHttpException(404, 'The requested page does not exist.');
 		return $model;
@@ -157,13 +156,28 @@ class ProjectsController extends Controller {
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param Project $model the model to be validated
+	 * @param Propertie $model the model to be validated
 	 */
 	protected function performAjaxValidation($model) {
-		if (isset($_POST['ajax']) && $_POST['ajax'] === 'project-form') {
+		if (isset($_POST['ajax']) && $_POST['ajax'] === 'propertie-form') {
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
+	}
+
+	protected function getSubstance($model) {
+		$substanceId = $model->projectId;
+
+		return Substance::model()->findByPk($substanceId);
+	}
+
+	protected function getSubstanceViewURL($substance = NULL, $model = NULL) {
+		if (!(isset($substance) || isset($model))) {
+			throw new CException("Not given the requested parameters");
+		}
+
+		$substanceId = (isset($substance)) ? $substance->id : $model->substanceId;
+		return "/substances/$substanceId";
 	}
 
 }

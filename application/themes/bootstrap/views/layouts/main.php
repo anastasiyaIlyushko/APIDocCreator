@@ -6,6 +6,7 @@
 	<meta name="language" content="en" />
 
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/styles.css" />
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
 
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 
@@ -19,6 +20,8 @@
         array(
             'class'=>'bootstrap.widgets.TbMenu',
             'items'=>array(
+				array('label'=>'Projects', 'url'=>array('/projects')),
+				array('label'=>'Substance', 'url'=>array('/substances')),
                 array('label'=>'Home', 'url'=>array('/site/index')),
                 array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
                 array('label'=>'Contact', 'url'=>array('/site/contact')),
