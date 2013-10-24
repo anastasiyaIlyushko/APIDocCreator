@@ -1,1 +1,3 @@
-
+application/assets/
+application/protected/runtime/
+application/protected/data/APIDocCreator.db
