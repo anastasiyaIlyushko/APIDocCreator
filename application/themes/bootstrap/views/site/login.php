@@ -39,6 +39,7 @@ $this->breadcrumbs=array(
             'buttonType'=>'submit',
             'type'=>'primary',
             'label'=>'Login',
+			'htmlOptions' => array('name' => 'loginButton')
         )); ?>
 	</div>
 

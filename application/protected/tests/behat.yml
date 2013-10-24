@@ -4,7 +4,7 @@ default:
             default_session: selenium2
             javascript_session: selenium2
             selenium2: ~
-            base_url: "http://apidoccreator.ru.local"
+            base_url: "http://apidoccreator.local"
 
         Behat\YiiExtension\Extension:
             framework_script: ../../../../yii/framework/yii.php

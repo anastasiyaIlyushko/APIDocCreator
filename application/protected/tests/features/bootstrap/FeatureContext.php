@@ -31,10 +31,14 @@ class FeatureContext extends MinkContext
      *
      * @param array $parameters context parameters (set them up through behat.yml)
      */
-    public function __construct(array $parameters) {
+    public function __construct(array $parameters) { }
 
-    }
-
+	/**
+	 * @When /^wait (\d+) seconds?$/
+	 */
+	public function waitSeconds($seconds) {
+		$this->getSession()->wait(1000 * $seconds);
+	}
 //
 // Place your definition and hook methods here:
 //
