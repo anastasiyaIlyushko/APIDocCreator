@@ -19,10 +19,24 @@ $this->widget('bootstrap.widgets.TbGridView', array(
 	'type'=>'striped bordered condensed',
 		'dataProvider'=>$dataProvider,
 		'template'=>"{items}",
-		'columns'=>array(
-			array('name'=>'id', 'header'=>'#'),
-			array('name'=>'name', 'header'=>'Name'),
-			array('name'=>'description', 'header'=>'Description'),
+		'columns' => array(
+			array('name' => 'id', 'header' => '#'),
+			array('name' => 'name', 'header' => 'Name'),
+			array('name' => 'description', 'header' => 'Description'),
+			array(
+			    'class' => 'bootstrap.widgets.TbButtonColumn',
+			    'template' => '{edit}',
+			    'buttons' => array(
+				'edit' => array(
+				    'label'=>'Редактировать проект',
+				    'icon'=>'edit',
+				    'url'=>'Yii::app()->createUrl("projects/update", array("id"=>$data->id))',
+				    'options'=>array(
+					'class'=>'btn btn-small',
+				    )
+				),
+			    )
+			)
 		)
 	)
 ); 
