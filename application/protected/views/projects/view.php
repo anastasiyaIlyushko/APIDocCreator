@@ -7,7 +7,7 @@ $this->breadcrumbs=array(
 	$model->name,
 );
 
-$this->menu=array(
+$this->menu = array(
 	array('label'=>'Add new Substance', 'url'=>array('/substances/create', 'projectId'=>$model->id)),
 	
 	//array('label'=>'List Project', 'url'=>array('index')),
@@ -21,8 +21,10 @@ $this->menu=array(
 
 $this->menuName = "Substances";
 
+$array = array();
+
 foreach ($substances->getData() as $value) {
-	$array[] = array('label'=> $value->name, 'url'=>array('/substances/'.$value->id));
+	$array[] = array('label' => $value->name, 'url' => array('/substances/'.$value->id));
 }
 
 $this->substances=$array;

@@ -3,11 +3,7 @@
 		convertErrorsToExceptions="true"
 		convertNoticesToExceptions="true"
 		convertWarningsToExceptions="true"
-		stopOnFailure="false">
-
-	<selenium>
-		<browser name="Internet Explorer" browser="*iexplore" />
-		<browser name="Firefox" browser="*firefox" />
-	</selenium>
-
+		printerClass="WUnit_ResultPrinter"
+		printerFile="../extensions/wunit/PHPUnit/ResultPrinter.php"
+		stopOnFailure="false">		
 </phpunit>
