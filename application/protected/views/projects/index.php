@@ -21,7 +21,7 @@ $this->widget('bootstrap.widgets.TbGridView', array(
 		'template'=>"{items}",
 		'columns' => array(
 			array('name' => 'id', 'header' => '#'),
-			array('name' => 'name', 'header' => 'Project', 'class' => 'application.views.widgets.DcValueWithDescriptionColumn', 'description' => 'description'),
+			array('name' => 'name', 'header' => 'Project', 'class' => 'application.views.widgets.DcValueWithDescriptionColumn', 'description' => 'annotation'),
 			array(
 				'class' => 'bootstrap.widgets.TbButtonColumn',
 				'template' => '{edit}',

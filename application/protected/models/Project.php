@@ -38,6 +38,7 @@ class Project extends CActiveRecord
 		return array(
 			array('name', 'required'),
 			array('name', 'length', 'max'=>255),
+			array('annotation', 'length', 'max'=>255),
 			array('description', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
@@ -65,6 +66,7 @@ class Project extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'name' => 'Name',
+			'annotation' => 'Annotation',
 			'description' => 'Description',
 		);
 	}
@@ -82,6 +84,7 @@ class Project extends CActiveRecord
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('name',$this->name,true);
+		$criteria->compare('annotation',$this->annotation,true);
 		$criteria->compare('description',$this->description,true);
 
 		return new CActiveDataProvider($this, array(
