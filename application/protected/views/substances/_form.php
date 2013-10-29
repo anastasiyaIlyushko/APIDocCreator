@@ -6,38 +6,24 @@
 
 <div class="form">
 
-<?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'substance-form',
-	'enableAjaxValidation'=>false,
+<?php
+$form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
+	'id' => 'substance-form',
+	'htmlOptions' => array('class' => 'well'),
 ));
-
 ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+<p class="note">Fields with <span class="required">*</span> are required.</p>
 
-	<?php echo $form->errorSummary($model); ?>
+<?php echo $form->errorSummary($model); ?>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'name'); ?>
-		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'name'); ?>
-	</div>
+<?php echo $form->textFieldRow($model, 'name', array('class' => 'span7', 'maxlength' => 255)); ?>
+<?php echo $form->textFieldRow($model, 'projectId', array('class' => 'span7', 'maxlength' => 16, 'value' => $project->id)); ?>
+<?php echo $form->textAreaRow($model, 'description', array('class' => 'span7', 'rows' => 12)); ?>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'description'); ?>
-		<?php echo $form->textArea($model,'description',array('rows'=>6, 'cols'=>50)); ?>
-		<?php echo $form->error($model,'description'); ?>
-	</div>
+<div style='clear:both'></div>
 
-	<div class="row hidden">
-		<?php echo $form->labelEx($model,'projectId'); ?>
-		<?php echo $form->textField($model,'projectId', array('value'=>$project->id)); ?>
-		<?php echo $form->error($model,'projectId'); ?>
-	</div>
-
-	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
-	</div>
+<?php $this->widget('bootstrap.widgets.TbButton', array('buttonType' => 'submit', 'type' => 'primary', 'label' => $model->isNewRecord ? 'Create' : 'Save')); ?>
 
 <?php $this->endWidget(); ?>
 

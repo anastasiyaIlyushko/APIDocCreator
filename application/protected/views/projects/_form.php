@@ -17,8 +17,8 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 
 <?php echo $form->errorSummary($model); ?>
 
-<?php echo $form->textFieldRow($model, 'name', array('class' => 'span7')); ?>
-<?php echo $form->textFieldRow($model, 'annotation', array('class' => 'span7')); ?>
+<?php echo $form->textFieldRow($model, 'name', array('class' => 'span7', 'maxlength' => 255)); ?>
+<?php echo $form->textFieldRow($model, 'annotation', array('class' => 'span7', 'maxlength' => 255)); ?>
 <?php echo $form->textAreaRow($model, 'description', array('class' => 'span7', 'rows' => 12)); ?>
 
 <div style='clear:both'></div>
