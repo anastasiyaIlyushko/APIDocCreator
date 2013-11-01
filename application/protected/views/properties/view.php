@@ -24,7 +24,13 @@ $this->menu=array(
 		'id',
 		'name',
 		'description',
-		'type',
-		'substanceId',
+		array(
+                        'label' => $model->struct->getAttributeLabel('type'),
+                        'value' => $model->struct->type
+                ),
+        array(
+                        'label' => $model->struct->getAttributeLabel('options'),
+                        'value' => $model->struct->options
+                )
 	),
 )); ?>

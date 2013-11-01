@@ -17,13 +17,5 @@
 	<?php echo CHtml::encode($data->description); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('type')); ?>:</b>
-	<?php echo CHtml::encode($data->type); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('substanceId')); ?>:</b>
-	<?php echo CHtml::encode($data->substanceId); ?>
-	<br />
-
 
 </div>

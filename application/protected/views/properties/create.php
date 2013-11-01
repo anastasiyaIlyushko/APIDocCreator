@@ -1,7 +1,6 @@
 <?php
 /* @var $this PropertiesController */
 /* @var $model Propertie */
-/* @var $substance Substance */
 
 $this->breadcrumbs=array(
 	'Properties'=>array('index'),
@@ -14,6 +13,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Create Propertie in '<?php echo $substance->name?>' substance</h1>
+<h1>Create Propertie</h1>
 
-<?php echo $this->renderPartial('_form', array('model'=>$model, 'substance'=>$substance)); ?>
+<?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

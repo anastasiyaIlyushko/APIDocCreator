@@ -23,17 +23,7 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'description'); ?>
-		<?php echo $form->textField($model,'description',array('size'=>60,'maxlength'=>511)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'type'); ?>
-		<?php echo $form->textField($model,'type',array('size'=>60,'maxlength'=>64)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'substanceId'); ?>
-		<?php echo $form->textField($model,'substanceId'); ?>
+		<?php echo $form->textArea($model,'description',array('rows'=>6, 'cols'=>50)); ?>
 	</div>
 
 	<div class="row buttons">
