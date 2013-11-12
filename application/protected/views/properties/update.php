@@ -18,4 +18,9 @@ $this->menu=array(
 
 <h1>Update Propertie <?php echo $model->id; ?></h1>
 
-<?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php 
+Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl . '/css/structure.css');
+echo CHtml::errorSummary($model);
+Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . '/js/structure.js'); 
+
+//echo $this->renderPartial('_form', array('model'=>$model)); ?>

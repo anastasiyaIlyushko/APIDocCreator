@@ -131,6 +131,15 @@ class SubstancesController extends Controller {
 	 */
 	public function actionIndex() {
 		$dataProvider = new CActiveDataProvider('Substance');
+		if (Yii::app()->request->isAjaxRequest) {
+			$result = array();
+			foreach ($dataProvider->getData() as $value) {
+				$result[$value->id] = $value->name;
+			}
+			echo json_encode($result);
+			Yii::app()->end();
+		}
+
 		$this->render('index', array(
 			'dataProvider' => $dataProvider,
 		));
@@ -177,10 +186,10 @@ class SubstancesController extends Controller {
 
 	protected function getProject($model) {
 		$projectId = $model->projectId;
-		
+
 		return Project::model()->findByPk($projectId);
 	}
-	
+
 	protected function getProjectViewURL($project = NULL, $model = NULL) {
 		if (!(isset($project) || isset($model))) {
 			throw new CException("Not given the requested parameters");
@@ -189,14 +198,12 @@ class SubstancesController extends Controller {
 		$projectId = (isset($project)) ? $project->id : $model->projectId;
 		return "/projects/$projectId";
 	}
-	
-	protected function getProperties($model){
+
+	protected function getProperties($model) {
 		return new CActiveDataProvider('Propertie', array(
 					'criteria' => array(
 						'condition' => 'substanceId=' . $model->id)
 				));
-		
-		
 	}
 
 }

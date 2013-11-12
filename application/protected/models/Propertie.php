@@ -36,11 +36,10 @@ class Propertie extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name', 'length', 'max'=>255),
-			array('description', 'safe'),
-			// The following rule is used by search().
-			// Please remove those attributes that should not be searched.
-			array('id, name, description', 'safe', 'on'=>'search'),
+//			array('name, description', 'required'),
+//			array('name', 'length', 'max'=>5, 'tooLong'=>'ssssssssssssssssssssssssssssss'),
+//			array('description', 'safe'),
+//			array('id, name, description', 'safe', 'on'=>'search'),
 		);
 	}
 

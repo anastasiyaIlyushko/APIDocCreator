@@ -39,12 +39,12 @@ class PropertieStructure extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('parentId, type', 'required'),
+			
+			array('parentId, type, propertieId', 'required'),
 			array('parentId, type, propertieId', 'numerical', 'integerOnly'=>true),
 			array('options', 'length', 'max'=>255),
-			// The following rule is used by search().
-			// Please remove those attributes that should not be searched.
 			array('id, parentId, type, options, propertieId', 'safe', 'on'=>'search'),
+			array('type, item, options', 'safe')
 		);
 	}
 

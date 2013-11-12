@@ -7,7 +7,8 @@ class CollectPropertie extends Propertie {
 	public $description;
 	public $struct;
 	public $linkType;
-	public $linlId;
+	public $linkId;
+	public $structureArray = array();
 
 	public static function model($className = __CLASS__) {
 		return parent::model($className);
@@ -17,22 +18,13 @@ class CollectPropertie extends Propertie {
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id, name, description', 'isPropertieParams'),
-			array('struct', 'isPropertieStructureParams'),
-			array('linkType, linlId', 'isLinksParams'),
+			array('name, description', 'required'),
+			array('name', 'length', 'max' => 255),
+			array('description', 'safe'),
+			array('id, name, description, struct', 'safe', 'on' => 'search'),
+			array('struct', 'safe'),
+			
 		);
-	}
-
-	public function isPropertieParams($attribute, $params) {
-		//if(FALSE){$this->addError('attributeName','MessageError.');}
-	}
-
-	public function isPropertieStructureParams($attribute, $params) {
-		//if(FALSE){$this->addError('attributeName','MessageError.');}
-	}
-
-	public function isLinksParams($attribute, $params) {
-		//if(FALSE){$this->addError('attributeName','MessageError.');}
 	}
 
 	public function relations() {
@@ -43,20 +35,62 @@ class CollectPropertie extends Propertie {
 	}
 
 	public function save() {
-		$isSavePropertie = parent::save();
-		if ($isSavePropertie) {
-			$this->struct->type = (int) $this->struct->type;
-			$this->struct->parentId = 0;
-			$this->struct->propertieId = $this->id;
-			return $this->struct->save();
-		} else {
+		if (!parent::validate(null, false)) {
+			$this->addErrors($this->errors);
 			return FALSE;
 		}
+		$isSavePropertie = parent::save(false);
+		if ($isSavePropertie) {
+			$this->saveStructure($this->struct, 0, $this->id);
+		}
+		return ($this->hasErrors()) ? FALSE : TRUE;
+	}
+
+	protected function saveStructure(PropertieStructure $struct, $parentId, $propertieId) {
+		$struct->parentId = $parentId;
+		$struct->propertieId = $propertieId;
+		$struct->options = json_encode($struct->options);
+		if (!$struct->validate(null, false)) {
+			$this->addErrors($struct->errors);
+		}
+		$struct->save(false);
+		unset($parentId);
+		$parentId = $struct->id;
+
+		if (!is_null($struct->item)) {
+			$childStruct = new PropertieStructure;
+			$childStruct->attributes = $struct->item;
+			$this->saveStructure($childStruct, $parentId, $propertieId);
+		}
+	}
+
+	protected function getStructure($parentId) {
+		if (isset($this->structureArray[$parentId])) {
+			$child = $this->structureArray[$parentId];
+			$child['item'] = $this->getStructure($child['id']);
+		}
+
+		return $child;
 	}
 
 	public function findByPk($propertieId) {
 		$propertie = parent::findByPk($propertieId);
-		$propertie->struct = PropertieStructure::model()->find('propertieId=:propertieId AND parentId=:parentId', array(':propertieId' => $propertieId, ':parentId' => 0));
+
+		$structureArray = PropertieStructure::model()->findAll(array(
+			'condition' => 'propertieId=:propertieId',
+			'params' => array(
+				':propertieId' => $propertieId
+			)
+				));
+
+		foreach ($structureArray as $structure) {
+			foreach ($structure as $key => $value) {
+				$this->structureArray[$structure->parentId][$key] = $value;
+			}
+		}
+
+		$propertie->struct = $this->structureArray[0];
+		$propertie->struct['item'] = $this->getStructure($propertie->struct['id']);
 		return $propertie;
 	}
 
