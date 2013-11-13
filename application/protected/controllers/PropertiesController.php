@@ -94,14 +94,12 @@ class PropertiesController extends Controller {
 			Yii::app()->end();
 		}
 
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
 		if (isset($_POST['CollectPropertie'])) {
 			$model->attributes = $_POST['CollectPropertie'];
+			$model->struct = new PropertieStructure;
 			$model->struct->attributes = $_POST['PropertieStructure'];
 			if ($model->save()) {
-				$this->redirect(array('view', 'id' => $model->id));
+				$this->redirect(array('update', 'id' => $model->id));
 			}
 		}
 

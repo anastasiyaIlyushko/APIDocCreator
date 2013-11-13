@@ -13,6 +13,12 @@
 class PropertieStructure extends CActiveRecord
 {
     public $item = NULL;
+	public $id;
+	public $parentId;
+	public $type;
+	public $options = NULL;
+	public $propertieId;
+	
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -39,12 +45,12 @@ class PropertieStructure extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			
+			array('id, type, item, options, parentId, propertieId', 'safe'),
 			array('parentId, type, propertieId', 'required'),
 			array('parentId, type, propertieId', 'numerical', 'integerOnly'=>true),
 			array('options', 'length', 'max'=>255),
 			array('id, parentId, type, options, propertieId', 'safe', 'on'=>'search'),
-			array('type, item, options', 'safe')
+			
 		);
 	}
 

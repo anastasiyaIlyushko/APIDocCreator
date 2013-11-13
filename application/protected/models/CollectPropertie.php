@@ -23,7 +23,6 @@ class CollectPropertie extends Propertie {
 			array('description', 'safe'),
 			array('id, name, description, struct', 'safe', 'on' => 'search'),
 			array('struct', 'safe'),
-			
 		);
 	}
 
@@ -41,6 +40,12 @@ class CollectPropertie extends Propertie {
 		}
 		$isSavePropertie = parent::save(false);
 		if ($isSavePropertie) {
+			PropertieStructure::model()->deleteAll(array(
+				'condition' => 'propertieId=:propertieId',
+				'params' => array(
+					':propertieId' => $this->id
+				)
+			));
 			$this->saveStructure($this->struct, 0, $this->id);
 		}
 		return ($this->hasErrors()) ? FALSE : TRUE;
@@ -75,7 +80,6 @@ class CollectPropertie extends Propertie {
 
 	public function findByPk($propertieId) {
 		$propertie = parent::findByPk($propertieId);
-
 		$structureArray = PropertieStructure::model()->findAll(array(
 			'condition' => 'propertieId=:propertieId',
 			'params' => array(
@@ -89,8 +93,9 @@ class CollectPropertie extends Propertie {
 			}
 		}
 
-		$propertie->struct = $this->structureArray[0];
-		$propertie->struct['item'] = $this->getStructure($propertie->struct['id']);
+		$propertie->struct = new PropertieStructure;
+		$propertie->struct->attributes = $this->structureArray[0];
+		$propertie->struct->item = $this->getStructure($propertie->struct->id);
 		return $propertie;
 	}
 
