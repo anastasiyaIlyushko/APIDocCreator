@@ -5,8 +5,8 @@
 
 $this->breadcrumbs=array(
 	'Projects'=> array('/projects'),
-	"$project->name" => array('/projects/'.$project->id),
-	'Substances'=>array('index'),
+	"$project->name" => array('/projects/view', 'id' => $project->id),
+	'Substances'=>array('index', 'projectId' => $project->id),
 	$model->name,
 );
 
@@ -18,12 +18,6 @@ $this->menu=array(
 	array('label'=>'Delete Substance', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
 	//array('label'=>'Manage Substance', 'url'=>array('admin')),
 );
-
-foreach ($properties->getData() as $value) {
-	$array[] = array('label'=> $value->name, 'url'=>array('/properties/'.$value->id));
-}
-
- 
 
 ?>
 

@@ -3,12 +3,14 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Substances',
+	'Projects'=> array('/projects'),
+	"$project->name" => array('/projects/view', 'id' => $project->id),
+	'Substances'
 );
 
 $this->menu=array(
-	array('label'=>'Create Substance', 'url'=>array('create')),
-	array('label'=>'Manage Substance', 'url'=>array('admin')),
+	array('label'=>'Create Substance', 'url'=>array('create', 'projectId' => $project->id)),
+	array('label'=>'Manage Substance', 'url'=>array('admin', 'projectId' => $project->id)),
 );
 ?>
 

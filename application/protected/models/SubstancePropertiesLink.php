@@ -1,20 +1,18 @@
 <?php
 
 /**
- * This is the model class for table "substances".
+ * This is the model class for table "substancePropertiesLink".
  *
- * The followings are the available columns in table 'substances':
- * @property integer $id
- * @property string $name
- * @property string $description
- * @property integer $projectId
+ * The followings are the available columns in table 'substancePropertiesLink':
+ * @property integer $substanceId
+ * @property integer $propertieId
  */
-class Substance extends CActiveRecord {
+class SubstancePropertiesLink extends CActiveRecord {
 
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return Substance the static model class
+	 * @return SubstancePropertiesLink the static model class
 	 */
 	public static function model($className = __CLASS__) {
 		return parent::model($className);
@@ -24,7 +22,7 @@ class Substance extends CActiveRecord {
 	 * @return string the associated database table name
 	 */
 	public function tableName() {
-		return 'substances';
+		return 'substancePropertiesLink';
 	}
 
 	/**
@@ -34,12 +32,11 @@ class Substance extends CActiveRecord {
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name, description', 'required'),
-			array('projectId', 'numerical', 'integerOnly' => true),
-			array('name', 'length', 'max' => 255),
+			array('substanceId, propertieId', 'required'),
+			array('substanceId, propertieId', 'numerical', 'integerOnly' => true),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, name, description, projectId', 'safe', 'on' => 'search'),
+			array('substanceId, propertieId', 'safe', 'on' => 'search'),
 		);
 	}
 
@@ -50,9 +47,6 @@ class Substance extends CActiveRecord {
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'project' => array(self::BELONGS_TO, 'Project', 'projectId'),
-			'properties' => array(self::MANY_MANY, 'Propertie',
-				'substancePropertiesLink(substanceId, propertieId)'),
 		);
 	}
 
@@ -61,10 +55,8 @@ class Substance extends CActiveRecord {
 	 */
 	public function attributeLabels() {
 		return array(
-			'id' => 'ID',
-			'name' => 'Name',
-			'description' => 'Description',
-			'projectId' => 'Project',
+			'substanceId' => 'Substance',
+			'propertieId' => 'Propertie',
 		);
 	}
 
@@ -78,14 +70,26 @@ class Substance extends CActiveRecord {
 
 		$criteria = new CDbCriteria;
 
-		$criteria->compare('id', $this->id);
-		$criteria->compare('name', $this->name, true);
-		$criteria->compare('description', $this->description, true);
-		$criteria->compare('projectId', $this->projectId);
+		$criteria->compare('substanceId', $this->substanceId);
+		$criteria->compare('propertieId', $this->propertieId);
 
 		return new CActiveDataProvider($this, array(
 					'criteria' => $criteria,
 				));
+	}
+
+	public static function updateAssignments($substanceId, $propertieId) {
+		$criteria = new CDbCriteria;
+		$criteria->condition = 'substanceId=:substanceId and propertieId=:propertieId';
+		$criteria->params = array(':substanceId' => $substanceId, ':propertieId' => $propertieId);
+
+		$assignment = self::model()->find($criteria);
+		if ($assignment === null) {
+			$assignment = new SubstancePropertiesLink;
+			$assignment->attributes = array('substanceId' => $substanceId,
+				'propertieId' => $propertieId);
+			$assignment->save();
+		}
 	}
 
 }

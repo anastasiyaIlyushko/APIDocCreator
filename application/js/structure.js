@@ -3,6 +3,7 @@ $(document).ready(function(){
 	$.ajax({
 		url: document.location.href,
 		dataType: 'json',
+		//TODO: обязательно передавать или substanceId или $methodId
 		success: function(data) {
 			//var form = $('form');
 			var form = $('<form  id="propertie-form" action="'+document.location.href+'" method="post"></form>')
@@ -158,6 +159,7 @@ $(document).ready(function(){
 		var selected;
 		$.ajax({
 			url: '/substances',
+			//TODO: обязательно передавать параметр projectId!!!
 			dataType: 'json',
 			success: function(data) {
 				for(var i in data){

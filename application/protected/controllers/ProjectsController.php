@@ -29,7 +29,7 @@ class ProjectsController extends Controller {
 	public function accessRules() {
 		return array(
 			array('allow', // allow all users to perform 'index' and 'view' actions
-				'actions' => array('index', 'view'),
+				'actions' => array('index', 'view', 'substances'),
 				'users' => array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -48,6 +48,7 @@ class ProjectsController extends Controller {
 
     public function actions() {
         return array(
+			'substances' => 'application.controllers.projects.SubstancesAction',
             'create' => 'application.controllers.projects.CreateAction',
 			'view' => 'application.controllers.projects.ViewAction',
 			'update' => 'application.controllers.projects.UpdateAction',

@@ -30,6 +30,8 @@ class CollectPropertie extends Propertie {
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'substances' => array(self::MANY_MANY, 'Substance',
+				'substancePropertiesLink(propertieId, substanceId)'),
 		);
 	}
 
@@ -49,6 +51,11 @@ class CollectPropertie extends Propertie {
 			$this->saveStructure($this->struct, 0, $this->id);
 		}
 		return ($this->hasErrors()) ? FALSE : TRUE;
+	}
+
+	public function afterSave() {
+		parent::afterSave();
+		SubstancePropertiesLink::updateAssignments($this->substances[0]->id, $this->id);
 	}
 
 	protected function saveStructure(PropertieStructure $struct, $parentId, $propertieId) {

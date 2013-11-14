@@ -48,9 +48,10 @@ class SubstancesController extends Controller {
 	 * @param integer $id the ID of the model to be displayed
 	 */
 	public function actionView($id) {
+
 		$model = $this->loadModel($id);
 		$project = $this->getProject($model);
-		$properties = $this->getProperties($model);
+		$properties = $this->getProperties($id);
 		$this->render('view', array(
 			'model' => $model,
 			'project' => $project,
@@ -129,8 +130,12 @@ class SubstancesController extends Controller {
 	/**
 	 * Lists all models.
 	 */
-	public function actionIndex() {
-		$dataProvider = new CActiveDataProvider('Substance');
+	public function actionIndex($projectId) {
+		$dataProvider = new CActiveDataProvider('Substance', array(
+					'criteria' => array(
+						'condition' => 'projectId=' . $projectId)
+				));
+
 		if (Yii::app()->request->isAjaxRequest) {
 			$result = array();
 			foreach ($dataProvider->getData() as $value) {
@@ -142,6 +147,7 @@ class SubstancesController extends Controller {
 
 		$this->render('index', array(
 			'dataProvider' => $dataProvider,
+			'project' => Project::model()->findByPk($projectId),
 		));
 	}
 
@@ -199,11 +205,21 @@ class SubstancesController extends Controller {
 		return "/projects/$projectId";
 	}
 
-	protected function getProperties($model) {
-		return new CActiveDataProvider('Propertie', array(
+	protected function getProperties($id) {
+
+		$dataProvider = new CActiveDataProvider('Propertie', array(
 					'criteria' => array(
-						'condition' => 'substanceId=' . $model->id)
+						'with' => array(
+							'substances' => array(
+								'condition' => 'substanceId = :substanceId',
+								'params' => array(':substanceId' => $id),
+								'together' => true,
+							)
+						),
+					),
 				));
+
+		return $dataProvider;
 	}
 
 }

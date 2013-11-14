@@ -7,6 +7,15 @@ $this->breadcrumbs = array(
 	'Create',
 );
 
+$this->breadcrumbs=array(
+	'Projects'=> array('/projects'),
+	$model->substances[0]->project->name => array('/projects/view', 'id' => $model->substances[0]->project->id),
+	'Substances'=>array('substances/index', 'projectId' => $model->substances[0]->project->id),
+	$model->substances[0]->name => array('substances/view', 'id' => $model->substances[0]->id),
+	'Properties' => array('index'),
+	'Create',
+);
+
 $this->menu = array(
 	array('label' => 'List Propertie', 'url' => array('index')),
 	array('label' => 'Manage Propertie', 'url' => array('admin')),
