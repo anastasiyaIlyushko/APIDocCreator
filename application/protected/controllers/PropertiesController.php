@@ -61,16 +61,24 @@ class PropertiesController extends Controller {
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionCreate($substanceId = NULL, $methodId = NULL) {
-		
-		if (!(isset($substanceId) || isset($methodId))) {
+	public function actionCreate($substanceId = NULL, $methodId = NULL, $status = NULL, $description = NULL) {
+
+		$model = new CollectPropertie;
+		if (!empty($substanceId)) {
+			$model->linkType = 'substance';
+			$model->substance = Substance::model()->findByPk($substanceId);
+		} elseif (!empty($methodId)) {
+			$model->linkType = 'method';
+			$model->response = new MethodResponse;
+			$model->response->methodId = $methodId;
+			$model->response->status = (int) $status;
+			$model->response->description = $description;
+			$model->method = Method::model()->findByPk($methodId);
+		} else {
 			throw new CHttpException(400, 'Your request is invalid.');
 		}
-		//TODO: methods
-		
-		$model = new CollectPropertie;
+
 		$model->struct = new PropertieStructure;
-		$model->substances = Substance::model()->findAllByPk(array($substanceId));
 
 		if (Yii::app()->request->isAjaxRequest) {
 			echo json_encode($model);
@@ -95,9 +103,11 @@ class PropertiesController extends Controller {
 	 * @param integer $id the ID of the model to be updated
 	 */
 	public function actionUpdate($id) {
-		$model = CollectPropertie::model()->with(array('substances' => array('with' => 'project')))->findByPk($id);
 
-		//$model = CollectPropertie::model()->with('substances')->findByPk($id);
+		$model = CollectPropertie::model()->findByPk($id);
+		$linkType = $model->linkType;
+		$link = $model->$linkType;
+
 		if (Yii::app()->request->isAjaxRequest) {
 			echo json_encode($model);
 			Yii::app()->end();
@@ -114,6 +124,7 @@ class PropertiesController extends Controller {
 
 		$this->render('update', array(
 			'model' => $model,
+			'link' => $link
 		));
 	}
 

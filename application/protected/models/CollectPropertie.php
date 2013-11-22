@@ -7,7 +7,7 @@ class CollectPropertie extends Propertie {
 	public $description;
 	public $struct;
 	public $linkType;
-	public $linkId;
+	public $type;
 	public $structureArray = array();
 
 	public static function model($className = __CLASS__) {
@@ -15,8 +15,6 @@ class CollectPropertie extends Propertie {
 	}
 
 	public function rules() {
-		// NOTE: you should only define rules for those attributes that
-		// will receive user inputs.
 		return array(
 			array('name, description', 'required'),
 			array('name', 'length', 'max' => 255),
@@ -27,12 +25,34 @@ class CollectPropertie extends Propertie {
 	}
 
 	public function relations() {
-		// NOTE: you may need to adjust the relation name and the related
-		// class name for the relations automatically generated below.
 		return array(
-			'substances' => array(self::MANY_MANY, 'Substance',
-				'substancePropertiesLink(propertieId, substanceId)'),
+			'substanceLink' => array(self::HAS_ONE, 'SubstancePropertiesLink', 'propertieId'),
+			'substance' => array(self::HAS_ONE, 'Substance', array('substanceId' => 'id'), 'through' => 'substanceLink'),
+			'response' => array(self::HAS_ONE, 'MethodResponse', 'propertieId'),
+			'method' => array(self::HAS_ONE, 'Method', array('methodId' => 'id'), 'through' => 'response'),
+			'structure' => array(self::HAS_ONE, 'PropertieStructure', 'propertieId'),
 		);
+	}
+
+	public function beforeDelete() {
+		$isDelete = parent::beforeDelete();
+		if ($this->linkType == 'substance') {
+			$isDeleteAssign = SubstancePropertiesLink::deleteAssignments($this->substance->id, $this->id);
+		} else {
+			$isDeleteAssign = $this->response->delete();
+		}
+		return ($isDelete && $isDeleteAssign) ? TRUE : FALSE;
+	}
+
+	public function delete() {
+		PropertieStructure::model()->deleteAll(array(
+			'condition' => 'propertieId=:propertieId',
+			'params' => array(
+				':propertieId' => $this->id
+			)
+		));
+		parent::delete();
+		return ($this->hasErrors()) ? FALSE : TRUE;
 	}
 
 	public function save() {
@@ -55,7 +75,12 @@ class CollectPropertie extends Propertie {
 
 	public function afterSave() {
 		parent::afterSave();
-		SubstancePropertiesLink::updateAssignments($this->substances[0]->id, $this->id);
+		if ($this->linkType == 'substance') {
+			SubstancePropertiesLink::updateAssignments($this->substance->id, $this->id);
+		} else {
+			$this->response->propertieId = $this->id;
+			$this->response->save();
+		}
 	}
 
 	protected function saveStructure(PropertieStructure $struct, $parentId, $propertieId) {
@@ -81,12 +106,22 @@ class CollectPropertie extends Propertie {
 			$child = $this->structureArray[$parentId];
 			$child['item'] = $this->getStructure($child['id']);
 		}
-
 		return $child;
 	}
 
 	public function findByPk($propertieId) {
 		$propertie = parent::findByPk($propertieId);
+
+		if ($propertie === null) {
+			throw new CHttpException(404, 'The requested page does not exist.');
+		}
+
+		if ($propertie->substance !== NULL) {
+			$propertie->linkType = 'substance';
+		} elseif ($propertie->method !== NULL) {
+			$propertie->linkType = 'method';
+		}
+
 		$structureArray = PropertieStructure::model()->findAll(array(
 			'condition' => 'propertieId=:propertieId',
 			'params' => array(
@@ -104,13 +139,6 @@ class CollectPropertie extends Propertie {
 		$propertie->struct->attributes = $this->structureArray[0];
 		$propertie->struct->item = $this->getStructure($propertie->struct->id);
 		return $propertie;
-	}
-
-	public function delete() {
-		$isDeleteStruct = $this->struct->delete();
-		$isDeletePropertie = parent::delete();
-
-		return ($isDeleteStruct && $isDeletePropertie) ? TRUE : FALSE;
 	}
 
 }

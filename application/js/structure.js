@@ -99,7 +99,7 @@ $(document).ready(function(){
 			//
 			default:
 				result = $('<div></div>');
-				//result = null;
+		//result = null;
 
 		}
 		
@@ -160,6 +160,9 @@ $(document).ready(function(){
 		$.ajax({
 			url: '/substances',
 			//TODO: обязательно передавать параметр projectId!!!
+			data: {
+				projectId: 1
+			},
 			dataType: 'json',
 			success: function(data) {
 				for(var i in data){

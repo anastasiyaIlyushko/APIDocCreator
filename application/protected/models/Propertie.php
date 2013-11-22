@@ -47,8 +47,11 @@ class Propertie extends CActiveRecord {
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'substances' => array(self::MANY_MANY, 'Substance',
-				'substancePropertiesLink(propertieId, substanceId)'),
+			'substanceLink' => array(self::HAS_ONE, 'SubstancePropertiesLink', 'propertieId'),
+			'substance' => array(self::HAS_ONE ,'Substance', array('substanceId'=>'id'),'through'=>'substanceLink'),
+			'response' => array(self::HAS_ONE, 'MethodResponse', 'propertieId'),
+			'method' => array(self::HAS_ONE, 'Method', array('methodId'=>'id'),'through'=>'response'),
+			'structure' => array(self::HAS_ONE, 'PropertieStructure', 'propertieId'),
 		);
 	}
 

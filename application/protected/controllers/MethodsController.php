@@ -1,6 +1,6 @@
 <?php
 
-class SubstancesController extends Controller {
+class MethodsController extends Controller {
 
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -48,14 +48,19 @@ class SubstancesController extends Controller {
 	 * @param integer $id the ID of the model to be displayed
 	 */
 	public function actionView($id) {
-
 		$model = $this->loadModel($id);
-		//$project = $this->getProject($model);
-		$properties = $this->getProperties($id);
+
+		$responsesByStatus = array();
+
+		foreach ($model->responses as $response) {
+			$responsesByStatus[$response->status][] = $response->propertie;
+		}
+
+		ksort($responsesByStatus);
+
 		$this->render('view', array(
 			'model' => $model,
-			//'project' => $project,
-			'properties' => $properties,
+			'responsesByStatus' => $responsesByStatus
 		));
 	}
 
@@ -64,21 +69,20 @@ class SubstancesController extends Controller {
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
 	public function actionCreate($projectId) {
-		$model = new Substance;
+		$model = new Method;
 		$model->projectId = $projectId;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if (isset($_POST['Substance'])) {
-			$model->attributes = $_POST['Substance'];
+		if (isset($_POST['Method'])) {
+			$model->attributes = $_POST['Method'];
 			if ($model->save())
-				$this->redirect(array($this->getProjectViewURL(NULL, $model)));
+				$this->redirect(array('view', 'id' => $model->id));
 		}
 
-		
 		$project = Project::model()->findByPk($projectId);
-		
+
 
 		if ($project === null) {
 			throw new CHttpException(400, "Project with projectId = '{$projectId}' not found");
@@ -86,7 +90,7 @@ class SubstancesController extends Controller {
 
 		$this->render('create', array(
 			'model' => $model,
-			'project' => $project
+			'project' => $project,
 		));
 	}
 
@@ -97,18 +101,25 @@ class SubstancesController extends Controller {
 	 */
 	public function actionUpdate($id) {
 		$model = $this->loadModel($id);
+		$responsesByStatus = array();
+
+		foreach ($model->responses as $response) {
+			$responsesByStatus[$response->status][] = $response->propertie;
+		}
+		ksort($responsesByStatus);
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if (isset($_POST['Substance'])) {
-			$model->attributes = $_POST['Substance'];
+		if (isset($_POST['Method'])) {
+			$model->attributes = $_POST['Method'];
 			if ($model->save())
-				$this->redirect(array($this->getProjectViewURL(NULL, $model)));
+				$this->redirect(array('view', 'id' => $model->id));
 		}
 
 		$this->render('update', array(
 			'model' => $model,
+			'responsesByStatus' => $responsesByStatus
 		));
 	}
 
@@ -118,33 +129,21 @@ class SubstancesController extends Controller {
 	 * @param integer $id the ID of the model to be deleted
 	 */
 	public function actionDelete($id) {
-		$model = $this->loadModel($id);
-		$project = $this->getProject($model);
-		$model->delete();
+		$this->loadModel($id)->delete();
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if (!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array($this->getProjectViewURL($project)));
+			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
 	}
 
 	/**
 	 * Lists all models.
 	 */
 	public function actionIndex($projectId) {
-		$dataProvider = new CActiveDataProvider('Substance', array(
+		$dataProvider = new CActiveDataProvider('Method', array(
 					'criteria' => array(
 						'condition' => 'projectId=' . $projectId)
 				));
-
-		if (Yii::app()->request->isAjaxRequest) {
-			$result = array();
-			foreach ($dataProvider->getData() as $value) {
-				$result[$value->id] = $value->name;
-			}
-			echo json_encode($result);
-			Yii::app()->end();
-		}
-
 		$this->render('index', array(
 			'dataProvider' => $dataProvider,
 			'project' => Project::model()->findByPk($projectId),
@@ -155,10 +154,10 @@ class SubstancesController extends Controller {
 	 * Manages all models.
 	 */
 	public function actionAdmin() {
-		$model = new Substance('search');
+		$model = new Method('search');
 		$model->unsetAttributes();  // clear any default values
-		if (isset($_GET['Substance']))
-			$model->attributes = $_GET['Substance'];
+		if (isset($_GET['Method']))
+			$model->attributes = $_GET['Method'];
 
 		$this->render('admin', array(
 			'model' => $model,
@@ -169,11 +168,11 @@ class SubstancesController extends Controller {
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
-	 * @return Substance the loaded model
+	 * @return Method the loaded model
 	 * @throws CHttpException
 	 */
 	public function loadModel($id) {
-		$model = Substance::model()->findByPk($id);
+		$model = Method::model()->findByPk($id);
 		if ($model === null)
 			throw new CHttpException(404, 'The requested page does not exist.');
 		return $model;
@@ -181,45 +180,13 @@ class SubstancesController extends Controller {
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param Substance $model the model to be validated
+	 * @param Method $model the model to be validated
 	 */
 	protected function performAjaxValidation($model) {
-		if (isset($_POST['ajax']) && $_POST['ajax'] === 'substance-form') {
+		if (isset($_POST['ajax']) && $_POST['ajax'] === 'method-form') {
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
-	}
-
-	protected function getProject($model) {
-		$projectId = $model->projectId;
-
-		return Project::model()->findByPk($projectId);
-	}
-
-	protected function getProjectViewURL($project = NULL, $model = NULL) {
-		if (!(isset($project) || isset($model))) {
-			throw new CException("Not given the requested parameters");
-		}
-
-		$projectId = (isset($project)) ? $project->id : $model->projectId;
-		return "/projects/$projectId";
-	}
-
-	protected function getProperties($id) {
-
-		$dataProvider = new CActiveDataProvider('Propertie', array(
-					'criteria' => array(
-						'with' => array(
-							'substance' => array(
-								'condition' => 'substanceId = :substanceId',
-								'params' => array(':substanceId' => $id),
-								'together' => true,
-							)
-						),
-					),
-				));
-
-		return $dataProvider;
 	}
 
 }

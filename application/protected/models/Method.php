@@ -1,20 +1,21 @@
 <?php
 
 /**
- * This is the model class for table "substances".
+ * This is the model class for table "methods".
  *
- * The followings are the available columns in table 'substances':
+ * The followings are the available columns in table 'methods':
  * @property integer $id
  * @property string $name
  * @property string $description
+ * @property string $uri
  * @property integer $projectId
  */
-class Substance extends CActiveRecord {
+class Method extends CActiveRecord {
 
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return Substance the static model class
+	 * @return Method the static model class
 	 */
 	public static function model($className = __CLASS__) {
 		return parent::model($className);
@@ -24,7 +25,7 @@ class Substance extends CActiveRecord {
 	 * @return string the associated database table name
 	 */
 	public function tableName() {
-		return 'substances';
+		return 'methods';
 	}
 
 	/**
@@ -34,12 +35,12 @@ class Substance extends CActiveRecord {
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name, description', 'required'),
+			array('name, uri, type', 'required'),
 			array('projectId', 'numerical', 'integerOnly' => true),
-			array('name', 'length', 'max' => 255),
+			array('name, uri, type', 'length', 'max' => 255),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, name, description, projectId', 'safe', 'on' => 'search'),
+			array('id, name, description, uri, projectId, type', 'safe', 'on' => 'search'),
 		);
 	}
 
@@ -51,9 +52,8 @@ class Substance extends CActiveRecord {
 		// class name for the relations automatically generated below.
 		return array(
 			'project' => array(self::BELONGS_TO, 'Project', 'projectId'),
-			'substanceLink' => array(self::HAS_MANY, 'SubstancePropertiesLink', 'substanceId'),
-			'properties' => array(self::HAS_MANY ,'CollectPropertie', array('propertieId'=>'id'),'through'=>'substanceLink'),
-			
+			'responses' => array(self::HAS_MANY, 'MethodResponse', 'methodId'),
+			'properties' => array(self::HAS_MANY, 'CollectPropertie', array('propertieId'=>'id'),'through'=>'responses'),
 		);
 	}
 
@@ -65,6 +65,7 @@ class Substance extends CActiveRecord {
 			'id' => 'ID',
 			'name' => 'Name',
 			'description' => 'Description',
+			'uri' => 'Uri',
 			'projectId' => 'Project',
 		);
 	}
@@ -82,6 +83,7 @@ class Substance extends CActiveRecord {
 		$criteria->compare('id', $this->id);
 		$criteria->compare('name', $this->name, true);
 		$criteria->compare('description', $this->description, true);
+		$criteria->compare('uri', $this->uri, true);
 		$criteria->compare('projectId', $this->projectId);
 
 		return new CActiveDataProvider($this, array(

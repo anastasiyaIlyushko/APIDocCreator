@@ -92,4 +92,16 @@ class SubstancePropertiesLink extends CActiveRecord {
 		}
 	}
 
+	public function deleteAssignments($substanceId, $propertieId) {
+		$criteria = new CDbCriteria;
+		$criteria->condition = 'substanceId=:substanceId and propertieId=:propertieId';
+		$criteria->params = array(':substanceId' => $substanceId, ':propertieId' => $propertieId);
+
+		$assignment = self::model()->find($criteria);
+		if ($assignment !== null) {
+			return $assignment->delete();
+		}
+		return FALSE;
+	}
+
 }

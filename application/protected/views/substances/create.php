@@ -6,7 +6,7 @@
 $this->breadcrumbs=array(
 	'Projects'=> array('/projects'),
 	"$project->name" => array('/projects/'.$project->id),
-	'Substances'=>array('index'),
+	'Substances'=>array('index', 'projectId' => $project->id),
 	'Create',
 );
 /*
@@ -20,4 +20,4 @@ $this->menu=array(
 ?>
 <h1>Create Substance in '<?php echo $project->name?>' project</h1>
 
-<?php echo $this->renderPartial('_form', array('model'=>$model, 'project'=>$project)); ?>
+<?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

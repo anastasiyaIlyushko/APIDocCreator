@@ -851,3 +851,92 @@ Stack trace:
 #9 /home/y2k/projects/env/bdd/vendor/symfony/console/Symfony/Component/Console/Application.php(124): Behat\Behat\Console\BehatApplication->doRun()
 #10 /home/y2k/projects/env/bdd/vendor/behat/behat/bin/behat(32): Behat\Behat\Console\BehatApplication->run()
 
+2013/11/21 12:03:53 [error] [php] require_once(/home/nastya/projects/APIDocCreator/application/protected/migrations/m131120_115949_create_method_responces_table.php): failed to open stream: No such file or directory (/home/nastya/projects/yii/framework/cli/commands/MigrateCommand.php:428)
+Stack trace:
+#0 /home/nastya/projects/yii/framework/cli/commands/MigrateCommand.php(145): MigrateCommand->migrateDown()
+#1 unknown(0): MigrateCommand->actionDown()
+#2 /home/nastya/projects/yii/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#3 /home/nastya/projects/yii/framework/console/CConsoleCommandRunner.php(67): MigrateCommand->run()
+#4 /home/nastya/projects/yii/framework/console/CConsoleApplication.php(91): CConsoleCommandRunner->run()
+#5 /home/nastya/projects/yii/framework/base/CApplication.php(169): CConsoleApplication->processRequest()
+#6 /home/nastya/projects/yii/framework/yiic.php(33): CConsoleApplication->run()
+#7 /home/nastya/projects/APIDocCreator/application/protected/yiic.php(7): require_once()
+#8 /home/nastya/projects/APIDocCreator/application/protected/yiic(4): require_once()
+
+2013/11/21 12:04:33 [error] [system.db.CDbCommand] Error in preparing SQL: CREATE TABLE 'methodResponses' (
+	"id" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	"description" text,
+	"status" integer NOT NULL,
+	"methodId" integer  NOT NULL,
+	"propertieId" integer  NOT NULL
+)
+2013/11/21 12:04:33 [error] [system.db.CDbCommand] CDbCommand::execute() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 table 'methodResponses' already exists. The SQL statement executed was: CREATE TABLE 'methodResponses' (
+	"id" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	"description" text,
+	"status" integer NOT NULL,
+	"methodId" integer  NOT NULL,
+	"propertieId" integer  NOT NULL
+).
+2013/11/21 12:04:33 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 table 'methodResponses' already exists. The SQL statement executed was: CREATE TABLE 'methodResponses' (
+	"id" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	"description" text,
+	"status" integer NOT NULL,
+	"methodId" integer  NOT NULL,
+	"propertieId" integer  NOT NULL
+)' in /home/nastya/projects/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /home/nastya/projects/yii/framework/db/CDbCommand.php(1321): CDbCommand->execute()
+#1 /home/nastya/projects/yii/framework/db/CDbMigration.php(228): CDbCommand->createTable('methodResponses', Array, NULL)
+#2 /home/nastya/projects/APIDocCreator/application/protected/migrations/m131120_115949_create_method_responses_table.php(12): CDbMigration->createTable('methodResponses', Array)
+#3 /home/nastya/projects/yii/framework/cli/commands/MigrateCommand.php(385): m131120_115949_create_method_responses_table->up()
+#4 /home/nastya/projects/yii/framework/cli/commands/MigrateCommand.php(109): MigrateCommand->migrateUp('m131120_115949_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 /home/nastya/projects/yii/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 /home/nastya/projects/yii/framework/console/CConsoleCommandRunner.php(67): CConsoleCommand->run(Array)
+#8 /home/nastya/projects/yii/framework/console/CConsoleApplication.php(91): CConsoleCommandRunner->run(Array)
+#9 /home/nastya/projects/yii/framework/base/CApplication.php(169): CConsoleApplication->processRequest()
+#10 /home/nastya/projects/yii/framework/yiic.php(33): CApplication->run()
+#11 /home/nastya/projects/APIDocCreator/application/protected/yiic.php(7): require_once('/home/nastya/pr...')
+#12 /home/nastya/projects/APIDocCreator/application/protected/yiic(4): require_once('/home/nastya/pr...')
+#13 {main}
+---
+2013/11/22 11:31:04 [error] [system.db.CDbCommand] Error in preparing SQL: CREATE TABLE 'methods' (
+	"id" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	"name" varchar(255) NOT NULL,
+	"description" text,
+	"type" text NOT NULL,
+	"uri" varchar(255) NOT NULL,
+	"projectId" integer
+)
+2013/11/22 11:31:04 [error] [system.db.CDbCommand] CDbCommand::execute() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 table 'methods' already exists. The SQL statement executed was: CREATE TABLE 'methods' (
+	"id" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	"name" varchar(255) NOT NULL,
+	"description" text,
+	"type" text NOT NULL,
+	"uri" varchar(255) NOT NULL,
+	"projectId" integer
+).
+2013/11/22 11:31:04 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 table 'methods' already exists. The SQL statement executed was: CREATE TABLE 'methods' (
+	"id" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	"name" varchar(255) NOT NULL,
+	"description" text,
+	"type" text NOT NULL,
+	"uri" varchar(255) NOT NULL,
+	"projectId" integer
+)' in /home/nastya/projects/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /home/nastya/projects/yii/framework/db/CDbCommand.php(1321): CDbCommand->execute()
+#1 /home/nastya/projects/yii/framework/db/CDbMigration.php(228): CDbCommand->createTable('methods', Array, NULL)
+#2 /home/nastya/projects/APIDocCreator/application/protected/migrations/m131120_053828_create_methods_table.php(13): CDbMigration->createTable('methods', Array)
+#3 /home/nastya/projects/yii/framework/cli/commands/MigrateCommand.php(385): m131120_053828_create_methods_table->up()
+#4 /home/nastya/projects/yii/framework/cli/commands/MigrateCommand.php(109): MigrateCommand->migrateUp('m131120_053828_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 /home/nastya/projects/yii/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 /home/nastya/projects/yii/framework/console/CConsoleCommandRunner.php(67): CConsoleCommand->run(Array)
+#8 /home/nastya/projects/yii/framework/console/CConsoleApplication.php(91): CConsoleCommandRunner->run(Array)
+#9 /home/nastya/projects/yii/framework/base/CApplication.php(169): CConsoleApplication->processRequest()
+#10 /home/nastya/projects/yii/framework/yiic.php(33): CApplication->run()
+#11 /home/nastya/projects/APIDocCreator/application/protected/yiic.php(7): require_once('/home/nastya/pr...')
+#12 /home/nastya/projects/APIDocCreator/application/protected/yiic(4): require_once('/home/nastya/pr...')
+#13 {main}
+---

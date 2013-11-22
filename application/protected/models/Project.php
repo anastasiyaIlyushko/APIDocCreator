@@ -55,6 +55,7 @@ class Project extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 		    'substances'=>array(self::HAS_MANY, 'Substance', 'projectId'),
+			'methods'=>array(self::HAS_MANY, 'Method', 'projectId'),
 		);
 	}
 

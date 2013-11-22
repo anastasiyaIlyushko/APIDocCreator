@@ -2,8 +2,9 @@
 
 class ProjectsController extends Controller {
 
-	public $menuName = "";
+	//public $menuName = "";
 	public $substances = array();
+	public $methods = array();
 
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
